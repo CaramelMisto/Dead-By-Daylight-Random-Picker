@@ -1,0 +1,2630 @@
+window.PERKS = [
+    {
+        "name":  "A Nurse\u0027s Calling",
+        "role":  "killer",
+        "slug":  "a-nurse-s-calling",
+        "desc":  "Unlocks potential in your Aura-reading ability: The Auras of injured Survivors being healed or healing themselves are revealed to you within 28/30/32 metres.",
+        "owner":  "The Nurse",
+        "desc_tr":  "Aura okuma yeteneğinizdeki potansiyeli açığa çıkarır: İyileşen veya kendilerini iyileştiren yaralı Hayatta Kalanların Auraları 28/30/32 metre içinde size gösterilir.",
+        "name_tr":  "Bir Hemşirenin Çağrısı"
+    },
+    {
+        "name":  "Agitation",
+        "role":  "killer",
+        "slug":  "agitation",
+        "desc":  "While carrying a Survivor, Agitation activates: Increases your Carrying speed by 6/12/18 %. Increases your Terror Radius by +12 metres.",
+        "owner":  "The Trapper",
+        "desc_tr":  "Bir Hayatta Kalanı taşırken, Ajitasyon etkinleştirilir: Taşıma hızınızı %6/12/18 artırır. Terör Yarıçapını +12 metre artırır.",
+        "name_tr":  "Ajitasyon"
+    },
+    {
+        "name":  "Alien Instinct",
+        "role":  "killer",
+        "slug":  "alien-nstinct",
+        "desc":  "Whenever you hook a Survivor, Alien Instinct activates: The Aura of the farthest Survivor from your current location who is in the Injured State is revealed to you for 8 seconds. Causes that Survivor to suffer from the Oblivious Status Effect for 40/50/60 seconds.",
+        "owner":  "The Xenomorph",
+        "desc_tr":  "Bir Kurban\u0027ı bağladığınızda, Uzaylı İçgüdüsü etkinleştirilir: Mevcut konumunuzdan en uzakta olan ve Yaralı Durumunda bulunan Kurban\u0027ın Aura\u0027sı 8 saniye boyunca size gösterilir. Survivor\u0027un 40/50/60 saniye boyunca Kayıtsız Durum Etkisinden muzdarip olmasına neden olur.",
+        "name_tr":  "Uzaylı İçgüdüsü"
+    },
+    {
+        "name":  "All-Shaking Thunder",
+        "role":  "killer",
+        "slug":  "all-shaking-thunder",
+        "desc":  "After falling from a height, All-Shaking Thunder activates for 15/20/25 seconds: Increases the range of your Lunge Attack by +75 %. All-Shaking Thunder has a cool-down of 5 seconds.",
+        "owner":  "The Houndmaster",
+        "desc_tr":  "Yüksekten düştükten sonra All-Shaking Thunder 15/20/25 saniye boyunca etkinleşir: Hamle Saldırınızın menzilini +%75 artırır. All-Shaking Thunder\u0027ın soğuma süresi 5 saniyedir.",
+        "name_tr":  "Her Şeyi Sarsan Gök Gürültüsü"
+    },
+    {
+        "name":  "Awakened Awareness",
+        "role":  "killer",
+        "slug":  "awakened-awareness",
+        "desc":  "While carrying a Survivor, you benefit from the following effect: The Auras of other Survivors within 16/18/20 metres of your location are revealed to you.",
+        "owner":  "The Mastermind",
+        "desc_tr":  "Bir Survivor\u0027ı taşırken aşağıdaki etkiden yararlanırsınız: Bulunduğunuz yere 16/18/20 metre mesafedeki diğer Survivor\u0027ların Auraları size gösterilir.",
+        "name_tr":  "Uyanmış Farkındalık"
+    },
+    {
+        "name":  "Bamboozle",
+        "role":  "killer",
+        "slug":  "bamboozle",
+        "desc":  "You benefit from the following permanent effect: Increases your Vaulting speed by 5/10/15 %. Whenever you vault a Window, Bamboozle calls upon The Entity for the following effect: Blocks it to all Survivors for 8/12/16 seconds. Vaulting it again within that time resets the timer. Vaulting a different one transfers the effect to it instead. Bamboozle does not extend its effects to vaulting a dropped Pallet.",
+        "owner":  "The Clown",
+        "desc_tr":  "Aşağıdaki kalıcı etkiden faydalanırsınız: Atlama hızınızı %5/10/15 artırır. Bir Pencereye her atladığınızda, Bambuzle aşağıdaki etki için Varlığı çağırır: Onu 8/12/16 saniye boyunca tüm Hayatta Kalanlara engeller. Bu süre içinde tekrar atlamak zamanlayıcıyı sıfırlar. Farklı bir tanesini tonozlamak onun yerine efekti ona aktarır. Bamboozle, etkilerini düşen bir Paletin üzerinden atlamaya kadar genişletmez.",
+        "name_tr":  "Şaşırtmak"
+    },
+    {
+        "name":  "Barbecue \u0026 Chilli",
+        "role":  "killer",
+        "slug":  "barbecue-chilli",
+        "desc":  "A deep bond with The Entity unlocks potential in one\u0027s Aura-reading ability. After hooking a Survivor, all Survivors who are at least 60/50/40 metres away from that Hook have their Aura revealed to you for 5 seconds.",
+        "owner":  "The Cannibal",
+        "desc_tr":  "Varlık ile derin bir bağ, kişinin Aura okuma yeteneğindeki potansiyeli ortaya çıkarır. Bir Kurban\u0027ı kancaya taktıktan sonra, o Kancadan en az 60/50/40 metre uzakta olan tüm Hayatta Kalanların Aura\u0027ları 5 saniye boyunca size gösterilir.",
+        "name_tr":  "Barbekü ve Acı Biber"
+    },
+    {
+        "name":  "Batteries Included",
+        "role":  "killer",
+        "slug":  "batteries-ncluded",
+        "desc":  "While within 16 metres of a completed Generator, you benefit from the following effect: Grants a +5 % Haste Status Effect. This effect lingers for 1/3/5 second(s).",
+        "owner":  "The Good Guy",
+        "desc_tr":  "Tamamlanmış bir Jeneratöre 16 metre mesafedeyken aşağıdaki etkiden yararlanırsınız: +%5 Haste Statü Etkisi kazandırır. Bu etki 1/3/5 saniye sürer.",
+        "name_tr":  "Piller Dahil"
+    },
+    {
+        "name":  "Beast of Prey",
+        "role":  "killer",
+        "slug":  "beast-of-prey",
+        "desc":  "Whenever you trigger the Bloodlust Status Effect, Beast of Prey activates for 30/35/40 seconds: Grants the Undetectable Status Effect.",
+        "owner":  "The Huntress",
+        "desc_tr":  "Kana Susamışlık Durum Efektini her tetiklediğinizde, Beast of Prey 30/35/40 saniye boyunca etkinleşir: Tespit Edilemez Durum Efekti kazandırır.",
+        "name_tr":  "Yırtıcı Canavar"
+    },
+    {
+        "name":  "Bitter Murmur",
+        "role":  "killer",
+        "slug":  "bitter-murmur",
+        "desc":  "Unlocks potential in your Aura-reading ability. Whenever a Generator is completed, Bitter Murmur triggers its primary effect: The Auras of any Survivors within 16 metres of that Generator are revealed to you for 5 seconds. Once the last Generator is completed, Bitter Murmur triggers its secondary effect: The Auras of all Survivors are revealed to you for 5/7/10 seconds.",
+        "owner":  "General",
+        "desc_tr":  "Aura okuma yeteneğinizdeki potansiyeli açığa çıkarır. Bir Jeneratör tamamlandığında, Acı Üfürüm birincil etkisini tetikler: Jeneratörün 16 metre yakınındaki tüm Hayatta Kalanların Auraları 5 saniye boyunca size gösterilir. Son Jeneratör tamamlandığında, Acı Üfürüm ikincil etkisini tetikler: Tüm Hayatta Kalanların Auraları 5/7/10 saniye boyunca size gösterilir.",
+        "name_tr":  "Acı Üfürüm"
+    },
+    {
+        "name":  "Blood Echo",
+        "role":  "killer",
+        "slug":  "blood-echo",
+        "desc":  "Whenever you hook a Survivor, Blood Echo triggers its effect: Causes all Survivors in the Injured State to suffer from the Exhausted and Haemorrhage Status Effects for 20/25/30 seconds.",
+        "owner":  "The Oni",
+        "desc_tr":  "Bir Kurban\u0027ı bağladığınızda, Kan Yankısı etkisini tetikler: Yaralı Durumdaki tüm Hayatta Kalanların 20/25/30 saniye boyunca Bitkinlik ve Kanama Durumu Etkilerinden muzdarip olmasına neden olur.",
+        "name_tr":  "Kan Yankısı"
+    },
+    {
+        "name":  "Blood Warden",
+        "role":  "killer",
+        "slug":  "blood-warden",
+        "desc":  "As soon as at least one Exit Gate is opened, Blood Warden activates: The Auras of Survivors are revealed to you, whenever they are inside the Exit Gate. Once per Trial, hooking a Survivor while Blood Warden is active calls upon The Entity to trigger the following effect: Blocks all opened Exit Gates for 40/50/60 seconds, preventing any remaining Survivor from leaving the Trial through them.",
+        "owner":  "The Nightmare",
+        "desc_tr":  "En az bir Çıkış Kapısı açılır açılmaz Kan Muhafızı etkinleşir: Hayatta Kalanların Auraları, Çıkış Kapısının içinde olduklarında size gösterilir. Her Denemede bir kez, Kan Muhafızı aktifken bir Kurban\u0027ı kancaya takmak, Varlık\u0027ın aşağıdaki etkiyi tetiklemesini gerektirir: 40/50/60 saniye boyunca tüm açık Çıkış Kapılarını bloke ederek, kalan herhangi bir Hayatta Kalanın Denemeden bu kapılardan ayrılmasını engeller.",
+        "name_tr":  "Kan Muhafızı"
+    },
+    {
+        "name":  "Bloodhound",
+        "role":  "killer",
+        "slug":  "bloodhound",
+        "desc":  "Bloodhound causes the following effects: Pools of Blood left by injured Survivors appear in bright red. Extends their lifetime by 2/3/4 seconds.",
+        "owner":  "The Wraith",
+        "desc_tr":  "Bloodhound aşağıdaki etkilere neden olur: Yaralı Hayatta Kalanların bıraktığı Kan Havuzları parlak kırmızı renkte görünür. Ömürlerini 2/3/4 saniye uzatır.",
+        "name_tr":  "Kan Tazısı"
+    },
+    {
+        "name":  "Brutal Strength",
+        "role":  "killer",
+        "slug":  "brutal-strength",
+        "desc":  "While performing the Break or Damage action on Breakable Walls, Pallets, or Generators, Brutal Strength triggers its effect: Increases the Action speed by 10/15/20 %.",
+        "owner":  "The Trapper",
+        "desc_tr":  "Kırılabilir Duvarlar, Paletler veya Jeneratörler üzerinde Kırma veya Hasar verme eylemini gerçekleştirirken, Brutal Strength etkisini tetikler: Aksiyon hızını %10/15/20 artırır.",
+        "name_tr":  "Acımasız Güç"
+    },
+    {
+        "name":  "Call of Brine",
+        "role":  "killer",
+        "slug":  "call-of-brine",
+        "desc":  "After performing the Damage Generator action on a Generator, Call of Brine applies its effects to it for 70 seconds: Increases its Regression speed to 130/140/150 % of the default value. Highlights its Aura to you in yellow. Triggers a Loud Noise Notification whenever a Survivor succeeds a Good Skill Check while repairing it.",
+        "owner":  "The Onryō",
+        "desc_tr":  "Bir Jeneratörde Hasar Oluşturucu eylemini gerçekleştirdikten sonra Call of Brine, etkilerini 70 saniye boyunca ona uygular: Gerileme hızını varsayılan değerin %130/140/150\u0027sine artırır. Aurasını size sarı renkle vurgular. Bir Hayatta Kalan tamir ederken İyi Beceri Kontrolünde başarılı olduğunda bir Yüksek Gürültü Bildirimi tetikler.",
+        "name_tr":  "Brine\u0027ın Çağrısı"
+    },
+    {
+        "name":  "Corrupt Intervention",
+        "role":  "killer",
+        "slug":  "corrupt-ntervention",
+        "desc":  "Your prayers invoke a dark power that meddles with the Survivors\u0027 chances of survival. At the start of the Trial, the 3 Generators located farthest from you are blocked by The Entity for 80/100/120 seconds. Corrupt Intervention deactivates prematurely once the first Survivor is put into the Dying State. — (The Tablet of Adiris, 3.7)",
+        "owner":  "The Plague",
+        "desc_tr":  "Dualarınız, Hayatta Kalanların hayatta kalma şansına müdahale eden karanlık bir gücü çağırıyor. Denemenin başlangıcında, sizden en uzakta bulunan 3 Jeneratör Varlık tarafından 80/100/120 saniye boyunca engellenir. Yolsuzluk Müdahalesi, ilk Hayatta Kalan Ölme Durumuna girdiğinde zamanından önce devre dışı bırakılır. — (Adiris Tableti, 3.7)",
+        "name_tr":  "Yolsuzluk Müdahalesi"
+    },
+    {
+        "name":  "Coulrophobia",
+        "role":  "killer",
+        "slug":  "coulrophobia",
+        "desc":  "Survivors inside your Terror Radius suffer from the following effects: Reduces all Healing speeds by 30/40/50 %. Increases the Pointer-Rotation speed of Healing Skill Checks by +50 %.",
+        "owner":  "The Clown",
+        "desc_tr":  "Terör Yarıçapınız içindeki hayatta kalanlar aşağıdaki etkilerden etkilenir: Tüm İyileştirme hızlarını %30/40/50 azaltır. İyileştirme Beceri Kontrollerinin İşaretçi Dönüş hızını +%50 artırır.",
+        "name_tr":  "Kulrofobi"
+    },
+    {
+        "name":  "Coup de Grâce",
+        "role":  "killer",
+        "slug":  "coup-de-grace",
+        "desc":  "As the end nears, you go in for the kill. Whenever a Generator is completed, Coup de Grâce gains +2 Tokens, up to a maximum of 10 Tokens per Trial: Increases the range of your next Lunge Attack by 70/75/80 %, while consuming -1 Token. Coup de Grâce can only hold a maximum of 5 Tokens at a time.",
+        "owner":  "The Twins",
+        "desc_tr":  "Son yaklaşırken öldürmeye başlarsınız. Bir Jeneratör tamamlandığında, Coup de Grâce, Deneme başına maksimum 10 Jeton olmak üzere +2 Jeton kazanır: -1 Jeton tüketirken bir sonraki Hamle Saldırınızın menzilini %70/75/80 artırır. Coup de Grâce aynı anda en fazla 5 Jeton tutabilir.",
+        "name_tr":  "Coup de Grace"
+    },
+    {
+        "name":  "Cruel Limits",
+        "role":  "killer",
+        "slug":  "cruel-limits",
+        "desc":  "Whenever a Generator is completed, Cruel Limits triggers its effect for 20/25/30 seconds: Blocks all Windows for all Survivors. The Auras of the Blocked Windows are revealed to you and highlighted in yellow.",
+        "owner":  "The Demogorgon",
+        "desc_tr":  "Bir Jeneratör tamamlandığında, Zalim Sınırlar etkisini 20/25/30 saniye boyunca tetikler: Tüm Hayatta Kalanlar için tüm Pencereleri engeller. Engellenen Pencerelerin Auraları size gösterilir ve sarı renkle vurgulanır.",
+        "name_tr":  "Zalim Sınırlar"
+    },
+    {
+        "name":  "Cull the Weak",
+        "role":  "killer",
+        "slug":  "cull-the-weak",
+        "desc":  "Each time you hook a Survivor other than your Obsession, you gain +1 Token: For as long as the Obsession is alive, all other Survivors suffer from a stack-able 2/2.5/3 % per Token Action Speed penalty to Repairing, Healing, and Sabotaging, up to a maximum of 22/27.5/33 % or 11 Tokens. The Obsession is unaffected by this penalty and instead granted a permanent +33 % Action Speed bonus to Unhooking and Healing other Survivors. You can only be obsessed with one Survivor at a time.",
+        "owner":  "General",
+        "desc_tr":  "Takıntınız dışında bir Kurban\u0027ı her kancaladığınızda, +1 Jeton kazanırsınız: Takıntı canlı olduğu sürece, diğer tüm Hayatta Kalanlar, Maksimum %22/27,5/33\u0027e veya 11 Jeton\u0027a kadar, Tamir, İyileştirme ve Sabotaj için Jeton başına %2/2,5/3 istiflenebilir bir Eylem Hızı cezasına maruz kalır. Obsession bu cezadan etkilenmez ve bunun yerine diğer Hayatta Kalanları Kancadan Çıkarma ve İyileştirmeye yönelik kalıcı +%33 Eylem Hızı bonusu verir. Aynı anda yalnızca bir Survivor\u0027a takıntılı olabilirsiniz.",
+        "name_tr":  "Zayıfları Ele Geçirin"
+    },
+    {
+        "name":  "Dark Arrogance",
+        "role":  "killer",
+        "slug":  "dark-arrogance",
+        "desc":  "Whenever you are vaulting a Window, you benefit from the following effect: Increases the Vaulting speed by 15/20/25 %. Whenever you are stunned with a Pallet or blinded by any means, you suffer from the following effects: Reduces the Recovery speed from Pallet Stuns by -15 %. Increases the duration of Killer Blinds by +15 %.",
+        "owner":  "The Lich",
+        "desc_tr":  "Bir Pencereden atladığınızda aşağıdaki etkiden yararlanırsınız: Atlama hızını %15/20/25 artırır. Bir Palet ile sersemlettiğinizde veya herhangi bir şekilde kör olduğunuzda, aşağıdaki etkilerden muzdarip olursunuz: Palet Sersemletmelerinden kurtarma hızını %-15 azaltır. Killer Blind\u0027lerin süresini +%15 artırır.",
+        "name_tr":  "Karanlık Kibir"
+    },
+    {
+        "name":  "Dark Devotion",
+        "role":  "killer",
+        "slug":  "dark-devotion",
+        "desc":  "Whenever the Obsession becomes injured by any means, Dark Devotion activates for 35/40/45 seconds: Transfers your Terror Radius to the Obsession. This Terror Radius is set to 40 metres. Grants the Undetectable Status Effect. You can only be obsessed with one Survivor at a time. — (The Tablet of Adiris, 48.9)",
+        "owner":  "The Plague",
+        "desc_tr":  "Obsession herhangi bir şekilde yaralandığında, Dark Devotion 35/40/45 saniye boyunca etkinleşir: Terör Yarıçapını Obsession\u0027a aktarır. Bu Terör Yarıçapı 40 metreye ayarlanmıştır. Tespit Edilemez Durum Etkisi kazandırır. Aynı anda yalnızca bir Survivor\u0027a takıntılı olabilirsiniz. — (Adiris Levhi, 48.9)",
+        "name_tr":  "Karanlık Adanmışlık"
+    },
+    {
+        "name":  "Darkness Revealed",
+        "role":  "killer",
+        "slug":  "darkness-revealed",
+        "desc":  "Searching a Locker has the following effect: The Auras of Survivors within 8 metres of any Locker are revealed to you for 6/7/8 seconds. Darkness Revealed has a cool-down of 30 seconds.",
+        "owner":  "The Dredge",
+        "desc_tr":  "Bir Dolap aramak şu etkiye sahiptir: Herhangi bir Dolaptan 8 metre uzaktaki Hayatta Kalanların Auraları 6/7/8 saniye boyunca size gösterilir. Darkness Revealed\u0027ın 30 saniyelik bir soğuma süresi vardır.",
+        "name_tr":  "Karanlık Ortaya Çıktı"
+    },
+    {
+        "name":  "Dead Man\u0027s Switch",
+        "role":  "killer",
+        "slug":  "dead-man-s-switch",
+        "desc":  "After hooking a Survivor, Dead Man\u0027s Switch triggers its effect: Blocks the first Generator any Survivor stops repairing for 25/30/35 seconds. The Blocked Generator is highlighted to you in white. Dead Man\u0027s Switch cannot activate if its effect is still active from a previous activation.",
+        "owner":  "The Deathslinger",
+        "desc_tr":  "Bir Hayatta Kalanı kancaya taktıktan sonra, Ölü Adamın Anahtarı etkisini tetikler: Hayatta Kalanların 25/30/35 saniye boyunca tamir etmeyi bıraktığı ilk Jeneratörü bloke eder. Engellenen Jeneratör beyaz renkle vurgulanır. Dead Man\u0027s Switch\u0027in etkisi önceki aktivasyondan sonra hâlâ aktifse etkinleştirilemez.",
+        "name_tr":  "Ölü Adamın Anahtarı"
+    },
+    {
+        "name":  "Deathbound",
+        "role":  "killer",
+        "slug":  "deathbound",
+        "desc":  "Whenever a Survivor finishes healing another Survivor for the equivalent of 1 Health State, Deathbound activates: Causes the Healer to scream and reveal their location. Causes the Healer to suffer from the Oblivious Status Effect whenever they are farther than 12/8/4 metres from the other Survivor. The Healer sees the Aura of the Healed Survivor while Deathbound is active. Deathbound deactivates after the Healer loses a Health State.",
+        "owner":  "The Executioner",
+        "desc_tr":  "Bir Kurban, 1 Sağlık Durumuna eşdeğer başka bir Kurban\u0027ı iyileştirmeyi bitirdiğinde, Deathbound etkinleştirilir: Şifacının çığlık atmasına ve yerini açıklamasına neden olur. Diğer Hayatta Kalandan 12/8/4 metreden daha uzak olduğunda Şifacının Farkında Olmayan Durum Etkisinden muzdarip olmasına neden olur. Şifacı, Deathbound aktifken İyileşmiş Hayatta Kalanın Aurasını görür. Deathbound, Şifacı Sağlık Durumunu kaybettikten sonra devre dışı kalır.",
+        "name_tr":  "Ölüme bağlı"
+    },
+    {
+        "name":  "Deerstalker",
+        "role":  "killer",
+        "slug":  "deerstalker",
+        "desc":  "Unlocks potential in your Aura-reading ability. Whenever a Survivor reads your Aura, Deerstalker activates for the same duration as their Aura-reading action: The Aura of that Survivor is revealed to you. Furthermore, the following effect triggers automatically every 40/35/30 seconds: Your Aura is revealed for 3 seconds to the Survivor with currently the lowest cumulative Chase time.",
+        "owner":  "General",
+        "desc_tr":  "Aura okuma yeteneğinizdeki potansiyeli açığa çıkarır. Bir Kurban Auranızı okuduğunda, Geyik Avcısı Aura okuma eylemiyle aynı süre boyunca etkinleşir: O Kurban\u0027ın Aura\u0027sı size gösterilir. Ayrıca, aşağıdaki efekt her 40/35/30 saniyede bir otomatik olarak tetiklenir: Auranız, şu anda en düşük kümülatif Takip süresine sahip Survivor\u0027a 3 saniye boyunca gösterilir.",
+        "name_tr":  "Geyik avcısı"
+    },
+    {
+        "name":  "Discordance",
+        "role":  "killer",
+        "slug":  "discordance",
+        "desc":  "Any Generator within a range of 64/96/128 metres that is being repaired by 2 or more Survivors is marked by a yellow Aura. When the Generator is first highlighted, Discordance triggers a Loud Noise Notification on the Generator. After the Generator is no longer within range or is being repaired by just 1 Survivor, the highlighted Aura will linger for another 4 seconds.",
+        "owner":  "The Legion",
+        "desc_tr":  "64/96/128 metre menzil içindeki, 2 veya daha fazla Hayatta Kalan tarafından onarılan herhangi bir Jeneratör, sarı bir Aura ile işaretlenir. Jeneratör ilk vurgulandığında Discordance, Jeneratörde Yüksek Gürültü Bildirimini tetikler. Jeneratör artık menzil içinde olmadığında veya yalnızca 1 Hayatta Kalan tarafından onarıldığında, vurgulanan Aura 4 saniye daha oyalanacaktır.",
+        "name_tr":  "Uyumsuzluk"
+    },
+    {
+        "name":  "Dissolution",
+        "role":  "killer",
+        "slug":  "dissolution",
+        "desc":  "After 3 seconds of injuring a Survivor by any means, Dissolution activates for 12/16/20 seconds: Instantly breaks the next Pallet that Survivor performs a Fast Vault across while inside your Terror Radius.",
+        "owner":  "The Dredge",
+        "desc_tr":  "Bir Kurban\u0027ı herhangi bir şekilde 3 saniye boyunca yaraladıktan sonra, Çözünme 12/16/20 saniye boyunca etkinleşir: Terör Yarıçapı içindeyken Survivor\u0027ın Hızlı Vault yaptığı bir sonraki Paleti anında kırar.",
+        "name_tr":  "Çözünme"
+    },
+    {
+        "name":  "Distressing",
+        "role":  "killer",
+        "slug":  "distressing",
+        "desc":  "You benefit from the following permanent effect: Increases your Terror Radius by 20/25/30 %.",
+        "owner":  "General",
+        "desc_tr":  "Aşağıdaki kalıcı etkiden faydalanırsınız: Terör Yarıçapını %20/25/30 artırır.",
+        "name_tr":  "üzücü"
+    },
+    {
+        "name":  "Dominance",
+        "role":  "killer",
+        "slug":  "dominance",
+        "desc":  "The power you wield over the land strikes terror in the hearts of all who cross your path. The first time each Chest and each Totem are interacted with by a Survivor, Dominance triggers its effect: Calls upon The Entity to block it for 8/12/16 seconds. The Aura of the blocked Prop is revealed to you in white.",
+        "owner":  "The Dark Lord",
+        "desc_tr":  "Ülke üzerinde kullandığınız güç, yolunuza çıkan herkesin yüreğine korku salıyor. Her Sandık ve her Totem bir Kurban tarafından ilk kez etkileşime girdiğinde, Hakimiyet etkisini tetikler: Varlığı 8/12/16 saniye boyunca bloke etmesi için çağırır. Engellenen Nesnenin Aurası size beyaz renkte gösterilir.",
+        "name_tr":  "Hakimiyet"
+    },
+    {
+        "name":  "Dragon\u0027s Grip",
+        "role":  "killer",
+        "slug":  "dragon-s-grip",
+        "desc":  "After performing the Damage Generator action on a Generator, Dragon\u0027s Grip activates for 30 seconds. While active, the first Survivor interacting with that Generator suffers from the following effects: Causes them to scream and reveal their location for 4 seconds. Inflicts the Exposed Status Effect for 60 seconds. Dragon\u0027s Grip has a cool-down of 60/45/30 seconds.",
+        "owner":  "The Blight",
+        "desc_tr":  "Bir Jeneratör üzerinde Hasar Oluşturucu eylemi gerçekleştirildikten sonra Dragon\u0027s Grip 30 saniye boyunca etkinleşir. Aktifken, o Jeneratörle etkileşime giren ilk Kurban aşağıdaki etkilerden etkilenir: Çığlık atmasına ve 4 saniye boyunca konumlarını ortaya çıkarmasına neden olur. 60 saniye boyunca Maruz Kalma Durum Etkisini uygular. Dragon\u0027s Grip\u0027in soğuma süresi 60/45/30 saniyedir.",
+        "name_tr":  "Ejderhanın Kavraması"
+    },
+    {
+        "name":  "Enduring",
+        "role":  "killer",
+        "slug":  "enduring",
+        "desc":  "You benefit from the following effect: Reduces the duration of Pallet Stuns by 40/45/50 %. This effect does not apply when stunned while carrying a Survivor.",
+        "owner":  "The Hillbilly",
+        "desc_tr":  "Aşağıdaki etkiden faydalanırsınız: Palet Sersemletmelerinin süresini %40/45/50 azaltır. Bu etki, bir Hayatta Kalanı taşırken sersemletildiğinde geçerli değildir.",
+        "name_tr":  "Dayanıklı"
+    },
+    {
+        "name":  "Eruption",
+        "role":  "killer",
+        "slug":  "eruption",
+        "desc":  "Performing the Damage Generator action on Generators highlights their Auras in yellow. Whenever a Survivor enters the Dying State by any means, Eruption triggers the following effects on all highlighted Generators: Causes them to explode, damaging them. Instantly regresses them by -10 % of their total Progression. Causes them to start regressing afterwards. Causes all Survivors currently repairing them to suffer from the following effects: Causes them to scream. Their Auras are revealed to you for 8/10/12 seconds. Eruption has a cool-down of 30 seconds after triggering its effects, which also resets the highlighted Auras.",
+        "owner":  "The Nemesis",
+        "desc_tr":  "Jeneratörlerde Hasar Oluşturucu eyleminin gerçekleştirilmesi, onların Auralarını sarı renkte vurgular. Bir Kurban herhangi bir şekilde Ölüm Durumuna girdiğinde, Patlama, vurgulanan tüm Jeneratörlerde aşağıdaki etkileri tetikler: Patlamalarına neden olur ve onlara hasar verir. Onları anında toplam İlerlemelerinin %-10\u0027u oranında geriler. Daha sonra gerilemeye başlamalarına neden olur. Şu anda onları tamir eden tüm Hayatta Kalanların aşağıdaki etkilerden muzdarip olmasına neden olur: Çığlık atmalarına neden olur. Auraları size 8/10/12 saniye boyunca gösterilir. Eruption\u0027ın, efektleri tetiklendikten sonra 30 saniyelik bir soğuma süresi vardır ve bu aynı zamanda vurgulanan Auraları da sıfırlar.",
+        "name_tr":  "Patlama"
+    },
+    {
+        "name":  "Fire Up",
+        "role":  "killer",
+        "slug":  "fire-up",
+        "desc":  "The increased pressure of losing your preys fills you with anger and gives you unsuspected motivation. For each completed Generator, Fire Up gains +1 Token, up to a maximum of 5 Tokens: Increases the Action speeds for the following interactions by a stack-able 4/5/6 % per Token, up to a maximum of 20/25/30 %: Picking up and dropping Survivors. Breaking Breakable Walls and dropped Pallets. Damaging Generators. Vaulting Windows.",
+        "owner":  "The Nightmare",
+        "desc_tr":  "Avlarınızı kaybetmenin getirdiği artan baskı sizi öfkelendirir ve beklenmedik bir motivasyon sağlar. Tamamlanan her Jeneratör için Fire Up, maksimum 5 Jeton olmak üzere +1 Jeton kazanır: Aşağıdaki etkileşimler için Aksiyon hızlarını, Jeton başına istiflenebilir %4/5/6 oranında, maksimum %20/25/30\u0027a kadar artırır: Hayatta Kalanları toplama ve bırakma. Kırılabilir Duvarları Kırmak ve Paletleri Düşürmek. Jeneratörlere zarar vermek. Windows\u0027u tonozlama.",
+        "name_tr":  "Ateş Et"
+    },
+    {
+        "name":  "Forced Hesitation",
+        "role":  "killer",
+        "slug":  "forced-hesitation",
+        "desc":  "Whenever a Survivor is put into the Dying State by any means, Forced Hesitation triggers its effect: Causes all other Survivors within 16 metres of them suffer from a -20 % Hindered Status Effect for 10 seconds. Forced Hesitation has a cool-down of 40/35/30 seconds.",
+        "owner":  "The Singularity",
+        "desc_tr":  "Bir Kurban herhangi bir şekilde Ölüm Durumuna girdiğinde, Zorunlu Tereddüt etkisini tetikler: Kendilerine 16 metre mesafedeki diğer tüm Hayatta Kalanların 10 saniye boyunca -%20 Engellenmiş Durum Etkisine maruz kalmasına neden olur. Forced Hesitation\u0027ın soğuma süresi 40/35/30 saniyedir.",
+        "name_tr":  "Zorunlu Tereddüt"
+    },
+    {
+        "name":  "Forced Penance",
+        "role":  "killer",
+        "slug":  "forced-penance",
+        "desc":  "Whenever a Survivor triggers a Protection Hit, they suffer from the following effect: Inflicts the Broken Status Effect for 60/70/80 seconds.",
+        "owner":  "The Executioner",
+        "desc_tr":  "Bir Hayatta Kalan, bir Koruma Darbesini tetiklediğinde, aşağıdaki etkiye maruz kalır: 60/70/80 saniye boyunca Kırık Durum Etkisini uygular.",
+        "name_tr":  "Zorunlu Kefaret"
+    },
+    {
+        "name":  "Forever Entwined",
+        "role":  "killer",
+        "slug":  "forever-entwined",
+        "desc":  "Whenever a Survivors takes damage, Forever Entwined gains +1 Token, up to a maximum of 6/7/8 Tokens: Increases the Action speeds for Dropping, Hooking, and Picking up a Survivor by a stack-able +4 % per Token, up to a maximum of 24/28/32 %.",
+        "owner":  "The Ghoul",
+        "desc_tr":  "Bir Survivors hasar aldığında, Forever Entwined maksimum 6/7/8 Jeton olmak üzere +1 Jeton kazanır: Bir Hayatta Kalanı Düşürme, Takma ve Alma Aksiyon hızlarını, maksimum %24/28/32\u0027ye kadar, Jeton başına istiflenebilir +%4 oranında artırır.",
+        "name_tr":  "Sonsuza Kadar Dolanmış"
+    },
+    {
+        "name":  "Franklin\u0027s Demise",
+        "role":  "killer",
+        "slug":  "franklin-s-demise",
+        "desc":  "Survivors hit with your vicious Basic Attack drop any equipped Item on impact: The Auras of lost Items are revealed to within 32/48/64 metres.",
+        "owner":  "The Cannibal",
+        "desc_tr":  "Acımasız Temel Saldırınızla vurulan hayatta kalanlar, darbe anında donanımlı herhangi bir Öğeyi düşürür: Kayıp Öğelerin Auraları 32/48/64 metre içinde ortaya çıkar.",
+        "name_tr":  "Franklin\u0027in Ölümü"
+    },
+    {
+        "name":  "Friends \u0027til the End",
+        "role":  "killer",
+        "slug":  "friends-til-the-end",
+        "desc":  "When you hook any Survivors that is not the Obsession, the following effects apply to the Obsession: Their Aura is revealed for 6/8/10 seconds. They suffer from the Exposed Status Effect for 20 seconds. When you hook the Obsession, the following effects apply to a random Survivor: Causes the Survivor to scream and reveal their location to the Killer. They become the new Obsession. You can only be obsessed with one Survivor at a time.",
+        "owner":  "The Good Guy",
+        "desc_tr":  "Takıntı olmayan herhangi bir Hayatta Kalanı kancaya taktığınızda, Takıntıya şu etkiler uygulanır: Auraları 6/8/10 saniye boyunca ortaya çıkar. 20 saniye boyunca Maruz Kalma Durum Etkisine maruz kalırlar. Obsession\u0027ı bağladığınızda, aşağıdaki etkiler rastgele bir Kurban için geçerli olur: Kurban\u0027ın çığlık atmasına ve Katil\u0027e yerini açıklamasına neden olur. Onlar yeni Takıntı haline gelirler. Aynı anda yalnızca bir Survivor\u0027a takıntılı olabilirsiniz.",
+        "name_tr":  "Sonuna Kadar Arkadaşlar"
+    },
+    {
+        "name":  "Furtive Chase",
+        "role":  "killer",
+        "slug":  "furtive-chase",
+        "desc":  "After hooking the Obsession, you benefit from the following effects for 14/16/18 seconds: Grants the Undetectable Status Effect. Grants a +10 % Haste Status Effect. Whenever the Obsession is unhooked by another Survivor, the Obsession Status transfers to their Rescuer. You can only be obsessed with one Survivor at a time.",
+        "owner":  "The Ghost Face",
+        "desc_tr":  "Obsession\u0027ı taktıktan sonra 14/16/18 saniye boyunca aşağıdaki etkilerden yararlanırsınız: Tespit Edilemez Durum Etkisi kazandırır. +%10 Hız Statü Etkisi verir. Takıntı başka bir Hayatta Kalan tarafından çözüldüğünde, Takıntı Durumu Kurtarıcıya aktarılır. Aynı anda yalnızca bir Survivor\u0027a takıntılı olabilirsiniz.",
+        "name_tr":  "Sinsi Takip"
+    },
+    {
+        "name":  "Game Afoot",
+        "role":  "killer",
+        "slug":  "game-afoot",
+        "desc":  "Whenever you hit the Survivor with currently the highest cumulative Chase time with a Basic Attack, Game Afoot triggers its primary effect: Causes the Obsession Status to transfer to that Survivor. While chasing the Obsession, performing the Break or Damage action causes Game Afoot to trigger its secondary effect: Grants a +7 % Haste Status Effect for 8/9/10 seconds. You can only be obsessed with one Survivor at a time.",
+        "owner":  "The Skull Merchant",
+        "desc_tr":  "Bir Temel Saldırı ile şu anda en yüksek kümülatif Takip süresine sahip Kurban\u0027a vurduğunuzda, Ayakta Oyun birincil etkisini tetikler: Takıntı Durumunun o Kurban\u0027a aktarılmasına neden olur. Takıntıyı kovalarken, Kırma veya Hasar eyleminin gerçekleştirilmesi, Game Afoot\u0027un ikincil etkisini tetiklemesine neden olur: 8/9/10 saniye boyunca +%7 Haste Statü Etkisi verir. Aynı anda yalnızca bir Survivor\u0027a takıntılı olabilirsiniz.",
+        "name_tr":  "Oyun Devam Ediyor"
+    },
+    {
+        "name":  "Gearhead",
+        "role":  "killer",
+        "slug":  "gearhead",
+        "desc":  "After a Survivor loses a Health State, Gearhead activates for 30 seconds: While Gearhead is active, a Survivor succeeding a Good Skill Check while repairing reveals their Aura to you for 6/7/8 seconds.",
+        "owner":  "The Deathslinger",
+        "desc_tr":  "Bir Kurban Sağlık Durumunu kaybettikten sonra, Gearhead 30 saniye boyunca etkinleşir: Gearhead aktifken, tamir sırasında İyi Beceri Kontrolü\u0027nü başaran bir Kurban, 6/7/8 saniye boyunca Aura\u0027sını size gösterir.",
+        "name_tr":  "Redüktör"
+    },
+    {
+        "name":  "Genetic Limits",
+        "role":  "killer",
+        "slug":  "genetic-limits",
+        "desc":  "Whenever a Survivor loses a Health State by any means, Genetic Limits triggers its effect: Causes them to suffer from the Exhausted Status Effect for 6/7/8 seconds.",
+        "owner":  "The Singularity",
+        "desc_tr":  "Bir Kurban herhangi bir şekilde Sağlık Durumunu kaybettiğinde, Genetik Limitler etkisini tetikler: 6/7/8 saniye boyunca Tükenmiş Durum Etkisine maruz kalmalarına neden olur.",
+        "name_tr":  "Genetik Sınırlar"
+    },
+    {
+        "name":  "Grim Embrace",
+        "role":  "killer",
+        "slug":  "grim-embrace",
+        "desc":  "Your act of servitude to The Entity has not gone unnoticed. Each time a Survivor is hooked for the first time, Grim Embrace gains +1 Token and activates once you are at least 16 metres away from the Hook: 1-3 Tokens: Blocks all Generators for 6/8/10 seconds. 4 Tokens: Blocks all Generators for 40 seconds and the Aura of the Obsession is revealed to you for 6 seconds.",
+        "owner":  "The Artist",
+        "desc_tr":  "Varlık\u0027a olan kölelik hareketiniz gözden kaçmadı. Bir Hayatta Kalanın ilk kez kancaya takıldığı her seferde, Grim Embrace +1 Jeton kazanır ve Kancadan en az 16 metre uzakta olduğunuzda etkinleştirilir: 1-3 Jeton: Tüm Jeneratörleri 6/8/10 saniye boyunca bloke eder. 4 Jeton: Tüm Jeneratörleri 40 saniye boyunca engeller ve Takıntının Aurası 6 saniye boyunca size gösterilir.",
+        "name_tr":  "Acımasız Kucaklama"
+    },
+    {
+        "name":  "Haywire",
+        "role":  "killer",
+        "slug":  "haywire",
+        "desc":  "Whenever a Survivor stops opening an Exit Gate after accumulating at least 80 % Progression towards being opened, Haywire causes it to regress: Regresses at a rate of 80/90/100 % of the normal Gate-Opening speed. Causes Survivors to see the lights atop the switch flickering randomly while it regresses.",
+        "owner":  "The Animatronic",
+        "desc_tr":  "Bir Hayatta Kalan, açılma yönünde en az %80 İlerleme biriktirdikten sonra bir Çıkış Kapısını açmayı bıraktığında, Haywire bunun gerilemesine neden olur: Normal Kapı Açma hızının %80/90/100 oranında geriler. Hayatta kalanların, düğmenin üzerindeki ışıkların gerilerken rastgele titreştiğini görmesine neden olur.",
+        "name_tr":  "Haywire"
+    },
+    {
+        "name":  "Help Wanted",
+        "role":  "killer",
+        "slug":  "help-wanted",
+        "desc":  "After performing the Damage Generator action, Help Wanted activates: Causes that Generator to become a Compromised Generator. Once the Compromised Generator is completed, you benefit from the following effect for 40/50/60 seconds: Increases the Recovery speed of successful Basic Attacks by +25 %.",
+        "owner":  "The Animatronic",
+        "desc_tr":  "Hasar Oluşturucu eylemini gerçekleştirdikten sonra, Yardım Aranıyor etkinleştirilir: Jeneratörün Tehlike Altındaki Jeneratör haline gelmesine neden olur. Tehlike Altındaki Jeneratör tamamlandığında, 40/50/60 saniye boyunca aşağıdaki etkiden yararlanırsınız: Başarılı Temel Saldırıların İyileşme hızını +%25 artırır.",
+        "name_tr":  "Yardım isteniyor"
+    },
+    {
+        "name":  "Hex: Blood Favour",
+        "role":  "killer",
+        "slug":  "hex-blood-favour",
+        "desc":  "Hex: Blood Favour lights a Hex Totem at the start of the Trial, cursing Survivors with its Hex Effects. Whenever a Survivor loses a Health State by any means, Hex: Blood Favour triggers its effect for 15 seconds: Blocks all upright Pallets within 24/28/32 metres of that Survivor. Blocked Pallets cannot be dropped by any Survivor. The Hex Effects persist until the Hex Totem is either blessed or cleansed by a Survivor, disabling it for the remainder of the Trial.",
+        "owner":  "The Blight",
+        "desc_tr":  "Efsun: Blood Favor, Denemenin başında bir Efsun Totem yakar ve Hayatta Kalanları Efsun Efektleriyle lanetler. Bir Kurban herhangi bir şekilde Sağlık Durumunu kaybettiğinde, Efsun: Blood Favor etkisini 15 saniye boyunca tetikler: Kurban\u0027ın 24/28/32 metre yakınındaki tüm dik Paletleri bloke eder. Engellenen Paletler hiçbir Hayatta Kalan tarafından düşürülemez. Efsun Etkileri, Efsun Totem bir Kurban tarafından kutsanana veya temizlenene kadar devam eder ve Denemenin geri kalanı boyunca onu devre dışı bırakır.",
+        "name_tr":  "Efsun: Kan İyiliği"
+    },
+    {
+        "name":  "Hex: Crowd Control",
+        "role":  "killer",
+        "slug":  "hex-crowd-control",
+        "desc":  "Whenever a Survivors performs a Rushed Vault action at a Window, Hex: Crowd Control activates on a random Totem and triggers its effect: Blocks that Window for all Survivors. Increases basic-vault speed of blocked Windows by 15 % Reveals auras of blocked Windows within 24 metres Hex: Crowd Control has a limit of 4/5/6 Windows it can affect at a time. The Hex Effects persist until the Hex Totem is either blessed or cleansed by a Survivor, disabling it for the remainder of the Trial.",
+        "owner":  "The Trickster",
+        "desc_tr":  "Bir Hayatta Kalanlar bir Pencerede Hızlı Mahzen eylemi gerçekleştirdiğinde, Efsun: Kalabalık Kontrolü rastgele bir Totem üzerinde etkinleşir ve etkisini tetikler: O Pencereyi tüm Hayatta Kalanlar için engeller. Engellenen Windows\u0027un temel kasa hızını %15 artırır 24 metre içindeki engellenen Windows\u0027un aurasını ortaya çıkarır Efsun: Kalabalık Kontrolü\u0027nün aynı anda etkileyebileceği 4/5/6 Windows sınırı vardır. Efsun Etkileri, Efsun Totem bir Kurban tarafından kutsanana veya temizlenene kadar devam eder ve Denemenin geri kalanı boyunca onu devre dışı bırakır.",
+        "name_tr":  "Efsun: Kalabalık Kontrolü"
+    },
+    {
+        "name":  "Hex: Devour Hope",
+        "role":  "killer",
+        "slug":  "hex-devour-hope",
+        "desc":  "Hex: Devour Hope lights a Hex Totem at the start of the Trial, cursing Survivors with its Hex Effects. Whenever a Survivor is unhooked at least 24 metres from your location, Hex: Devour Hope gains +1 Token, up to a maximum of 5 Tokens: At 2 Tokens: 10 seconds after hooking a Survivor, you are granted a 3/4/5 % Haste Status Effect for 10 seconds. At 3 Tokens: Afflicts all Survivors with the Exposed Status Effect. At 5 Tokens: Unlocks the Kill ability, allowing you to kill dying Survivors by your own hands. The Hex Effects persist until the Hex Totem is either blessed or cleansed by a Survivor, disabling it for the remainder of the Trial.",
+        "owner":  "The Hag",
+        "desc_tr":  "Efsun: Devour Hope, Denemenin başında bir Efsun Totem yakar ve Hayatta Kalanları Efsun Etkileriyle lanetler. Bir Kurban, bulunduğunuz yerden en az 24 metre uzakta kancadan kurtarıldığında, Efsun: Devour Hope, maksimum 5 Jeton olmak üzere +1 Jeton kazanır: 2 Jetonda: Bir Kurban\u0027ı kancaya taktıktan 10 saniye sonra, size 10 saniye boyunca %3/4/5 Hız Statü Etkisi verilir. 3 Jetonda: Tüm Hayatta Kalanları Açık Statü Etkisiyle etkiler. 5 Jetonda: Öldürme yeteneğinin kilidini açarak ölmekte olan Hayatta Kalanları kendi ellerinizle öldürmenize olanak tanır. Efsun Etkileri, Efsun Totem bir Kurban tarafından kutsanana veya temizlenene kadar devam eder ve Denemenin geri kalanı boyunca onu devre dışı bırakır.",
+        "name_tr":  "Efsun: Umudu Yiyin"
+    },
+    {
+        "name":  "Hex: Face the Darkness",
+        "role":  "killer",
+        "slug":  "hex-face-the-darkness",
+        "desc":  "If there is still a Dull Totem in the environment, Hex: Face the Darkness lights a Hex Totem after injuring a Survivor by any means, cursing them with its Hex Effects. While cursed, the following effects trigger once every 35/30/25 seconds on all other Survivors outside of the Terror Radius: Causes them to scream. Their Auras are revealed to you for 2 seconds. Hex: Face the Darkness is deactivated once the Cursed Survivor either returns to Healthy or enters the Dying State by any means, extinguishing the Hex Totem. The Hex Effects persist until the Hex Totem is either blessed or cleansed by a Survivor, disabling it for the remainder of the Trial.",
+        "owner":  "The Knight",
+        "desc_tr":  "Ortamda hâlâ Donuk Totem varsa Efsun: Face the Darkness, bir Hayatta Kalanı herhangi bir şekilde yaraladıktan sonra bir Efsun Totem yakar ve onu Efsun Efektleriyle lanetler. Lanetliyken aşağıdaki etkiler, Terör Yarıçapı dışındaki tüm Hayatta Kalanlar üzerinde her 35/30/25 saniyede bir tetiklenir: Çığlık atmalarına neden olur. Auraları 2 saniye boyunca size gösterilir. Efsun: Karanlıkla Yüzleş, Lanetli Hayatta Kalan Sağlıklı duruma döndüğünde veya herhangi bir şekilde Ölme Durumuna girdiğinde, Efsun Totemini söndürdüğünde devre dışı bırakılır. Efsun Etkileri, Efsun Totem bir Kurban tarafından kutsanana veya temizlenene kadar devam eder ve Denemenin geri kalanı boyunca onu devre dışı bırakır.",
+        "name_tr":  "Efsun: Karanlıkla Yüzleşin"
+    },
+    {
+        "name":  "Hex: Fortune\u0027s Fool",
+        "role":  "killer",
+        "slug":  "hex-fortune-s-fool",
+        "desc":  "If there is still a Dull Totem in the environment, Hex: Fortune\u0027s Fool lights a Hex Totem whenever you hook a Survivor for the first time, cursing them with its Hex Effects. Inflicts the Oblivious Status Effect. Blocks the Hex Totem for all other Survivors for 90 seconds. Blocked Hex Totems cannot be cleansed or blessed by Survivors. This does not affect the Cursed Survivor. The Aura of the Hex Totem is revealed to the Cursed Survivor within 24/20/16 metres. The Hex Effects persist until the Hex Totem is either blessed or cleansed by a Survivor, disabling it for the remainder of the Trial.",
+        "owner":  "General",
+        "desc_tr":  "Ortamda hala bir Donuk Totem varsa, Efsun: Fortune\u0027s Fool, bir Survivor\u0027u ilk kez kancaladığınızda bir Efsun Totem yakar ve onu Efsun Efektleriyle lanetler. Farkında Olmayan Durum Etkisini uygular. Diğer tüm Hayatta Kalanların Efsun Totemini 90 saniye boyunca engeller. Engellenen Efsun Totemler Hayatta Kalanlar tarafından temizlenemez veya kutsanamaz. Bu Lanetli Hayatta Kalanı etkilemez. Sihir Toteminin Aurası, Lanetli Hayatta Kalan\u0027a 24/20/16 metre içinde gösterilir. Efsun Etkileri, Efsun Totem bir Kurban tarafından kutsanana veya temizlenene kadar devam eder ve Denemenin geri kalanı boyunca onu devre dışı bırakır.",
+        "name_tr":  "Efsun: Şansın Aptallığı"
+    },
+    {
+        "name":  "Hex: Haunted Ground",
+        "role":  "killer",
+        "slug":  "hex-haunted-ground",
+        "desc":  "Hex: Haunted Ground lights 2 Hex Totems at the start of the Trial, laying a trap for Survivors. Blessing or cleansing either Hex Totem trips the trap and triggers the following effect: Causes all Survivors to suffer from the Exposed Status Effect for 40/50/60 seconds. Hex: Haunted Ground extinguishes the second Hex Totem after tripping its trap. Hex: Haunted Ground is disabled for the remainder of the Trial after triggering its effect.",
+        "owner":  "The Spirit",
+        "desc_tr":  "Efsun: Perili Zemin, Denemenin başlangıcında 2 Efsun Totem\u0027i yakarak Hayatta Kalanlar için bir tuzak kurar. Efsun Totem\u0027i kutsamak veya temizlemek, tuzağı tetikler ve aşağıdaki etkiyi tetikler: Tüm Hayatta Kalanların 40/50/60 saniye boyunca Maruz Kalma Durum Etkisinden muzdarip olmasına neden olur. Efsun: Haunted Ground, tuzağını tetikledikten sonra ikinci Efsun Totemini söndürür. Efsun: Haunted Ground, etkisi tetiklendikten sonra Denemenin geri kalanı boyunca devre dışı bırakılır.",
+        "name_tr":  "Efsun: Perili Zemin"
+    },
+    {
+        "name":  "Hex: Hive Mind",
+        "role":  "killer",
+        "slug":  "hex-hive-mind",
+        "desc":  "The first time you hook any Survivor, a random Dull Totem becomes a Hex Totem, provided that a Dull Totem remains in the Trial Grounds. Generators are highlighted; the intensity of the generator\u0027s Auras reveals their repair progress. As soon as a total of 4 generators have been completed in the Trial: All remaining generators explode, lose 6/8/10 % progess, and start regressing. The associated Hex Totem becomes dull, and this perk becomes disabled for the remainder of the trial. The Hex Effects persist until the Hex Totem is either blessed or cleansed by a Survivor, disabling it for the remainder of the Trial.",
+        "owner":  "The First",
+        "desc_tr":  "Herhangi bir Hayatta Kalanı ilk kez kancaladığınızda, rastgele bir Kör Totem, Deneme Alanında bir Kör Totemin kalması koşuluyla, Efsun Toteme dönüşür. Jeneratörler vurgulanmıştır; Jeneratörün Auralarının yoğunluğu onarımın ilerlemesini ortaya koyuyor. Denemede toplam 4 jeneratör tamamlanır tamamlanmaz: Kalan tüm jeneratörler patlar, %6/8/10 ilerleme kaybeder ve gerilemeye başlar. İlgili Efsun Totem donuklaşır ve bu yetenek denemenin geri kalanı boyunca devre dışı kalır. Efsun Etkileri, Efsun Totem bir Kurban tarafından kutsanana veya temizlenene kadar devam eder ve Denemenin geri kalanı boyunca onu devre dışı bırakır.",
+        "name_tr":  "Efsun: Kovan Zihni"
+    },
+    {
+        "name":  "Hex: Huntress Lullaby",
+        "role":  "killer",
+        "slug":  "hex-huntress-lullaby",
+        "desc":  "Survivors performing Healing or Repairing actions suffer from the following effect: Increases the Progression penalty for Failed Skill Checks by 2/4/6 %. Each time a Survivor is hooked, Hex: Huntress Lullaby grows in power and gains +1 Token, up to a maximum of 5 Tokens. Survivors performing Healing or Repairing actions suffer from the following additional effect: Reduces the time between the audio cue announcing an imminent Skill Check and it appearing, depending on the number of accumulated Tokens: 1 Token: -14 % 2 Tokens: -28 % 3 Tokens: -42 % 4 Tokens: -56 % 5 Tokens: Suppresses the audio cue altogether. The Hex Effects persist until the Hex Totem is either blessed or cleansed by a Survivor, disabling it for the remainder of the Trial.",
+        "owner":  "The Huntress",
+        "desc_tr":  "İyileştirme veya Onarım eylemlerini gerçekleştiren hayatta kalanlar aşağıdaki etkiden etkilenir: Başarısız Beceri Kontrolleri için İlerleme cezasını %2/4/6 artırır. Bir Kurban\u0027a her bağlanıldığında, Efsun: Huntress Lullaby\u0027nin gücü artar ve maksimum 5 Jeton olmak üzere +1 Jeton kazanır. İyileştirme veya Onarım eylemlerini gerçekleştiren hayatta kalanlar aşağıdaki ek etkiden etkilenir: Birikmiş Jeton sayısına bağlı olarak, yaklaşan bir Beceri Kontrolünü bildiren ses işareti ile görünmesi arasındaki süreyi azaltır: 1 Jeton: % -14 2 Jeton: % -28 3 Jeton: % -42 4 Jeton: % -56 5 Jeton: Ses işaretini tamamen bastırır. Efsun Etkileri, Efsun Totem bir Kurban tarafından kutsanana veya temizlenene kadar devam eder ve Denemenin geri kalanı boyunca onu devre dışı bırakır.",
+        "name_tr":  "Efsun: Avcı Ninni"
+    },
+    {
+        "name":  "Hex: No One Escapes Death",
+        "role":  "killer",
+        "slug":  "hex-no-one-escapes-death",
+        "desc":  "Once the Exit Gates are powered, if there is still a Dull Totem remaining in the environment, Hex: No One Escapes Death activates and lights it: Grants a 2/3/4 % Haste Status Effect. Causes all Survivors to suffer from the Exposed Status Effect. Once the Status Effect is revealed to Survivors, Hex: No One Escapes Death triggers the following effect: The Aura of its Hex Totem is revealed to all Survivors within 4 metres. This range gradually expands to 24 metres over the course of 30 seconds. Hex: No One Escapes Death remains inactive if no Dull Totems are available. The Hex Effects persist until the Hex Totem is either blessed or cleansed by a Survivor, disabling it for the remainder of the Trial.",
+        "owner":  "General",
+        "desc_tr":  "Çıkış Kapılarına güç verildiğinde, eğer ortamda hala bir Donuk Totem kalmışsa, Efsun: No One Escapes Death etkinleştirilir ve onu yakar: %2/3/4 Hız Durum Etkisi verir. Tüm Hayatta Kalanların Maruz Kalan Statü Etkisinden muzdarip olmasına neden olur. Durum Etkisi Hayatta Kalanlara gösterildiğinde, Efsun: No One Escapes Death aşağıdaki etkiyi tetikler: Efsun Totem\u0027in Aura\u0027sı 4 metre içindeki tüm Hayatta Kalanlara gösterilir. Bu aralık 30 saniye içerisinde kademeli olarak 24 metreye kadar genişler. Efsun: Hiç Kimse Ölümden Kaçamaz, eğer Donuk Totem mevcut değilse, pasif kalır. Efsun Etkileri, Efsun Totem bir Kurban tarafından kutsanana veya temizlenene kadar devam eder ve Denemenin geri kalanı boyunca onu devre dışı bırakır.",
+        "name_tr":  "Efsun: Kimse Ölümden Kaçamaz"
+    },
+    {
+        "name":  "Hex: Nothing but Misery",
+        "role":  "killer",
+        "slug":  "hex-nothing-but-misery",
+        "desc":  "After damaging Survivors a total of 8 times with Basic Attacks, a random Dull Totem becomes a Hex Totem, cursing all Survivors: Survivors damaged by a Basic Attack suffer from a -5 % Hindered Status Effect for 10/12.5/15 seconds. The Hex Effects persist until the Hex Totem is either blessed or cleansed by a Survivor, disabling it for the remainder of the Trial.",
+        "owner":  "The Ghoul",
+        "desc_tr":  "Temel Saldırılarla Kurbanlara toplam 8 kez hasar verdikten sonra, rastgele bir Kör Totem, tüm Hayatta Kalanları lanetleyen bir Efsun Toteme dönüşür: Temel Saldırıdan hasar gören hayatta kalanlar, 10/12,5/15 saniye boyunca -%5 Engellenmiş Durum Etkisine maruz kalır. Efsun Etkileri, Efsun Totem bir Kurban tarafından kutsanana veya temizlenene kadar devam eder ve Denemenin geri kalanı boyunca onu devre dışı bırakır.",
+        "name_tr":  "Efsun: Sefaletten Başka Bir Şey Değil"
+    },
+    {
+        "name":  "Hex: Overture of Doom",
+        "role":  "killer",
+        "slug":  "hex-overture-of-doom",
+        "desc":  "Creates a Hex Totem that curses the farthest Generator from its location: The Aura of the Cursed Generator is highlighted in yellow. When a Survivor repairs the Cursed Generator for at least 5 seconds, Hex: Overture of Doom triggers the following effects for 20/25/30 seconds: Transfers your Terror Radius to the Cursed Generator. This Terror Radius is set to 32 metres. Grants the Undetectable Status Effect. Once the Cursed Generator is repaired, the next farthest Generator becomes cursed. The Hex Effects persist until the Hex Totem is either blessed or cleansed by a Survivor, disabling it for the remainder of the Trial.",
+        "owner":  "The Krasue",
+        "desc_tr":  "Bulunduğu yerden en uzaktaki Jeneratörü lanetleyen bir Efsun Totem yaratır: Lanetli Jeneratörün Aura\u0027sı sarı renkle vurgulanır. Bir Kurban, Lanetli Jeneratörü en az 5 saniye boyunca onardığında, Efsun: Overture of Doom 20/25/30 saniye boyunca aşağıdaki efektleri tetikler: Terör Yarıçapını Lanetli Jeneratöre aktarır. Bu Terör Yarıçapı 32 metreye ayarlanmıştır. Tespit Edilemez Durum Etkisi kazandırır. Lanetli Jeneratör onarıldığında, en uzaktaki Jeneratör lanetli hale gelir. Efsun Etkileri, Efsun Totem bir Kurban tarafından kutsanana veya temizlenene kadar devam eder ve Denemenin geri kalanı boyunca onu devre dışı bırakır.",
+        "name_tr":  "Efsun: Kıyamet Uvertürü"
+    },
+    {
+        "name":  "Hex: Pentimento",
+        "role":  "killer",
+        "slug":  "hex-pentimento",
+        "desc":  "Unlocks potential in your Aura-reading ability: The Auras of cleansed Totems are revealed to you in white. Press the Interaction button over the remains of a cleansed Totem to resurrect it as a Rekindled Totem. For each Rekindled Totem, Hex: Pentimento gains +1 Token, up to a maximum of 5 Tokens: 1 Token: Reduces the Action speeds for Healing and Repairing by -20 %. 2 to 5 Tokens: Increase the strength of the Action Speed penalty by a stackable 1/2/3 % per Token, up to a maximum of 24/28/32 %. Survivors cursed by Hex: Pentimento see the Auras of Rekindled Totems within 16 metres. Once Hex: Pentimento has reached its limit of 5 Tokens, it calls upon The Entity for the following effect: Blocks all Rekindled Totems for the remainder of the Trial. Totems may only be rekindled once per Trial, with The Entity consuming the remains of Rekindled Totems once they are cleansed. The Hex Effects persist until the Hex Totem is either blessed or cleansed by a Survivor, disabling it for the remainder of the Trial.",
+        "owner":  "The Artist",
+        "desc_tr":  "Aura okuma yeteneğinizdeki potansiyeli açığa çıkarır: Temizlenmiş Totemlerin Auraları size beyaz renkte gösterilir. Temizlenmiş bir Totem\u0027i Yeniden Yakılmış Totem olarak yeniden canlandırmak için, temizlenmiş bir Totem\u0027in kalıntıları üzerinde Etkileşim düğmesine basın. Her Yeniden Yakılan Totem için Efsun: Pentimento, maksimum 5 Jeton olmak üzere +1 Jeton kazanır: 1 Jeton: İyileştirme ve Onarım için Aksiyon hızlarını %-20 azaltır. 2 ila 5 Jeton: Aksiyon Hızı cezasının gücünü, maksimum %24/28/32\u0027ye kadar, Jeton başına istiflenebilir %1/2/3 oranında artırın. Efsun tarafından lanetlenen hayatta kalanlar: Pentimento, 16 metre mesafedeki Yeniden Alevlenen Totemlerin Auralarını görebilir. Efsun: Pentimento 5 Jeton sınırına ulaştığında, aşağıdaki etki için Varlığı çağırır: Denemenin geri kalanı boyunca tüm Yeniden Yakılan Totemleri engeller. Totemler her Denemede yalnızca bir kez yeniden yakılabilir; Varlık, Yeniden Yakılan Totemlerin kalıntılarını temizlendikten sonra tüketir. Efsun Etkileri, Efsun Totem bir Kurban tarafından kutsanana veya temizlenene kadar devam eder ve Denemenin geri kalanı boyunca onu devre dışı bırakır.",
+        "name_tr":  "Efsun: Pentimento"
+    },
+    {
+        "name":  "Hex: Retribution",
+        "role":  "killer",
+        "slug":  "hex-retribution",
+        "desc":  "Whenever a Survivor blesses or cleanses a Totem, Hex: Retribution triggers its primary effect: Causes that Survivor to suffer from the Oblivious Status Effect for 40/50/60 seconds. Whenever a Hex Totem is removed by any means, including its own, Hex: Retribution triggers its secondary effect: The Auras of all Survivors are revealed to you for 20 seconds. The Hex Effects persist until the Hex Totem is either blessed or cleansed by a Survivor, disabling it for the remainder of the Trial.",
+        "owner":  "The Deathslinger",
+        "desc_tr":  "Bir Kurban bir Totemi kutsadığında veya temizlediğinde, Efsun: Retribution birincil etkisini tetikler: Kurban\u0027ın 40/50/60 saniye boyunca Bilinmeyen Durum Etkisinden muzdarip olmasına neden olur. Bir Efsun Totem, kendisininki de dahil olmak üzere herhangi bir yöntemle kaldırıldığında, Efsun: Retribution ikincil etkisini tetikler: Tüm Hayatta Kalanların Auraları 20 saniye boyunca size gösterilir. Efsun Etkileri, Efsun Totem bir Kurban tarafından kutsanana veya temizlenene kadar devam eder ve Denemenin geri kalanı boyunca onu devre dışı bırakır.",
+        "name_tr":  "Efsun: İntikam"
+    },
+    {
+        "name":  "Hex: Ruin",
+        "role":  "killer",
+        "slug":  "hex-ruin",
+        "desc":  "All Generators not currently being repaired experience the following effect: Causes them to automatically regress at 100/125/150 % of the default Regression rate. The Hex Effects persist until the Hex Totem is either blessed or cleansed by a Survivor, disabling it for the remainder of the Trial.",
+        "owner":  "The Hag",
+        "desc_tr":  "Şu anda tamir edilmeyen tüm Jeneratörler aşağıdaki etkiyi yaşar: Varsayılan Regresyon oranının %100/125/150\u0027sinde otomatik olarak gerilemelerine neden olur. Efsun Etkileri, Efsun Totem bir Kurban tarafından kutsanana veya temizlenene kadar devam eder ve Denemenin geri kalanı boyunca onu devre dışı bırakır.",
+        "name_tr":  "Efsun: Yıkım"
+    },
+    {
+        "name":  "Hex: The Third Seal",
+        "role":  "killer",
+        "slug":  "hex-the-third-seal",
+        "desc":  "The last 2/3/4 Survivors you hit with a Basic or Special Attack suffer permanently from the Blindness Status Effect. The Hex Effects persist until the Hex Totem is either blessed or cleansed by a Survivor, disabling it for the remainder of the Trial.",
+        "owner":  "The Hag",
+        "desc_tr":  "Temel veya Özel Saldırı ile vurduğunuz son 2/3/4 Hayatta Kalanlar, Körlük Durumu Etkisinden kalıcı olarak etkilenir. Efsun Etkileri, Efsun Totem bir Kurban tarafından kutsanana veya temizlenene kadar devam eder ve Denemenin geri kalanı boyunca onu devre dışı bırakır.",
+        "name_tr":  "Efsun: Üçüncü Mühür"
+    },
+    {
+        "name":  "Hex: Thrill of the Hunt",
+        "role":  "killer",
+        "slug":  "hex-thrill-of-the-hunt",
+        "desc":  "Start the Trial with 5 Tokens, one for each Totem located in the environment: Reduces the Action speeds for Blessing and Cleansing by a stack-able 8/10/12 % per Token, up to a maximum of 40/50/60 %. Hex: Thrill of the Hunt loses -1 Token whenever a Totem is cleansed. The Hex Effects persist until the Hex Totem is either blessed or cleansed by a Survivor, disabling it for the remainder of the Trial.",
+        "owner":  "General",
+        "desc_tr":  "Denemeyi, ortamda bulunan her Totem için bir tane olmak üzere 5 Jetonla başlatın: Kutsama ve Temizleme için Aksiyon hızlarını, maksimum %40/50/60\u0027a kadar, Jeton başına istiflenebilir %8/10/12 oranında azaltır. Efsun: Av Heyecanı, bir Totem temizlendiğinde -1 Jeton kaybeder. Efsun Etkileri, Efsun Totem bir Kurban tarafından kutsanana veya temizlenene kadar devam eder ve Denemenin geri kalanı boyunca onu devre dışı bırakır.",
+        "name_tr":  "Efsun: Avın Heyecanı"
+    },
+    {
+        "name":  "Hex: Two Can Play",
+        "role":  "killer",
+        "slug":  "hex-two-can-play",
+        "desc":  "Anytime you are stunned or blinded by any Survivor a total of 4/3/2 times, and if there is not yet a Hex Totem already associated with Hex: Two Can Play and there is at least one Dull Totem remaining in the Trial Grounds, Hex: Two Can Play activates on a random Totem: Blinds all Survivors who stun or blind you for 1.5 seconds. This does not affect carried Survivors. The Hex Effects persist until the Hex Totem is either blessed or cleansed by a Survivor, disabling it for the remainder of the Trial.",
+        "owner":  "The Good Guy",
+        "desc_tr":  "Herhangi bir Hayatta Kalan tarafından toplam 4/3/2 kez sersemlettiğinizde veya kör ettiğinizde ve henüz Efsun: Two Can Play ile ilişkilendirilmiş bir Efsun Totem yoksa ve Deneme Alanında en az bir Donuk Totem kaldıysa, Efsun: Two Can Play rastgele bir Totem üzerinde etkinleştirilir: Sizi 1,5 saniye boyunca sersemleten veya kör eden tüm Hayatta Kalanları kör eder. Bu, taşınan Hayatta Kalanları etkilemez. Efsun Etkileri, Efsun Totem bir Kurban tarafından kutsanana veya temizlenene kadar devam eder ve Denemenin geri kalanı boyunca onu devre dışı bırakır.",
+        "name_tr":  "Efsun: İki Oynayabilir"
+    },
+    {
+        "name":  "Hex: Undying",
+        "role":  "killer",
+        "slug":  "hex-undying",
+        "desc":  "Whenever a Survivor is within 2/3/4 metres of a Dull Totem, Hex: Undying triggers its primary effect: Their Aura is revealed to you for as long as they remain in that range. Whenever a Hex Totem is cleansed, Hex: Undying triggers its secondary effect: Transfers the cleansed Hex to the Hex Totem associated with Hex: Undying instead, replacing it. The Hex Effects persist until the Hex Totem is either blessed or cleansed by a Survivor, disabling it for the remainder of the Trial.",
+        "owner":  "The Blight",
+        "desc_tr":  "Bir Kurban, bir Donuk Totemin 2/3/4 metre yakınında olduğunda, Efsun: Undying birincil etkisini tetikler: Auraları, o aralıkta kaldıkları sürece size gösterilir. Bir Efsun Totem temizlendiğinde, Efsun: Undying ikincil etkisini tetikler: Temizlenen Efsun\u0027i, onun yerine Efsun: Undying ile ilişkili Efsun Totemine aktarır. Efsun Etkileri, Efsun Totem bir Kurban tarafından kutsanana veya temizlenene kadar devam eder ve Denemenin geri kalanı boyunca onu devre dışı bırakır.",
+        "name_tr":  "Efsun: Ölümsüz"
+    },
+    {
+        "name":  "Hex: Wretched Fate",
+        "role":  "killer",
+        "slug":  "hex-wretched-fate",
+        "desc":  "You see your victim from afar and resolve to prolong their suffering. After a Generator is completed, Hex: Wretched Fate activates and lights a random Dull Totem, cursing the Obsession: Reduces their Repair speed by 27/30/33 %. The Aura of the Hex Totem is revealed to them within 12 metres.",
+        "owner":  "The Dark Lord",
+        "desc_tr":  "Kurbanınızı uzaktan görüyorsunuz ve acılarını uzatmaya karar veriyorsunuz. Bir Jeneratör tamamlandıktan sonra, Efsun: Wretched Fate etkinleştirilir ve rastgele bir Donuk Totem yakarak Obsession\u0027ı lanetler: Onarım hızlarını %27/30/33 azaltır. Efsun Totemin Aurası onlara 12 metre içinde gösterilir.",
+        "name_tr":  "Efsun: Sefil Kader"
+    },
+    {
+        "name":  "Hoarder",
+        "role":  "killer",
+        "slug":  "hoarder",
+        "desc":  "You protect what little you have and are perceptive to those rummaging through your stockpiles. Hoarder triggers a Loud Noise Notification for 4 seconds, whenever a Survivor performs any of the following actions within 32/48/64 metres of your location: Unlocks a Chest. Picks up any Item. Hoarder spawns 2 additional Chests in the Trial.",
+        "owner":  "The Twins",
+        "desc_tr":  "Sahip olduğunuz azıcık şeyi korursunuz ve stoklarınızı karıştıranlara karşı anlayışlı olursunuz. Bir Kurban konumunuza 32/48/64 metre mesafede aşağıdaki eylemlerden herhangi birini gerçekleştirdiğinde, Hoarder 4 saniye boyunca Yüksek Gürültü Bildirimi tetikler: Bir Sandığın kilidini açar. Herhangi bir Öğeyi alır. Hoarder, Denemede 2 ek Sandık daha ortaya çıkarır.",
+        "name_tr":  "Stokçu"
+    },
+    {
+        "name":  "Hubris",
+        "role":  "killer",
+        "slug":  "hubris",
+        "desc":  "Whenever a Survivor stuns you by any means, Hubris triggers its effect: Causes them to suffer from the Exposed Status Effect for 20/25/30 seconds. Hubris has a cool-down of 20 seconds.",
+        "owner":  "The Knight",
+        "desc_tr":  "Bir Kurban sizi herhangi bir şekilde sersemlettiğinde, Hubris etkisini tetikler: 20/25/30 saniye boyunca Maruz Kalma Durum Etkisinden etkilenmelerine neden olur. Hubris\u0027in 20 saniyelik bir bekleme süresi vardır.",
+        "name_tr":  "Kibir"
+    },
+    {
+        "name":  "Human Greed",
+        "role":  "killer",
+        "slug":  "human-greed",
+        "desc":  "One can always rely on the avarice of the living and use it to one\u0027s advantage. Grants the ability to kick opened Chests and close them. The Auras of unopened Chests are revealed to you at all times. The Auras of Survivors coming within 8 metres of unopened or closed Chests are revealed to you for 3/4/5 seconds. Human Greed has a cool-down of 10 seconds on the ability to kick Chests.",
+        "owner":  "The Dark Lord",
+        "desc_tr":  "İnsan her zaman yaşayanların açgözlülüğüne güvenebilir ve bunu kendi avantajına kullanabilir. Açılan Sandıkları tekmeleme ve kapatma yeteneği verir. Açılmamış Sandıkların Auraları size her zaman açıklanır. Açılmamış veya kapalı Sandıkların 8 metre yakınına gelen Hayatta Kalanların Auraları 3/4/5 saniye boyunca size gösterilir. Human Greed\u0027in Sandıklara tekme atma yeteneğinin 10 saniyelik bir soğuma süresi vardır.",
+        "name_tr":  "İnsan Açgözlülüğü"
+    },
+    {
+        "name":  "Hysteria",
+        "role":  "killer",
+        "slug":  "hysteria",
+        "desc":  "Whenever you injure a healthy Survivor, Hysteria triggers its effect: Causes all Survivors currently in the Injured State to suffer from the Oblivious Status Effect for 30/35/40 seconds. This effect also applies the Survivor triggering it. Hysteria has a cool-down of 20 seconds.",
+        "owner":  "The Nemesis",
+        "desc_tr":  "Sağlıklı bir Kurban\u0027ı yaraladığınızda, Hysteria etkisini tetikler: Şu anda Yaralı Durumda bulunan tüm Kurbanların 30/35/40 saniye boyunca Bilinmeyen Durum Etkisinden muzdarip olmasına neden olur. Bu etki aynı zamanda onu tetikleyen Survivor\u0027a da uygulanır. Hysteria\u0027nın 20 saniyelik bir bekleme süresi vardır.",
+        "name_tr":  "Histeri"
+    },
+    {
+        "name":  "I\u0027m All Ears",
+        "role":  "killer",
+        "slug":  "m-all-ears",
+        "desc":  "Whenever a Survivor performs a Rushed Vault action within 48 metres of your location, you benefit from the following effect: The Aura of the Survivor is revealed to you for 8 seconds. I\u0027m All Ears has a cool-down of 60/45/30 seconds.",
+        "owner":  "The Ghost Face",
+        "desc_tr":  "Bir Kurban konumunuza 48 metre mesafede bir Koşturulmuş Vault eylemi gerçekleştirdiğinde, aşağıdaki etkiden faydalanırsınız: Kurban\u0027ın Aura\u0027sı 8 saniye boyunca size gösterilir. I\u0027m All Ears\u0027ün bekleme süresi 60/45/30 saniyedir.",
+        "name_tr":  "Tamamen Kulaklarım"
+    },
+    {
+        "name":  "Infectious Fright",
+        "role":  "killer",
+        "slug":  "nfectious-fright",
+        "desc":  "Whenever a Survivor is put into the Dying State by any means, all other Survivors within your Terror Radius will scream and reveal their current location to you for 4/5/6 seconds. — (Hymn of Praise, 11.4)",
+        "owner":  "The Plague",
+        "desc_tr":  "Bir Kurban herhangi bir şekilde Ölüm Durumuna getirildiğinde, Terör Yarıçapınız içindeki diğer tüm Kurbanlar çığlık atacak ve 4/5/6 saniye boyunca mevcut konumlarını size açıklayacaktır. — (Övgü İlahisi, 11.4)",
+        "name_tr":  "Bulaşıcı Korku"
+    },
+    {
+        "name":  "Insidious",
+        "role":  "killer",
+        "slug":  "nsidious",
+        "desc":  "Unlocks the stealth ability. After standing still for 3/2/1 second(s), Insidious activates for as long as you remain stationary: Grants the Undetectable Status Effect. Insidious deactivates once you start moving again.",
+        "owner":  "General",
+        "desc_tr":  "Gizli yeteneğin kilidini açar. 3/2/1 saniye boyunca hareketsiz durduktan sonra, hareketsiz kaldığınız sürece Sinsi etkinleşir: Tespit Edilemez Durum Etkisi kazandırır. Tekrar hareket etmeye başladığınızda Sinsi devre dışı kalır.",
+        "name_tr":  "Sinsi"
+    },
+    {
+        "name":  "Iron Grasp",
+        "role":  "killer",
+        "slug":  "ron-grasp",
+        "desc":  "While carrying a Survivor, they suffer from the following effects: Reduces the strength of the Involuntary Strafing caused by their wiggling by -75 %. Increases the time required to break free from your grasp by 4/8/12 %.",
+        "owner":  "General",
+        "desc_tr":  "Bir Hayatta Kalanı taşırken aşağıdaki etkilerden etkilenirler: Kıpırdamalarından kaynaklanan İstemsiz Saldırının gücünü -%75 azaltır. Elinizden kurtulmak için gereken süreyi %4/8/12 artırır.",
+        "name_tr":  "Demir Kavrama"
+    },
+    {
+        "name":  "Iron Maiden",
+        "role":  "killer",
+        "slug":  "ron-maiden",
+        "desc":  "While interacting with an empty Locker, Iron Maiden applies its primary effect: Increases your Search speed by 30/40/50 %. Whenever a Survivor exits a Locker, Iron Maiden triggers its secondary effects: Causes them to scream and trigger a Loud Noise Notification at their current location. This effect lingers for 4 seconds. Causes them to suffer from the Exposed Status Effect for 30 seconds.",
+        "owner":  "The Legion",
+        "desc_tr":  "Boş bir Dolapla etkileşime girerken Iron Maiden birincil etkisini uygular: Arama hızınızı %30/40/50 artırır. Bir Hayatta Kalan bir Dolaptan çıktığında, Iron Maiden onun ikincil etkilerini tetikler: Çığlık atmalarına ve bulundukları konumda bir Yüksek Gürültü Bildirimi tetiklemelerine neden olur. Bu etki 4 saniye sürer. 30 saniye boyunca Maruz Kalma Durum Etkisine maruz kalmalarına neden olur.",
+        "name_tr":  "Demir Bakire"
+    },
+    {
+        "name":  "Keep Them Waiting",
+        "role":  "killer",
+        "slug":  "keep-them-waiting",
+        "desc":  "Damaging any Survivor other than the Obsession with a Basic Attack causes Keep Them Waiting to gain +1 Token, up to a maximum of 6/7/8 Tokens. Damaging the Obsession with either a Basic or Special Attack causes Keep Them Waiting to lose -2 Tokens: Grants a stack-able -4 % per Token Cool-down time reduction on successful Basic Attacks, up to a maximum of 24/28/32 %. Keep Them Waiting freezes its current Token Count once the Obsession is sacrificed or killed. You can only be obsessed with one Survivor at a time.",
+        "owner":  "General",
+        "desc_tr":  "Takıntı dışında herhangi bir Kurban\u0027a Temel Saldırı ile hasar vermek, Keep Them Waiting\u0027in maksimum 6/7/8 Jeton olmak üzere +1 Jeton kazanmasına neden olur. Obsession\u0027a bir Temel veya Özel Saldırı ile hasar vermek, Keep On\u0027ların -2 Jeton kaybetmesine neden olur: Başarılı Temel Saldırılarda Jeton başına Bekleme Süresinde maksimum %24/28/32\u0027ye kadar istiflenebilir -%4 oranında azalma sağlar. Onları Bekletin, Obsession feda edildiğinde veya öldürüldüğünde mevcut Jeton Sayısını dondurur. Aynı anda yalnızca bir Survivor\u0027a takıntılı olabilirsiniz.",
+        "name_tr":  "Onları Bekletin"
+    },
+    {
+        "name":  "Knock Out",
+        "role":  "killer",
+        "slug":  "knock-out",
+        "desc":  "Whenever a Survivor moves farther than 6 metres from a Pallet within 6 seconds of dropping it, Knock Out triggers its effect: Causes them to suffer from a -5 % Hindered Status Effect for 3/4/5 seconds.",
+        "owner":  "The Cannibal",
+        "desc_tr":  "Bir Hayatta Kalan, paleti düşürdükten sonraki 6 saniye içinde 6 metreden daha uzağa hareket ederse, Nakavt etkisini tetikler: 3/4/5 saniye boyunca -%5 Engellenmiş Durum Etkisine maruz kalmasına neden olur.",
+        "name_tr":  "Nakavt"
+    },
+    {
+        "name":  "Languid Touch",
+        "role":  "killer",
+        "slug":  "languid-touch",
+        "desc":  "When a Survivor scares off a Crow within 36 metres of your location, Languid Touch activates: Causes that Survivor to suffer from the Exhausted Status Effect for 6/8/10 seconds. Languid Touch has a cool-down of 5 seconds.",
+        "owner":  "The Lich",
+        "desc_tr":  "Bir Kurban, konumunuza 36 metre mesafedeki bir Karga\u0027yı korkuttuğunda, Languid Touch etkinleştirilir: Kurban\u0027ın 6/8/10 saniye boyunca Bitkinlik Durum Etkisinden muzdarip olmasına neden olur. Languid Touch\u0027ın 5 saniyelik bir soğuma süresi vardır.",
+        "name_tr":  "Ağır Dokunuş"
+    },
+    {
+        "name":  "Lethal Pursuer",
+        "role":  "killer",
+        "slug":  "lethal-pursuer",
+        "desc":  "At the start of the Trial, the Auras of all Survivors are revealed to you for 7/8/9 seconds. Extends the duration of all instances of a Survivor Aura being revealed to you by +2 seconds. Lethal Pursuer benefits from its own effect.",
+        "owner":  "The Nemesis",
+        "desc_tr":  "Denemenin başlangıcında, tüm Hayatta Kalanların Auraları 7/8/9 saniye boyunca size gösterilir. Survivor Aura\u0027nın tüm örneklerinin size gösterilme süresini +2 saniye uzatır. Ölümcül Takipçi kendi etkisinden yararlanır.",
+        "name_tr":  "Ölümcül Takipçi"
+    },
+    {
+        "name":  "Leverage",
+        "role":  "killer",
+        "slug":  "leverage",
+        "desc":  "Whenever a Survivor performs an Unhook action, they suffer from the following effect for 60 seconds: Reduces their Healing speeds by 20/25/30 %.",
+        "owner":  "The Skull Merchant",
+        "desc_tr":  "Bir Hayatta Kalan, Kancayı Kaldırma eylemi gerçekleştirdiğinde, 60 saniye boyunca aşağıdaki etkiye maruz kalır: İyileşme hızlarını %20/25/30 azaltır.",
+        "name_tr":  "Kaldıraç"
+    },
+    {
+        "name":  "Lightborn",
+        "role":  "killer",
+        "slug":  "lightborn",
+        "desc":  "Unlike other beasts of The Fog, you have adapted to light. The Auras of Survivors attempting to blind you by any means are revealed to you for 6/8/10 seconds. Grants immunity from being blinded from Flashlights, Firecrackers, Flash Grenades, and Blast Mine.",
+        "owner":  "The Hillbilly",
+        "desc_tr":  "The Fog\u0027un diğer canavarlarının aksine siz ışığa uyum sağladınız. Sizi herhangi bir şekilde kör etmeye çalışan Hayatta Kalanların Auraları 6/8/10 saniye boyunca size gösterilir. El Fenerlerinden, Havai Fişeklerden, Flaş Bombalarından ve Patlayıcı Madenden kör edilmeye karşı bağışıklık sağlar.",
+        "name_tr":  "Işıkdoğumlu"
+    },
+    {
+        "name":  "Machine Learning",
+        "role":  "killer",
+        "slug":  "machine-learning",
+        "desc":  "After performing the Damage Generator action, Machine Learning activates: Causes that Generator to become a Compromised Generator. Damaging another Generator transfers the state to it instead. The Aura of the Compromised Generator is highlighted to you in yellow until it is completed. Once the Compromised Generator is completed, you benefit from the following effects for 40/50/60 seconds: Undetectable Status Effect +8 % Haste Status Effect Machine Learning deactivates after use.",
+        "owner":  "The Singularity",
+        "desc_tr":  "Hasar Oluşturucu eylemi gerçekleştirildikten sonra Makine Öğrenimi etkinleştirilir: Bu Jeneratörün Güvenliği Tehlike Altına Girmiş bir Jeneratör haline gelmesine neden olur. Başka bir Jeneratöre zarar vermek, durumu ona aktarır. Tehlike Altındaki Jeneratörün Aurası, tamamlanana kadar sarı renkle vurgulanır. Tehlike Altındaki Jeneratör tamamlandığında, 40/50/60 saniye boyunca aşağıdaki etkilerden yararlanırsınız: Tespit Edilemez Durum Etkisi +%8 Hız Durum Etkisi Makine Öğrenimi kullanımdan sonra devre dışı kalır.",
+        "name_tr":  "Makine Öğrenimi"
+    },
+    {
+        "name":  "Mad Grit",
+        "role":  "killer",
+        "slug":  "mad-grit",
+        "desc":  "Whenever you are carrying a Survivor, Mad Grit activates: Removes the Cool-down of missed Basic Attacks. Pauses the Wiggle Progression of the carried Survivor for 2/3/4 seconds each time you successfully hit another Survivor.",
+        "owner":  "The Legion",
+        "desc_tr":  "Bir Hayatta Kalanı taşıdığınızda Mad Grit etkinleştirilir: Kaçırılan Temel Saldırıların Bekleme Süresini kaldırır. Başka bir Kurban\u0027a başarılı bir şekilde vurduğunuzda, taşınan Kurban\u0027ın Kıkırdama İlerlemesini 2/3/4 saniye duraklatır.",
+        "name_tr":  "Çılgın Cesaret"
+    },
+    {
+        "name":  "Make Your Choice",
+        "role":  "killer",
+        "slug":  "make-your-choice",
+        "desc":  "Whenever a Survivor is rescued from a Hook, while you are farther than 32 metres away, Make Your Choice activates: Causes the unhooking Survivor to scream and reveal their location to you. Causes them to suffer from the Exposed Status Effect for 40/50/60 seconds. Make Your Choice has a cooldown of 40/50/60 seconds.",
+        "owner":  "The Pig",
+        "desc_tr":  "Ne zaman bir Kurban Kancadan kurtarılırsa, siz 32 metreden daha uzaktayken Seçiminizi Yapın etkinleşir: Kancayı açan Kurban\u0027ın çığlık atmasına ve konumunu size açıklamasına neden olur. 40/50/60 saniye boyunca Maruz Kalma Durum Etkisinden etkilenmelerine neden olur. Seçimini Yap\u0027ın bekleme süresi 40/50/60 saniyedir.",
+        "name_tr":  "Seçiminizi Yapın"
+    },
+    {
+        "name":  "Merciless Storm",
+        "role":  "killer",
+        "slug":  "merciless-storm",
+        "desc":  "Whenever a Generator reaches 90 % of Repair progression, Merciless Storm triggers its effect: All Survivors repairing that Generator are faced with a continuous stream of Skill Checks until the Generator is completed. If any contributing Survivor fails a Skill Check or interrupts the action by any means, The Entity blocks the Generator for 16/18/20 seconds. Merciless Storm can only trigger once per Generator per Trial.",
+        "owner":  "The Onryō",
+        "desc_tr":  "Bir Jeneratör Onarım ilerlemesinin %90\u0027ına ulaştığında, Acımasız Fırtına etkisini tetikler: Bu Jeneratörü tamir eden tüm Hayatta Kalanlar, Jeneratör tamamlanana kadar sürekli bir Beceri Kontrolleri akışıyla karşı karşıya kalır. Katkıda bulunan herhangi bir Hayatta Kalan, Beceri Kontrolünde başarısız olursa veya eylemi herhangi bir şekilde kesintiye uğratırsa Varlık, Jeneratörü 16/18/20 saniye süreyle bloke eder. Acımasız Fırtına, Deneme başına Jeneratör başına yalnızca bir kez tetiklenebilir.",
+        "name_tr":  "Acımasız Fırtına"
+    },
+    {
+        "name":  "Mindbreaker",
+        "role":  "killer",
+        "slug":  "mindbreaker",
+        "desc":  "While repairing a Generator, Survivors suffer from the following effects: Incurs the Blindness and Exhausted Status Effects. Both Status Effects linger for 3/4/5 seconds after ending the interaction. Mindbreaker cannot be used to override an existing Exhausted Status Effect, but pauses its timer instead.",
+        "owner":  "The Demogorgon",
+        "desc_tr":  "Hayatta Kalanlar, bir Jeneratörü onarırken aşağıdaki etkilerden etkilenir: Körlük ve Bitkinlik Durum Etkilerine maruz kalır. Her iki Durum Efekti de etkileşim sona erdikten sonra 3/4/5 saniye boyunca devam eder. Mindbreaker, mevcut bir Bitkinlik Durum Efektini geçersiz kılmak için kullanılamaz ancak bunun yerine zamanlayıcısını duraklatır.",
+        "name_tr":  "Zihin Kırıcı"
+    },
+    {
+        "name":  "Monitor \u0026 Abuse",
+        "role":  "killer",
+        "slug":  "monitor-abuse",
+        "desc":  "While actively chasing a Survivor, Monitor \u0026 Abuse applies its primary effect: Increases your Terror Radius by 5/10/15 %. While not actively chasing a Survivor, Monitor \u0026 Abuse applies its secondary effect: Reduces your Terror Radius by 15/20/25 %.",
+        "owner":  "The Doctor",
+        "desc_tr":  "Bir Hayatta Kalanı aktif olarak kovalarken, İzleme ve Kötüye Kullanım birincil etkisini uygular: Terör Yarıçapını %5/10/15 artırır. Monitor \u0026 Abuse, bir Kurban\u0027ı aktif olarak kovalamasa da ikincil etkisini uygular: Terör Yarıçapını %15/20/25 azaltır.",
+        "name_tr":  "İzleme ve Kötüye Kullanım"
+    },
+    {
+        "name":  "Nemesis",
+        "role":  "killer",
+        "slug":  "nemesis",
+        "desc":  "Whenever a Survivor other than your Obsession blinds you by any means or stuns you with a Pallet or a Locker, Nemesis triggers its primary effect: Causes that Survivor to become your current Obsession. Whenever your Obsession switches to a different Survivor by any means, Nemesis triggers its secondary effects: Causes that Survivor to suffer from the Oblivious Status Effect for 40/50/60 seconds. Their Aura is revealed to you for 8 seconds. You can only be obsessed with one Survivor at a time.",
+        "owner":  "The Oni",
+        "desc_tr":  "Takıntınızın dışında bir Kurban sizi herhangi bir şekilde kör ettiğinde veya bir Palet veya Dolapla sizi sersemlediğinde, Nemesis birincil etkisini tetikler: O Hayatta Kalanın mevcut Takıntınız olmasını sağlar. Obsession\u0027ınız herhangi bir şekilde farklı bir Kurban\u0027a geçtiğinde, Nemesis ikincil etkilerini tetikler: Kurban\u0027ın 40/50/60 saniye boyunca Bilinçsiz Durum Etkisinden muzdarip olmasına neden olur. Auraları 8 saniye boyunca size gösterilir. Aynı anda yalnızca bir Survivor\u0027a takıntılı olabilirsiniz.",
+        "name_tr":  "Düşman"
+    },
+    {
+        "name":  "No Holds Barred",
+        "role":  "killer",
+        "slug":  "no-holds-barred",
+        "desc":  "Each time a Generator is completed, No Holds Barred calls upon The Entity for the following effects: Blocks the Generator with the most Progression for 15/20/25 seconds. The Aura of the Blocked Generator is highlighted to you in white.",
+        "owner":  "General",
+        "desc_tr":  "Bir Jeneratörün tamamlandığı her defasında, No Holds Barred, aşağıdaki etkiler için Varlığı çağırır: En fazla İlerlemeye sahip Jeneratörü 15/20/25 saniye boyunca bloke eder. Engellenen Jeneratörün Aurası size beyaz renkle vurgulanır.",
+        "name_tr":  "Engel Yok"
+    },
+    {
+        "name":  "No Quarter",
+        "role":  "killer",
+        "slug":  "no-quarter",
+        "desc":  "Whenever a Survivor healing themselves by any means reaches 75 % Healing Progress, No Quarter triggers its effect: The Survivor is faced with a continuous stream of Skill Checks until the Self-Heal is completed. If they fail a Skill Check or interrupt the action by any means, they suffer from the Broken Status Effect for 20/25/30 seconds.",
+        "owner":  "The Houndmaster",
+        "desc_tr":  "Herhangi bir şekilde kendini iyileştiren bir Kurban, %75 İyileşme İlerlemesine ulaştığında, Hiçbir Çeyrek etkisini tetikler: Kurban, Kendini İyileştirme tamamlanana kadar sürekli bir Beceri Kontrolleri akışıyla karşı karşıya kalır. Beceri Kontrolünde başarısız olurlarsa veya eylemi herhangi bir şekilde kesintiye uğratırlarsa, 20/25/30 saniye boyunca Bozuk Durum Etkisine maruz kalırlar.",
+        "name_tr":  "Çeyrek Yok"
+    },
+    {
+        "name":  "No Way Out",
+        "role":  "killer",
+        "slug":  "no-way-out",
+        "desc":  "Whenever you hook a Survivor for the first time, No Way Out gains +1 Token. Once the Exit Gates are powered, No Way Out activates: Causes the first Survivor to interact with either Exit Gate Switch to trigger a Loud Noise Notification at their location. Upon triggering the Loud Noise Notification, No Way Out calls upon The Entity for the following effect: Blocks both Exit Gate Switches for 12 seconds. This time is extended by an additional 6/9/12 seconds per accumulated Token, up to a combined maximum of 36/48/60 seconds.",
+        "owner":  "The Trickster",
+        "desc_tr":  "Bir Survivor\u0027a ilk kez bağlandığınızda, No Way Out +1 Jeton kazanır. Çıkış Kapılarına güç verildiğinde, Çıkış Yok etkinleştirilir: İlk Hayatta Kalanın, Çıkış Kapısı Anahtarlarından herhangi biriyle etkileşime girerek bulundukları yerde Yüksek Gürültü Bildirimi tetiklemesine neden olur. Yüksek Gürültü Bildirimini tetikledikten sonra No Way Out, aşağıdaki etki için Varlık\u0027ı çağırır: Her iki Çıkış Kapısı Anahtarını da 12 saniye boyunca bloke eder. Bu süre, biriken Token başına ilave 6/9/12 saniye uzatılarak toplam maksimum 36/48/60 saniyeye kadar uzatılır.",
+        "name_tr":  "Çıkış Yok"
+    },
+    {
+        "name":  "None Are Free",
+        "role":  "killer",
+        "slug":  "none-are-free",
+        "desc":  "Whenever you hook a Survivor for the first time, None Are Free gains +1 Token, up to a maximum of 4 Tokens. Once all Generators are completed, None Are Free calls upon The Entity to trigger the following effect: Blocks all Windows and upright Pallets for a stack-able 12/14/16 seconds per Token, up to a maximum of 48/56/64 seconds.",
+        "owner":  "The Ghoul",
+        "desc_tr":  "Bir Survivor\u0027u ilk kez bağladığınızda, Hiçbiri Bedava Değil, maksimum 4 Jeton olmak üzere +1 Jeton kazanır. Tüm Jeneratörler tamamlandığında, Hiçbiri Ücretsiz Değildir, aşağıdaki etkiyi tetiklemek için Varlık\u0027ı çağırır: Maksimum 48/56/64 saniyeye kadar, Token başına istiflenebilir 12/14/16 saniye boyunca tüm Pencereleri ve dik Paletleri bloke eder.",
+        "name_tr":  "Hiçbiri Ücretsiz Değil"
+    },
+    {
+        "name":  "Nowhere to Hide",
+        "role":  "killer",
+        "slug":  "nowhere-to-hide",
+        "desc":  "Performing the Damage Generator action on a Generator triggers Nowhere to Hide: The Auras of all Survivors within 24 metres of your location are revealed to you for 3/4/5 seconds.",
+        "owner":  "The Knight",
+        "desc_tr":  "Bir Jeneratör üzerinde Hasar Oluşturucu eylemini gerçekleştirmek, Saklanacak Yer Yok\u0027u tetikler: Bulunduğunuz yerden 24 metre uzaktaki tüm Hayatta Kalanların Auraları 3/4/5 saniye boyunca size gösterilir.",
+        "name_tr":  "Saklanacak Hiçbir Yer"
+    },
+    {
+        "name":  "Oppression",
+        "role":  "killer",
+        "slug":  "oppression",
+        "desc":  "Performing the Damage Generator action on a Generator triggers the following effects: Randomly selects up to 4 additional Generators that will also start regressing. Triggers a difficult Skill Check for all Survivors currently repairing them. Oppression has a cool-down of 45/40/35 seconds.",
+        "owner":  "The Twins",
+        "desc_tr":  "Bir Jeneratör üzerinde Hasar Oluşturucu eyleminin gerçekleştirilmesi aşağıdaki etkileri tetikler: Rastgele olarak gerilemeye başlayacak en fazla 4 ek Jeneratör seçer. Şu anda onları tamir eden tüm Hayatta Kalanlar için zorlu bir Beceri Kontrolünü tetikler. Zulümün 45/40/35 saniyelik bir soğuma süresi vardır.",
+        "name_tr":  "Baskı"
+    },
+    {
+        "name":  "Overcharge",
+        "role":  "killer",
+        "slug":  "overcharge",
+        "desc":  "Performing the Damage Generator action on a Generator applies Overcharge: The next Survivor interacting with that Generator is faced with a difficult Skill Check. Instantly regresses that Generator by 2/3/4 % of its maximum possible Progression in addition to the default Progression penalty. After Overcharge is applied to a Generator, the following effect also applies: Increases the Regression speed from 85 % to 130 % of its default value over the next 30 seconds.",
+        "owner":  "The Doctor",
+        "desc_tr":  "Bir Jeneratörde Hasar Oluşturucu eyleminin gerçekleştirilmesi Aşırı Yükleme uygular: Bu Jeneratörle etkileşime giren bir sonraki Hayatta Kalan, zorlu bir Beceri Kontrolüyle karşı karşıya kalır. Varsayılan İlerleme cezasına ek olarak, Jeneratörü anında mümkün olan maksimum İlerlemesinin %2/3/4\u0027ü oranında geriler. Bir Jeneratöre Aşırı Yükleme uygulandıktan sonra aşağıdaki etki de uygulanır: Sonraki 30 saniye içinde Regresyon hızını varsayılan değerinin %85\u0027inden %130\u0027una artırır.",
+        "name_tr":  "Aşırı şarj"
+    },
+    {
+        "name":  "Overwhelming Presence",
+        "role":  "killer",
+        "slug":  "overwhelming-presence",
+        "desc":  "Whenever a Survivor starts using an Item within 32 metres of your location, Overwhelming Presence triggers its primary effect: Inflicts the Exhausted Status Effect for 15 seconds. Whenever a Survivor within 32 metres of your location becomes Exhausted by any means, Overwhelming Presence triggers its secondary effect: The Aura of whichever Exhausted Survivor is closest to your location is revealed to you for 2/3/4 seconds. Overwhelming Presence has a cool-down of 25 seconds.",
+        "owner":  "The Doctor",
+        "desc_tr":  "Bir Hayatta Kalan, konumunuza 32 metre mesafede bir Öğe kullanmaya başladığında, Ezici Varlık birincil etkisini tetikler: 15 saniye boyunca Bitkinlik Durum Efekti uygular. Bulunduğunuz konuma 32 metre mesafedeki bir Hayatta Kalan herhangi bir şekilde Bitkin hale geldiğinde, Ezici Varlık ikincil etkisini tetikler: Bulunduğunuz yere en yakın olan Yorgun Hayatta Kalanın Aura\u0027sı 2/3/4 saniye boyunca size gösterilir. Overwhelming Presence\u0027ın 25 saniyelik bir bekleme süresi vardır.",
+        "name_tr":  "Ezici Varlık"
+    },
+    {
+        "name":  "Phantom Fear",
+        "role":  "killer",
+        "slug":  "phantom-fear",
+        "desc":  "Whenever a Survivor within your Terror Radius looks at you, they suffer from the following effects: Causes them to scream and reveal their Aura to you for 2 seconds. Phantom Fear has a cool-down of 80/70/60 seconds.",
+        "owner":  "The Animatronic",
+        "desc_tr":  "Terör Yarıçapınız içindeki bir Kurban size baktığında aşağıdaki etkilerden etkilenir: Çığlık atmasına ve 2 saniye boyunca Aurasını size göstermesine neden olur. Phantom Fear\u0027ın bekleme süresi 80/70/60 saniyedir.",
+        "name_tr":  "Hayalet Korku"
+    },
+    {
+        "name":  "Pop Goes the Weasel",
+        "role":  "killer",
+        "slug":  "pop-goes-the-weasel",
+        "desc":  "After hooking a Survivor, Pop Goes the Weasel activates for 35/40/45 seconds. While active, manually damaging a Generator triggers the following effect: Increases the regression amount by +15 % resulting in 20 % regression. Pop Goes the Weasel deactivates after use or once its timer elapses.",
+        "owner":  "The Clown",
+        "desc_tr":  "Bir Hayatta Kalanı kancaya taktıktan sonra Pop Gelincik Gidiyor 35/40/45 saniye boyunca etkinleşir. Aktifken, bir Jeneratöre manüel olarak zarar vermek aşağıdaki etkiyi tetikler: Gerileme miktarını +%15 artırır ve sonuç olarak %20 gerileme sağlar. Pop Goes the Weasel, kullanımdan sonra veya zamanlayıcısı dolduğunda devre dışı kalır.",
+        "name_tr":  "Pop Gelincik\u0027e Gidiyor"
+    },
+    {
+        "name":  "Predator",
+        "role":  "killer",
+        "slug":  "predator",
+        "desc":  "Whenever you lose a Survivor in a Chase, Predator triggers its effect: Their Aura is revealed to you for 4 seconds. Predator has a cool-down of 60/50/40 seconds.",
+        "owner":  "The Wraith",
+        "desc_tr":  "Bir Kovalamacada bir Kurban\u0027ı kaybettiğinizde, Predator etkisini tetikler: Auraları 4 saniye boyunca size gösterilir. Predator\u0027ın 60/50/40 saniyelik bir soğuma süresi vardır.",
+        "name_tr":  "Yırtıcı"
+    },
+    {
+        "name":  "Rancor",
+        "role":  "killer",
+        "slug":  "rancor",
+        "desc":  "Whenever a Generator is completed, Rancor triggers its primary effects: Causes all Survivors to scream and trigger a Loud Noise Notification at their current location. This effect lingers for 3 seconds. Your Aura is revealed to the Obsession for 5/4/3 seconds. Once the Exit Gates are powered, Rancor additionally triggers its secondary effects on the Obsession: Inflicts the Exposed Status Effect for the remainder of the Trial. Grants the ability to kill them when in close proximity. You can only be obsessed with one Survivor at a time.",
+        "owner":  "The Spirit",
+        "desc_tr":  "Bir Jeneratör tamamlandığında, Rancor birincil etkilerini tetikler: Tüm Hayatta Kalanların çığlık atmasına ve mevcut konumlarında Yüksek Gürültü Bildirimi tetiklemesine neden olur. Bu etki 3 saniye sürer. Auranız 5/4/3 saniye boyunca Obsession\u0027a gösterilir. Çıkış Kapılarına güç verildiğinde, Rancor ayrıca Takıntı üzerinde ikincil etkilerini tetikler: Denemenin geri kalanı boyunca Açık Durum Etkisini uygular. Yakındayken onları öldürme yeteneği verir. Aynı anda yalnızca bir Survivor\u0027a takıntılı olabilirsiniz.",
+        "name_tr":  "Kin"
+    },
+    {
+        "name":  "Rapid Brutality",
+        "role":  "killer",
+        "slug":  "rapid-brutality",
+        "desc":  "You move with a speed and fury that makes blood run cold. You can no longer gain the Bloodlust Status Effect. Successfully hitting a Survivor with a Basic Attack grants you a +5 % Haste Status Effect for 8/9/10 seconds.",
+        "owner":  "The Xenomorph",
+        "desc_tr":  "Kanı donduran bir hız ve öfkeyle hareket ediyorsunuz. Artık Kana Susamışlık Durum Etkisini kazanamazsınız. Bir Kurban\u0027a Temel Saldırı ile başarılı bir şekilde vurmak, size 8/9/10 saniye boyunca +%5 Hız Statü Etkisi kazandırır.",
+        "name_tr":  "Hızlı Vahşet"
+    },
+    {
+        "name":  "Ravenous",
+        "role":  "killer",
+        "slug":  "ravenous",
+        "desc":  "Whenever you hook a Survivor for the first time, Ravenous gains +1 Token, up to a maximum of 4 Tokens. Once you accumulate 4 Tokens, all Survivors suffer from the following effects: Causes them to scream. Inflicts the Exposed Status Effect for 40/50/60 seconds.",
+        "owner":  "The Krasue",
+        "desc_tr":  "Bir Survivor\u0027u ilk kez bağladığınızda Ravenous, maksimum 4 Jeton olmak üzere +1 Jeton kazanır. 4 Jeton topladığınızda, tüm Hayatta Kalanlar aşağıdaki etkilerden etkilenir: Çığlık atmalarına neden olur. 40/50/60 saniye boyunca Maruz Kalma Durum Etkisini uygular.",
+        "name_tr":  "Açgözlü"
+    },
+    {
+        "name":  "Remember Me",
+        "role":  "killer",
+        "slug":  "remember-me",
+        "desc":  "Whenever the Obsession loses a Health State by any means, Remember Me gains +1 Token, up to a maximum of 3/4/5 Tokens: Increases the Opening time of both Exit Gates by a stack-able 6 seconds per Token, up to a maximum additional Opening time of 18/24/30 seconds. This results in a maximum possible Opening time of 38/44/50 seconds for both Exit Gates. Remember Me does not apply its penalty to the Obsession, allowing them to open both Exit Gates in the default time of 20 seconds. You can only be obsessed with one Survivor at a time.",
+        "owner":  "The Nightmare",
+        "desc_tr":  "Obsession herhangi bir şekilde Sağlık Durumunu kaybettiğinde, Beni Hatırla, maksimum 3/4/5 Jeton olmak üzere +1 Jeton kazanır: Her iki Çıkış Kapısının Açılış süresini, maksimum 18/24/30 saniyeye kadar, Jeton başına istiflenebilir 6 saniye kadar artırır. Bu, her iki Çıkış Kapısı için mümkün olan maksimum 38/44/50 saniyelik Açılış süresiyle sonuçlanır. Beni Hatırla, cezasını Obsession\u0027a uygulamaz ve varsayılan 20 saniyelik sürede her iki Çıkış Kapısını da açmalarına izin verir. Aynı anda yalnızca bir Survivor\u0027a takıntılı olabilirsiniz.",
+        "name_tr":  "Beni Hatırla"
+    },
+    {
+        "name":  "Scourge Hook: Floods of Rage",
+        "role":  "killer",
+        "slug":  "scourge-hook-floods-of-rage",
+        "desc":  "At the start of the Trial, 4 Hooks in the environment are changed into Scourge Hooks: The Auras of these Scourge Hooks are highlighted in white. Each time a Survivor is unhooked from a Scourge Hook, the following effects apply: The Auras of all other Survivors are revealed for 5/6/7 seconds.",
+        "owner":  "The Onryō",
+        "desc_tr":  "Denemenin başlangıcında, ortamdaki 4 Kanca, Scourge Kancalarına dönüştürülür: Bu Scourge Kancalarının Auraları beyaz renkle vurgulanır. Bir Kurban, Ceza Kancası\u0027tan her kurtarıldığında aşağıdaki etkiler uygulanır: Diğer tüm Kurbanların Auraları 5/6/7 saniye boyunca ortaya çıkar.",
+        "name_tr":  "Ceza Kancası: Öfke Selleri"
+    },
+    {
+        "name":  "Scourge Hook: Hangman\u0027s Trick",
+        "role":  "killer",
+        "slug":  "scourge-hook-hangman-s-trick",
+        "desc":  "At the start of the Trial, 4 Hooks in the environment are changed into Scourge Hooks: The Auras of these Scourge Hooks are highlighted in white. While carrying a Survivor, Scourge Hook: Hangman\u0027s Trick triggers its primary effect: The Auras of all Survivors within 12/14/16 metres of a Scourge Hook are revealed to you. Whenever a Survivor starts the Sabotage action on any Hook, Scourge Hook: Hangman\u0027s Trick triggers its secondary effect: Triggers a Loud Noise Notification at the location of that Hook.",
+        "owner":  "The Pig",
+        "desc_tr":  "Denemenin başlangıcında, ortamdaki 4 Kanca, Scourge Kancalarına dönüştürülür: Bu Scourge Kancalarının Auraları beyaz renkle vurgulanır. Ceza Kancası: Hangman\u0027s Trick, bir Kurban\u0027ı taşırken birincil etkisini tetikler: Ceza Kancası\u0027un 12/14/16 metre yakınındaki tüm Hayatta Kalanların Auraları size gösterilir. Bir Kurban herhangi bir Kanca üzerinde Sabotaj eylemi başlattığında, Ceza Kancası: Hangman\u0027s Trick ikincil etkisini tetikler: Kancanın bulunduğu yerde bir Yüksek Gürültü Bildirimi tetikler.",
+        "name_tr":  "Ceza Kancası: Adam Asmaca Hilesi"
+    },
+    {
+        "name":  "Scourge Hook: Jagged Compass",
+        "role":  "killer",
+        "slug":  "scourge-hook-jagged-compass",
+        "desc":  "At the start of the Trial, 4 Hooks in the environment are changed into Scourge Hooks: The Auras of these Scourge Hooks are highlighted in white. Whenever a Survivor is unhooked from a normal Hook, the following effect applies: The Hook is converted into a Scourge Hook. Whenever you hook a Survivor onto a Scourge Hook, the following effect applies: The Aura of the Generator with the most progression is highlighted in yellow for 6/8/10 seconds.",
+        "owner":  "The Houndmaster",
+        "desc_tr":  "Denemenin başlangıcında, ortamdaki 4 Kanca, Scourge Kancalarına dönüştürülür: Bu Scourge Kancalarının Auraları beyaz renkle vurgulanır. Bir Kurban normal bir Kancadan çıkarıldığında aşağıdaki etki uygulanır: Kanca, Scourge Kancasına dönüştürülür. Bir Survivor\u0027u Ceza Kancası\u0027a bağladığınızda aşağıdaki etki uygulanır: En fazla ilerlemeye sahip Jeneratörün Aura\u0027sı 6/8/10 saniye boyunca sarı renkle vurgulanır.",
+        "name_tr":  "Ceza Kancası: Pürüzlü Pusula"
+    },
+    {
+        "name":  "Scourge Hook: Monstrous Shrine",
+        "role":  "killer",
+        "slug":  "scourge-hook-monstrous-shrine",
+        "desc":  "At the start of the Trial, the 4 Hooks located inside the Basement and an additional 4 Hooks located throughout the Trial Grounds are all changed into Scourge Hooks: The Auras of Scourge Hooks are highlighted to you in white. Whenever you are farther than 24 metres from a Survivor hooked onto a Scourge Hook, the following effect applies: Accelerates their Sacrifice Process by 10/15/20 %.",
+        "owner":  "General",
+        "desc_tr":  "Denemenin başlangıcında, Bodrumda bulunan 4 Kanca ve Deneme Alanı boyunca bulunan ek 4 Kancanın tümü Scourge Kancalarına dönüştürülür: Scourge Kancalarının Auraları size beyaz renkle vurgulanır. Ceza Kancası\u0027a bağlanan bir Kurban\u0027dan 24 metreden daha uzakta olduğunuzda, aşağıdaki etki uygulanır: Kurban İşlemlerini %10/15/20 hızlandırır.",
+        "name_tr":  "Ceza Kancası: Korkunç Tapınak"
+    },
+    {
+        "name":  "Scourge Hook: Pain Resonance",
+        "role":  "killer",
+        "slug":  "scourge-hook-pain-resonance",
+        "desc":  "Overwhelming pain reverberates outwards. At the start of the Trial, 4 Hooks in the environment are changed into Scourge Hooks: The Auras of these Scourge Hooks are highlighted in white. Start the Trial with 4 Token. Whenever a Survivor is hooked onto a Scourge Hook for the first time, Scourge Hook: Pain Resonance consumes -1 Token and applies the following effects: Causes the Generator with the most progression to explode, damaging it. Instantly regresses the Damaged Generator by 10/15/20 % of its total Progression. Causes the Damaged Generator to start regressing afterwards. Causes all Survivors repairing the Damaged Generator to scream. This does not trigger a Loud Noise Notification. Scourge Hook: Pain Resonance is disabled for the remainder of the Trial once all Tokens are consumed.",
+        "owner":  "The Artist",
+        "desc_tr":  "Dayanılmaz acılar dışarıya yansıyor. Denemenin başlangıcında, ortamdaki 4 Kanca, Scourge Kancalarına dönüştürülür: Bu Scourge Kancalarının Auraları beyaz renkle vurgulanır. Denemeye 4 Token ile başlayın. Bir Kurban, Ceza Kancası\u0027a ilk kez bağlandığında, Ceza Kancası: Pain Resonance -1 Jeton tüketir ve aşağıdaki etkileri uygular: En fazla ilerlemeye sahip olan Jeneratörün patlamasına ve ona hasar vermesine neden olur. Hasarlı Jeneratörü anında toplam İlerlemesinin %10/15/20\u0027si oranında geriler. Hasarlı Jeneratörün daha sonra gerilemeye başlamasına neden olur. Hasarlı Jeneratörü tamir eden tüm Hayatta Kalanların çığlık atmasına neden olur. Bu, Yüksek Gürültü Bildirimini tetiklemez. Ceza Kancası: Tüm Jetonlar tüketildikten sonra, Denemenin geri kalanında Ağrı Rezonansı devre dışı bırakılır.",
+        "name_tr":  "Ceza Kancası: Ağrı Rezonansı"
+    },
+    {
+        "name":  "Scourge Hook: Weeping Wounds",
+        "role":  "killer",
+        "slug":  "scourge-hook-weeping-wounds",
+        "desc":  "At the start of the Trial, 4 Hooks in the environment are changed into Scourge Hooks: The Auras of these Scourge Hooks are highlighted in white. Each time a Survivor is unhooked from a Scourge Hook, the following effects apply: Causes that Survivor to suffer from the Haemorrhage Status Effect for 90 seconds. After the first time that Survivor is healed back to full health, they suffer from the following effect until they are injured again by any means: Reduces their Action speeds for Healing and Repairing by 10/13/16 %.",
+        "owner":  "General",
+        "desc_tr":  "Denemenin başlangıcında, ortamdaki 4 Kanca, Scourge Kancalarına dönüştürülür: Bu Scourge Kancalarının Auraları beyaz renkle vurgulanır. Bir Kurban, Ceza Kancası\u0027tan her kurtarıldığında aşağıdaki etkiler uygulanır: Kurban\u0027ın 90 saniye boyunca Kanama Durumu Efektinden muzdarip olmasına neden olur. Survivor ilk kez iyileşip tam sağlığına kavuştuktan sonra, herhangi bir şekilde tekrar yaralanıncaya kadar aşağıdaki etkiyi yaşar: İyileşme ve Onarım için Eylem hızlarını %10/13/16 azaltır.",
+        "name_tr":  "Ceza Kancası: Ağlayan Yaralar"
+    },
+    {
+        "name":  "See How They Run",
+        "role":  "killer",
+        "slug":  "see-how-they-run",
+        "desc":  "Losing your Obsession in a chase causes See How They Run to gain +1 Token, up to a maximum of 3 Tokens, and performing a Basic or Special Attack with the potential to damage a Survivor causes it to lose -1 Token. While having at least 1 Token, you benefit from the following effect: Grants a stack-able 3/4/5 % Haste Status Effect per Token, up to a maximum of 9/12/15 %. See How They Run has a cool-down of 10 seconds between gaining additional Tokens. You can only be obsessed with one Survivor at a time.",
+        "owner":  "General",
+        "desc_tr":  "Bir kovalamacada Obsession\u0027ınızı kaybetmek, See How They Run\u0027ın maksimum 3 Jeton olmak üzere +1 Jeton kazanmasına neden olur ve bir Hayatta Kalana hasar verme potansiyeli olan bir Temel veya Özel Saldırı gerçekleştirmek, onun -1 Jeton kaybetmesine neden olur. En az 1 Jeton sahibi olduğunuzda, aşağıdaki etkiden yararlanırsınız: Maksimum %9/12/15\u0027e kadar, Jeton başına istiflenebilir %3/4/5 Hız Statü Etkisi verir. Nasıl Koştuklarını Görün, ek Jeton kazanma arasında 10 saniyelik bir soğuma süresine sahiptir. Aynı anda yalnızca bir Survivor\u0027a takıntılı olabilirsiniz.",
+        "name_tr":  "Nasıl Çalıştıklarını Görün"
+    },
+    {
+        "name":  "Septic Touch",
+        "role":  "killer",
+        "slug":  "septic-touch",
+        "desc":  "Whenever a Survivor performs a Healing action while inside the Terror Radius, they suffer from the following effects: Inflicts the Blindness and Exhausted Status Effects. These effects linger for 20/25/30 seconds after the Healing action is interrupted by any means.",
+        "owner":  "The Dredge",
+        "desc_tr":  "Bir Kurban, Terör Yarıçapı içindeyken bir İyileştirme eylemi gerçekleştirdiğinde, aşağıdaki etkilerden muzdarip olur: Körlük ve Bitkinlik Durum Etkilerini uygular. Bu etkiler, İyileştirme eylemi herhangi bir şekilde kesintiye uğradıktan sonra 20/25/30 saniye boyunca devam eder.",
+        "name_tr":  "Septik Dokunuş"
+    },
+    {
+        "name":  "Shadowborn",
+        "role":  "killer",
+        "slug":  "shadowborn",
+        "desc":  "Whenever you are blinded by any means, Shadowborn triggers its effect: Grants a 6/8/10 % Haste Status Effect for 10 seconds.",
+        "owner":  "The Wraith",
+        "desc_tr":  "Herhangi bir şekilde kör olduğunuzda, Shadowborn etkisini tetikler: 10 saniye boyunca %6/8/10 Haste Statü Etkisi verir.",
+        "name_tr":  "Gölgedoğumlu"
+    },
+    {
+        "name":  "Shattered Hope",
+        "role":  "killer",
+        "slug":  "shattered-hope",
+        "desc":  "To capture your prey, you must first extinguish their hope. Instead of snuffing Boon Totems you destroy them. Destroying a Boon Totem this way reveals the Auras of all Survivors that were within its range at that moment for 6/7/8 seconds.",
+        "owner":  "General",
+        "desc_tr":  "Avınızı yakalamak için öncelikle umutlarını söndürmelisiniz. Lütuf Totemlerini yok etmek yerine onları yok edersiniz. Bir Lütuf Totemini bu şekilde yok etmek, o anda menzilinde bulunan tüm Hayatta Kalanların Auralarını 6/7/8 saniye boyunca ortaya çıkarır.",
+        "name_tr":  "Parçalanmış Umut"
+    },
+    {
+        "name":  "Sloppy Butcher",
+        "role":  "killer",
+        "slug":  "sloppy-butcher",
+        "desc":  "Survivors hit with your vicious Basic Attack suffer from the following effects for 70/80/90 seconds: Inflicts the Haemorrhage and Mangled Status Effects. Modifies the potency of Haemorrhage: Increases the Spawn frequency of Pools of Blood by 50/75/100 %. Increases the Regression rate of partial Healing progression by +25 %.",
+        "owner":  "General",
+        "desc_tr":  "Sizin acımasız Temel Saldırınızla vurulan hayatta kalanlar, 70/80/90 saniye boyunca aşağıdaki etkilerden etkilenir: Kanama ve Ezilmiş Durum Etkilerini uygular. Kanamanın gücünü değiştirir: Kan Havuzunun Ortaya Çıkma sıklığını %50/75/100 artırır. Kısmi İyileştirme ilerlemesinin Gerileme oranını +%25 artırır.",
+        "name_tr":  "özensiz kasap"
+    },
+    {
+        "name":  "Spies from the Shadows",
+        "role":  "killer",
+        "slug":  "spies-from-the-shadows",
+        "desc":  "Whenever a Survivor startles a Crow within 20/28/36 metres of your location, Spies from the Shadows triggers its effect: Alerts you with a unique Loud Noise Notification in the shape of a Crow. Spies from the Shadows has a cool-down of 5 seconds between alerts.",
+        "owner":  "General",
+        "desc_tr":  "Bir Hayatta Kalan, konumunuza 20/28/36 metre mesafedeki bir Kargayı ürküttüğünde, Gölgelerdeki Casuslar etkisini tetikler: Karga şeklinde benzersiz bir Yüksek Gürültü Bildirimi ile sizi uyarır. Gölgelerden Gelen Casusların, uyarılar arasında 5 saniyelik bir bekleme süresi vardır.",
+        "name_tr":  "Gölgelerden Gelen Casuslar"
+    },
+    {
+        "name":  "Spirit Fury",
+        "role":  "killer",
+        "slug":  "spirit-fury",
+        "desc":  "After manually breaking a total of 4/3/2 dropped Pallets by any means, Spirit Fury activates: Instantly breaks the next Pallet used by a Survivor to stun you. Spirit Fury deactivates after use and does not affect the duration of the Pallet Stun.",
+        "owner":  "The Spirit",
+        "desc_tr":  "Herhangi bir yolla toplam 4/3/2 düşen Paleti manuel olarak kırdıktan sonra Spirit Fury etkinleştirilir: Bir Hayatta Kalanın sizi sersemletmek için kullandığı bir sonraki Paleti anında kırar. Spirit Fury, kullanımdan sonra devre dışı kalır ve Palet Sersemletme süresini etkilemez.",
+        "name_tr":  "Ruh Öfkesi"
+    },
+    {
+        "name":  "Starstruck",
+        "role":  "killer",
+        "slug":  "starstruck",
+        "desc":  "Whenever you are carrying a Survivor, Starstruck activates: Causes all other Survivors in your Terror Radius to suffer from the Exposed Status Effect. This effect lingers for 26/28/30 seconds after affected Survivors leave the Terror Radius or Starstruck deactivates. Starstruck deactivates after hooking or dropping the carried Survivor and has a cool-down of 60 seconds.",
+        "owner":  "The Trickster",
+        "desc_tr":  "Bir Kurban taşıdığınızda, Starstruck etkinleştirilir: Terör Yarıçapındaki diğer tüm Hayatta Kalanların Açık Durum Etkisinden muzdarip olmasına neden olur. Bu etki, etkilenen Hayatta Kalanlar Terör Yarıçapından ayrıldıktan veya Yıldız Çarpması devre dışı kaldıktan sonra 26/28/30 saniye boyunca devam eder. Starstruck, taşınan Survivor\u0027u taktıktan veya düşürdükten sonra devre dışı kalır ve 60 saniyelik bir soğuma süresi vardır.",
+        "name_tr":  "Yıldız çarpması"
+    },
+    {
+        "name":  "Stridor",
+        "role":  "killer",
+        "slug":  "stridor",
+        "desc":  "You are acutely sensitive to the breathing of your prey. Increases the volume of Grunts of Pain of injured Survivors by 30/40/50 %. Increases the volume of regular breathing of Survivors by 15/20/25 %.",
+        "owner":  "The Nurse",
+        "desc_tr":  "Avınızın nefesine son derece duyarlısınız. Yaralı Hayatta Kalanların Acı Homurtularının hacmini %30/40/50 artırır. Hayatta Kalanların düzenli nefes alma hacmini %15/20/25 artırır.",
+        "name_tr":  "Stridor"
+    },
+    {
+        "name":  "Superior Anatomy",
+        "role":  "killer",
+        "slug":  "superior-anatomy",
+        "desc":  "Whenever a Survivor performs a Rush Vault action within 12 metres of your location, Superior Anatomy activates: Increases your Vaulting speed by 30/35/40 %. Superior Anatomy deactivates after vaulting. Superior Anatomy has a cool-down of 25 seconds.",
+        "owner":  "The Mastermind",
+        "desc_tr":  "Bir Hayatta Kalan, konumunuza 12 metre mesafede bir Rush Vault eylemi gerçekleştirdiğinde, Superior Anatomy etkinleştirilir: Atlama hızınızı %30/35/40 artırır. Üstün Anatomi atlamadan sonra devre dışı kalır. Superior Anatomy\u0027nin 25 saniyelik bir soğuma süresi vardır.",
+        "name_tr":  "Üstün Anatomi"
+    },
+    {
+        "name":  "Surge",
+        "role":  "killer",
+        "slug":  "surge",
+        "desc":  "Whenever you put a Survivor into the Dying State with your Basic Attack, Surge triggers its effect: Causes all Generators within 32 metres of your location to instantly explode and start regressing. Instantly regresses all affected Generators by 6/7/8 %.",
+        "owner":  "The Demogorgon",
+        "desc_tr":  "Temel Saldırınızla bir Hayatta Kalanı Ölme Durumuna soktuğunuzda, Surge etkisini tetikler: Bulunduğunuz yerden 32 metre uzaktaki tüm Jeneratörlerin anında patlamasına ve gerilemeye başlamasına neden olur. Etkilenen tüm Jeneratörleri anında %6/7/8 oranında geriler.",
+        "name_tr":  "Kabarmak"
+    },
+    {
+        "name":  "Surveillance",
+        "role":  "killer",
+        "slug":  "surveillance",
+        "desc":  "Unlocks potential in your Aura-reading ability: The Auras of damaged Generators are highlighted based on their current state: White Aura: The Generator is currently regressing. Yellow Aura: The Generator stopped regressing due to Survivor-intervention. This effect lasts for 8/12/16 seconds, after which the Generator Aura returns to its default colour. While Survivors are repairing Generators, they suffer from the following effect: Increases the audible range of all noises related to the Repair interaction by +8 metres.",
+        "owner":  "The Pig",
+        "desc_tr":  "Aura okuma yeteneğinizin potansiyelini açar: Hasarlı Jeneratörlerin Auraları, mevcut durumlarına göre vurgulanır: Beyaz Aura: Jeneratör şu anda geriliyor. Sarı Aura: Hayatta Kalanların müdahalesi nedeniyle Jeneratörün gerilemesi durdu. Bu etki 8/12/16 saniye sürer ve ardından Jeneratör Aurası varsayılan rengine döner. Hayatta kalanlar Jeneratörleri tamir ederken aşağıdaki etkiye maruz kalırlar: Onarım etkileşimiyle ilgili tüm seslerin duyulabilir aralığını +8 metre artırır.",
+        "name_tr":  "Gözetim"
+    },
+    {
+        "name":  "Terminus",
+        "role":  "killer",
+        "slug":  "terminus",
+        "desc":  "Once the Exit Gates are powered, Terminus activates: Causes all injured, dying, or hooked Survivors to suffer from the Broken Status Effect. This effect last until one of the Exit Gates is opened, after which it lingers for another 35/40/45 seconds.",
+        "owner":  "The Mastermind",
+        "desc_tr":  "Çıkış Kapılarına güç verildiğinde, Terminus etkinleştirilir: Tüm yaralı, ölen veya kancaya takılan Hayatta Kalanların Kırık Durum Etkisinden muzdarip olmasına neden olur. Bu etki, Çıkış Kapılarından biri açılıncaya kadar sürer ve ardından 35/40/45 saniye daha devam eder.",
+        "name_tr":  "Terminal"
+    },
+    {
+        "name":  "Territorial Imperative",
+        "role":  "killer",
+        "slug":  "territorial-mperative",
+        "desc":  "Unlocks potential in your Aura-reading ability. Whenever a Survivor enters the Basement while you are farther than 24 metres from its entrance, Territorial Imperative activates: The Aura of that Survivor is revealed to you for 4/5/6 seconds. Territorial Imperative has a cool-down of 45 seconds.",
+        "owner":  "The Huntress",
+        "desc_tr":  "Aura okuma yeteneğinizdeki potansiyeli açığa çıkarır. Bir Kurban Bodrum\u0027a girişinden 24 metreden daha uzaktayken girdiğinde, Bölgesel Emir etkinleşir: O Kurban\u0027ın Aura\u0027sı 4/5/6 saniye boyunca size gösterilir. Bölgesel Zorunluluğun 45 saniyelik bir soğuma süresi vardır.",
+        "name_tr":  "Bölgesel Zorunluluk"
+    },
+    {
+        "name":  "Thanatophobia",
+        "role":  "killer",
+        "slug":  "thanatophobia",
+        "desc":  "Whenever at least one Survivor is either injured, dying, or hooked, Thanatophobia activates. While active, all Survivors suffer from the following primary effect: Incurs a stack-able 1/1.5/2 % Action-Speed penalty per injured, dying, or hooked Survivor for Cleansing, Repairing, and Sabotaging, up to a maximum of 4/6/8 %. If all four Survivors are either injured, dying, or hooked, they suffer from the following secondary effect: Increases the penalty by an additional +12 % to a total of 16/18/20 %.",
+        "owner":  "The Nurse",
+        "desc_tr":  "En az bir Hayatta Kalan yaralandığında, öldüğünde veya kancaya takıldığında Tanatofobi etkinleşir. Aktifken, tüm Hayatta Kalanlar aşağıdaki birincil etkiye maruz kalır: Temizleme, Onarım ve Sabotaj için yaralanan, ölen veya kancaya takılan Kurban başına maksimum %4/6/8\u0027e kadar istiflenebilir %1/1,5/2 oranında Eylem Hızı cezasına tabi olur. Hayatta Kalanların dördü de yaralanır, ölür veya kancaya takılırsa, aşağıdaki ikincil etkiden muzdarip olurlar: Cezayı ilave %12 artırarak toplam %16/18/20\u0027ye çıkarır.",
+        "name_tr":  "Tanatofobi"
+    },
+    {
+        "name":  "Thrilling Tremors",
+        "role":  "killer",
+        "slug":  "thrilling-tremors",
+        "desc":  "After picking up a Survivor, Thrilling Tremors triggers its effects: Blocks all Generators not currently being repaired by any Survivors for 16 seconds. The Auras of Blocked Generators are highlighted to you in white. Thrilling Tremors has a cool-down of 40/35/30 seconds.",
+        "owner":  "The Ghost Face",
+        "desc_tr":  "Bir Kurban\u0027ı aldıktan sonra, Heyecan Verici Sarsıntılar etkilerini tetikler: 16 saniye boyunca herhangi bir Kurban tarafından onarılmayan tüm Jeneratörleri engeller. Engellenen Jeneratörlerin Auraları size beyaz renkle vurgulanır. Thrilling Tremors\u0027un soğuma süresi 40/35/30 saniyedir.",
+        "name_tr":  "Heyecan verici Sarsıntılar"
+    },
+    {
+        "name":  "THWACK!",
+        "role":  "killer",
+        "slug":  "thwack",
+        "desc":  "Start the Trial with 3 Tokens. Whenever you break a Breakable Wall or a dropped Pallet, THWACK! consumes -1 Token and applies the following effect: Causes all Survivors within 36 metres of your location to scream and reveal their Aura for 4/5/6 seconds. Whenever you hook a Survivor, THWACK! is granted +1 Token.",
+        "owner":  "The Skull Merchant",
+        "desc_tr":  "Denemeye 3 Jetonla başlayın. Kırılabilir bir duvarı veya düşen bir paleti kırdığınızda, THWACK! -1 Jeton tüketir ve şu etkiyi uygular: Bulunduğunuz yere 36 metre mesafedeki tüm Hayatta Kalanların çığlık atmasına ve 4/5/6 saniye boyunca Auralarını ortaya çıkarmasına neden olur. Ne zaman bir Survivor\u0027a bağlansan, THWACK! +1 Token verilir.",
+        "name_tr":  "THACK!"
+    },
+    {
+        "name":  "Tinkerer",
+        "role":  "killer",
+        "slug":  "tinkerer",
+        "desc":  "Whenever a Generator is repaired to 70 %, you benefit from the following effects: Triggers a Loud Noise Notification for that Generator, revealing its location. Grants the Undetectable Status Effect for the next 12/14/16 seconds. Tinkerer can only trigger once per Generator per Trial.",
+        "owner":  "The Hillbilly",
+        "desc_tr":  "Bir Jeneratör %70\u0027e kadar onarıldığında, aşağıdaki etkilerden yararlanırsınız: O Jeneratör için Yüksek Gürültü Bildirimini tetikleyerek konumunu ortaya çıkarır. Sonraki 12/14/16 saniye boyunca Tespit Edilemez Durum Etkisini verir. Tinkerer, Deneme başına Jeneratör başına yalnızca bir kez tetikleyebilir.",
+        "name_tr":  "Tamirci"
+    },
+    {
+        "name":  "Trail of Torment",
+        "role":  "killer",
+        "slug":  "trail-of-torment",
+        "desc":  "Performing the Damage Generator action on a Generator activates Trail of Torment: Grants the Undetectable Status Effect. The Aura of the Damaged Generator is revealed to all Survivors and highlighted in yellow. Trail of Torment deactivates after the Damaged Generator stops regressing by any means and has a cool-down of 60/45/30 seconds between activations.",
+        "owner":  "The Executioner",
+        "desc_tr":  "Bir Jeneratör üzerinde Hasar Oluşturucu eyleminin gerçekleştirilmesi, İşkence İzini etkinleştirir: Tespit Edilemez Statü Etkisi kazandırır. Hasarlı Jeneratörün Aurası tüm Hayatta Kalanlara gösterilir ve sarı renkle vurgulanır. Trail of Torment, Hasarlı Jeneratörün gerilemesi herhangi bir şekilde durdurulduktan sonra devre dışı bırakılır ve etkinleştirmeler arasında 60/45/30 saniyelik bir soğuma süresi vardır.",
+        "name_tr":  "Eziyet Yolu"
+    },
+    {
+        "name":  "Ultimate Weapon",
+        "role":  "killer",
+        "slug":  "ultimate-weapon",
+        "desc":  "Whenever you search a Locker, Ultimate Weapon triggers its effects on all Survivors within 40 metres of its location: Causes them to scream and reveal their location to you. Inflicts the Blindness Status Effect for 30 seconds. Ultimate Weapon has a cool-down of 55/50/45 seconds.",
+        "owner":  "The Xenomorph",
+        "desc_tr":  "Bir Dolap\u0027ı her aradığınızda Ultimate Weapon, bulunduğu yere 40 metre mesafedeki tüm Hayatta Kalanlar üzerinde etkilerini tetikler: Çığlık atmalarına ve konumlarını size açıklamalarına neden olur. 30 saniye boyunca Körlük Durumu Efekti uygular. Ultimate Weapon\u0027ın soğuma süresi 55/50/45 saniyedir.",
+        "name_tr":  "Nihai Silah"
+    },
+    {
+        "name":  "Unbound",
+        "role":  "killer",
+        "slug":  "unbound",
+        "desc":  "When a Survivor becomes injured by any means, Unbound activates for 24/27/30 seconds: Vaulting a Window while Unbound is active grants a +7 % Haste Status Effect for 10 seconds. This effect cannot stack with itself.",
+        "owner":  "The Unknown",
+        "desc_tr":  "Bir Kurban herhangi bir şekilde yaralandığında, Unbound 24/27/30 saniye boyunca etkinleştirilir: Unbound aktifken bir Pencereye Atlamak, 10 saniye boyunca +%7 Hız Durum Etkisi kazandırır. Bu etki kendi başına birikemez.",
+        "name_tr":  "Sınırsız"
+    },
+    {
+        "name":  "Undone",
+        "role":  "killer",
+        "slug":  "undone",
+        "desc":  "For every Repair or Healing Skill Check failed by a Survivor, Undone gains +3 Tokens, up to a maximum of 18/24/30 Tokens. Performing the Damage Generator action on a Generator consumes all accumulated Tokens and applies the following effects: Instantly regresses the Damaged Generator by a stack-able -1 % of its total Progression per Token, up to a maximum of 18/24/30 %. Blocks the Damaged Generator for 1 second per Token, up to a maximum of 18/24/30 seconds. Causes the Damaged Generator to start regressing once it becomes unblocked. Undone has a cool-down of 60 seconds.",
+        "owner":  "The Unknown",
+        "desc_tr":  "Bir Hayatta Kalanın başarısız olduğu her Onarım veya İyileştirme Beceri Kontrolü için, Undone, maksimum 18/24/30 Jeton olmak üzere +3 Jeton kazanır. Bir Jeneratör üzerinde Hasar Oluşturucu eylemi gerçekleştirmek, biriken tüm Jetonları tüketir ve aşağıdaki etkileri uygular: Hasarlı Jeneratörü, maksimum %18/24/30\u0027a kadar, Jeton başına toplam İlerlemesinin istiflenebilir -%1\u0027i kadar anında geriler. Hasarlı Jeneratörü Jeton başına 1 saniye boyunca, maksimum 18/24/30 saniyeye kadar engeller. Hasarlı Jeneratörün engeli kaldırıldığında gerilemeye başlamasına neden olur. Undone\u0027un 60 saniyelik bir soğuma süresi vardır.",
+        "name_tr":  "Geri alındı"
+    },
+    {
+        "name":  "Unforeseen",
+        "role":  "killer",
+        "slug":  "unforeseen",
+        "desc":  "After performing the Damage Generator action on a Generator, you benefit from the following effects for 22/26/30 seconds: Transfers your Terror Radius to the damaged Generator. This Terror Radius is set to 32 metres. Grants the Undetectable Status Effect. Unforeseen has a cool-down of 30 seconds.",
+        "owner":  "The Unknown",
+        "desc_tr":  "Bir Jeneratör üzerinde Hasar Oluşturucu eylemini gerçekleştirdikten sonra, 22/26/30 saniye boyunca aşağıdaki etkilerden yararlanırsınız: Terör Yarıçapını hasarlı Jeneratöre aktarır. Bu Terör Yarıçapı 32 metreye ayarlanmıştır. Tespit Edilemez Durum Etkisi kazandırır. Unforeseen\u0027in 30 saniyelik bir soğuma süresi vardır.",
+        "name_tr":  "öngörülemeyen"
+    },
+    {
+        "name":  "Unnerving Presence",
+        "role":  "killer",
+        "slug":  "unnerving-presence",
+        "desc":  "While inside your Terror Radius, Survivors performing Repairing or Healing actions suffer from the following effects: Increases the chances of triggering a Skill Check by +10 %. Reduces the Success zone of those Skill Checks by 40/50/60 %.",
+        "owner":  "The Trapper",
+        "desc_tr":  "Terör Yarıçapınızın içindeyken, Tamir veya İyileştirme eylemleri gerçekleştiren Hayatta Kalanlar aşağıdaki etkilerden etkilenir: Beceri Kontrolü tetiklenme şansını +%10 artırır. Bu Beceri Kontrollerinin Başarı bölgesini %40/50/60 azaltır.",
+        "name_tr":  "Sinir bozucu varlık"
+    },
+    {
+        "name":  "Unrelenting",
+        "role":  "killer",
+        "slug":  "unrelenting",
+        "desc":  "Basic Attacks benefit from the following effect: Reduces the Cool-down time of missed attacks by 20/25/30 %.",
+        "owner":  "General",
+        "desc_tr":  "Temel Saldırılar şu etkiden yararlanır: Kaçırılan saldırıların Bekleme süresini %20/25/30 azaltır.",
+        "name_tr":  "amansız"
+    },
+    {
+        "name":  "Wandering Eye",
+        "role":  "killer",
+        "slug":  "wandering-eye",
+        "desc":  "Whenever you start chasing a Survivor, Wandering Eye triggers the following effect: The Auras of all other injured Survivors within 20 metres of your location are revealed to you for 5 seconds. Wandering Eye has a cool-down of 40/35/30 seconds.",
+        "owner":  "The Krasue",
+        "desc_tr":  "Bir Kurban\u0027ı kovalamaya başladığınızda, Gezici Göz şu etkiyi tetikler: Bulunduğunuz yerden 20 metre uzaktaki diğer tüm yaralı Kurbanların Auraları 5 saniye boyunca size gösterilir. Wandering Eye\u0027ın soğuma süresi 40/35/30 saniyedir.",
+        "name_tr":  "Gezici Göz"
+    },
+    {
+        "name":  "Weave Attunement",
+        "role":  "killer",
+        "slug":  "weave-attunement",
+        "desc":  "Whenever an Item is depleted for the first time, it is automatically dropped: The Auras of dropped Survivor Items are revealed to you, as well as the Auras of any Survivors within 12 metres of them. Affected Survivors see the Aura of that Item as well. Causes Survivors picking up a Survivor Item to suffer from the Oblivious Status Effect for 20/25/30 seconds.",
+        "owner":  "The Lich",
+        "desc_tr":  "Bir Öğe ilk kez tükendiğinde, otomatik olarak düşer: Düşen Hayatta Kalan Öğelerin Auraları ve ayrıca onlara 12 metre mesafedeki tüm Hayatta Kalanların Auraları size gösterilir. Etkilenen Hayatta Kalanlar da o Öğenin Aurasını görür. Bir Hayatta Kalan Öğesi alan Hayatta Kalanların 20/25/30 saniye boyunca Bilinmeyen Durum Etkisine maruz kalmasına neden olur.",
+        "name_tr":  "Örgü Uyumlaması"
+    },
+    {
+        "name":  "Whispers",
+        "role":  "killer",
+        "slug":  "whispers",
+        "desc":  "Whenever any Survivor is within 48/40/32 metres of your location, Whispers triggers its effect: Causes you to hear the sporadic whispers of The Entity, indicating a Survivor\u0027s presence.",
+        "owner":  "General",
+        "desc_tr":  "Herhangi bir Kurban konumunuza 48/40/32 metre yakınlıkta olduğunda, Fısıltılar etkisini tetikler: Varlığın bir Kurban\u0027ın varlığını belirten ara sıra fısıltılarını duymanıza neden olur.",
+        "name_tr":  "Fısıltılar"
+    },
+    {
+        "name":  "Zanshin Tactics",
+        "role":  "killer",
+        "slug":  "zanshin-tactics",
+        "desc":  "Unlocks potential in your Aura-reading ability: The Auras of Pallets and Windows are revealed to you within 32 metres. Whenever a Survivor drops a Pallet, Zanshin Tactics triggers the following effect: Their Aura is revealed to you for 3/4/5 seconds.",
+        "owner":  "The Oni",
+        "desc_tr":  "Aura okuma yeteneğinizin potansiyelini açığa çıkarır: Paletlerin ve Pencerelerin Auraları 32 metre içinde size gösterilir. Bir Hayatta Kalan bir Palet düşürdüğünde, Zanshin Taktikleri şu etkiyi tetikler: Auraları 3/4/5 saniye boyunca size gösterilir.",
+        "name_tr":  "Zanshin Taktikleri"
+    },
+    {
+        "name":  "Ace in the Hole",
+        "role":  "survivor",
+        "slug":  "ace-in-the-hole",
+        "desc":  "Causes all regular Items you retrieve from a Chest to come equipped with 1 to 2 Add-ons: First Slot: 100 % chance to be equipped with an Add-on of Visceral Rarity or lower. Second Slot: 50/75/100 % chance to be equipped with an Add-on of Uncommon Rarity or lower. Ace in the Hole prevents any attached Add-ons on your currently held Item to be consumed upon escaping the Trial.",
+        "owner":  "Ace Visconti",
+        "desc_tr":  "Bir Sandıktan aldığınız tüm normal Öğelerin 1 ila 2 Eklenti ile donatılmış olarak gelmesine neden olur: İlk Yuva: Visceral Nadirlik veya daha düşük bir Eklenti ile donatılma şansı %100. İkinci Yuva: Sıra Dışı Nadirlik veya daha düşük bir Eklenti ile donatılma şansı %50/75/100. Ace in the Hole, Denemeden kaçtığınızda, halihazırda tuttuğunuz Öğeye eklenen Eklentilerin tüketilmesini engeller.",
+        "name_tr":  "Delikteki As"
+    },
+    {
+        "name":  "Adrenaline",
+        "role":  "survivor",
+        "slug":  "adrenaline",
+        "desc":  "Once the Exit Gates are powered, Adrenaline activates and triggers the following effects: Heals you to the next Health State. Grants a +50 % Haste Status Effect for 3 seconds. Adrenaline can be used while Exhausted and ignores an existing Status Effect. Adrenaline causes the Exhausted Status Effect for 60/50/40 seconds after use.",
+        "owner":  "Meg Thomas",
+        "desc_tr":  "Çıkış Kapılarına güç verildiğinde Adrenalin aşağıdaki etkileri etkinleştirir ve tetikler: Sizi bir sonraki Sağlık Durumuna iyileştirir. 3 saniye boyunca +%50 Hız Statü Etkisi verir. Adrenalin, Bitkin durumdayken kullanılabilir ve mevcut bir Durum Etkisini yok sayar. Adrenalin, kullanımdan sonra 60/50/40 saniye boyunca Bitkinlik Durum Etkisine neden olur.",
+        "name_tr":  "Adrenalin"
+    },
+    {
+        "name":  "Aftercare",
+        "role":  "survivor",
+        "slug":  "aftercare",
+        "desc":  "Unlocks potential in your Aura-reading ability: You see the Auras of the 1/2/3 most recent Survivor(s) that helped you or vice versa: Rescued from a Hook. Completed a Healing action on. They also see your Aura. Aftercare resets its effects when you are hooked by the Killer.",
+        "owner":  "Jeff Johansen",
+        "desc_tr":  "Aura okuma yeteneğinizdeki potansiyeli açığa çıkarır: Size yardım eden en son Hayatta Kalanların 1/2/3\u0027ünün Auralarını görürsünüz veya tam tersi: Kancadan Kurtarılanlar. tarihinde bir İyileştirme eylemi tamamlandı. Ayrıca Auranızı da görüyorlar. Aftercare, Katilin bağımlısı olduğunuzda etkilerini sıfırlar.",
+        "name_tr":  "Bakım sonrası"
+    },
+    {
+        "name":  "Alert",
+        "role":  "survivor",
+        "slug":  "alert",
+        "desc":  "Whenever the Killer performs the Break or Damage Action, Alert triggers: Their Aura is revealed to you for 3/4/5 seconds.",
+        "owner":  "Feng Min",
+        "desc_tr":  "Katil Kırma veya Hasar Eylemini her gerçekleştirdiğinde, Uyarı tetiklenir: Auraları 3/4/5 saniye boyunca size gösterilir.",
+        "name_tr":  "Uyarı"
+    },
+    {
+        "name":  "Any Means Necessary",
+        "role":  "survivor",
+        "slug":  "any-means-necessary",
+        "desc":  "Unlocks potential in your Aura-reading ability: The Auras of dropped Pallets in the environment are revealed to you. While standing next to a dropped Pallet, press and hold the Active Ability button to trigger the following effect: Resets the Pallet to its upright position over 5/4/3 seconds.",
+        "owner":  "Yui Kimura",
+        "desc_tr":  "Aura okuma yeteneğinizin potansiyelini açığa çıkarır: Çevreye düşen Paletlerin Auraları size gösterilir. Düşen bir Paletin yanında dururken, aşağıdaki etkiyi tetiklemek için Aktif Yetenek düğmesini basılı tutun: Paleti 5/4/3 saniye boyunca dik konuma sıfırlar.",
+        "name_tr":  "Gerekli Her Türlü Araç"
+    },
+    {
+        "name":  "Apocalyptic Ingenuity",
+        "role":  "survivor",
+        "slug":  "apocalyptic-ngenuity",
+        "desc":  "Unlocks potential in your Aura-reading ability: The Auras of broken Pallets are revealed to you within 24/28/32 metres. After unlocking or rummaging through 2 Chests, Apocalyptic Ingenuity gains a special ability. While standing next to the location of a broken Pallet, press and hold the Active Ability button for 4 seconds to use it: Rebuilds it as a Fragile Pallet. Fragile Pallets instantly break when dropped.",
+        "owner":  "Rick Grimes",
+        "desc_tr":  "Aura okuma yeteneğinizin potansiyelini açığa çıkarır: Kırık Paletlerin Auraları 24/28/32 metre içinde size gösterilir. Apocalyptic Ingenuity, 2 Sandığı açtıktan veya karıştırdıktan sonra özel bir yetenek kazanır. Kırık bir Paletin bulunduğu yerin yanında dururken, onu kullanmak için Aktif Yetenek düğmesini 4 saniye basılı tutun: Onu Kırılgan bir Palet olarak yeniden oluşturur. Kırılgan Paletler düşürüldüğünde anında kırılır.",
+        "name_tr":  "Kıyamet Yaratıcılığı"
+    },
+    {
+        "name":  "Appraisal",
+        "role":  "survivor",
+        "slug":  "appraisal",
+        "desc":  "Start the Trial with 4 Tokens. While standing next to an unlocked and empty Chest, press and hold the Interaction button to perform the Rummage action: Grants the ability to retrieve an extra Item from that Chest. This consumes -1 Token and is limited to twice per Chest. Increases the Rummaging speed by 40/60/80 %.",
+        "owner":  "Élodie Rakoto",
+        "desc_tr":  "Denemeye 4 Jetonla başlayın. Kilitlenmemiş ve boş bir Sandığın yanında dururken, Rummage eylemini gerçekleştirmek için Etkileşim düğmesini basılı tutun: Söz konusu Sandıktan fazladan bir Öğe alma yeteneği verir. Bu, -1 Jeton tüketir ve Sandık başına iki kez ile sınırlıdır. Rummaging hızını %40/60/80 artırır.",
+        "name_tr":  "Değerleme"
+    },
+    {
+        "name":  "Autodidact",
+        "role":  "survivor",
+        "slug":  "autodidact",
+        "desc":  "Succeeding a Skill Check while healing another Survivor grants +1 Token, up to a maximum of 3/4/5 Tokens: Suppresses Great Healing Skill Checks. Causes Good Healing Skill Checks to grant Healing progress based on the number of accumulated Tokens: 0 Tokens: -15 %. 1 Token: +0 %. 2 Tokens: +15 %. 3 Tokens: +30 % (limit of Tier I). 4 Tokens: +45 % (limit of Tier II). 5 Tokens: +60 % (limit of Tier III). Autodidact is inactive when healing using a Med-Kit.",
+        "owner":  "Adam Francis",
+        "desc_tr":  "Başka bir Hayatta Kalanı iyileştirirken bir Beceri Kontrolü gerçekleştirmek, maksimum 3/4/5 Jeton olmak üzere +1 Jeton kazandırır: Büyük İyileştirme Beceri Kontrollerini bastırır. İyi İyileştirme Beceri Kontrollerinin, biriken Jeton sayısına bağlı olarak İyileşme ilerlemesi sağlamasına neden olur: 0 Jeton: % -15. 1 Jeton: +%0. 2 Jeton: +%15. 3 Jeton: +%30 (Seviye I sınırı). 4 Jeton: +%45 (Seviye II sınırı). 5 Jeton: +%60 (Seviye III sınırı). Med-Kit kullanarak şifa verirken Autodidact etkin değildir.",
+        "name_tr":  "Kendi kendini eğitme"
+    },
+    {
+        "name":  "Babysitter",
+        "role":  "survivor",
+        "slug":  "babysitter",
+        "desc":  "Whenever you unhook another Survivor, you benefit from the following effect: The Aura of the Killer is revealed to you for 8 seconds. The unhooked Survivor benefits from the following effects instead for 20/25/30 seconds: Suppresses the creation of their Scratch Marks and Pools of Blood. Increases the strength of their Haste Status Effect by +10 %.",
+        "owner":  "Steve Harrington",
+        "desc_tr":  "Başka bir Kurban\u0027ı kancadan çıkardığınızda, aşağıdaki etkiden yararlanırsınız: Katilin Aurası 8 saniye boyunca size gösterilir. Kancası çözülen Survivor bunun yerine 20/25/30 saniye boyunca aşağıdaki etkilerden yararlanır: Çizik İşaretlerinin ve Kan Havuzlarının oluşumunu bastırır. Acele Durum Etkisinin gücünü +%10 arttırır.",
+        "name_tr":  "Bebek bakıcısı"
+    },
+    {
+        "name":  "Background Player",
+        "role":  "survivor",
+        "slug":  "background-player",
+        "desc":  "Whenever the Killer picks up any other Survivor in the Dying State, Background Player activates for 10 seconds. While active, starting to run triggers the following effect: Grants a +50 % Haste Status Effect for 5 seconds. Background Player cannot be used while Exhausted. Background Player causes the Exhausted Status Effect for 30/25/20 seconds after use.",
+        "owner":  "Renato Lyra",
+        "desc_tr":  "Katil, Ölme Durumunda başka bir Hayatta Kalanı aldığında, Arka Plan Oynatıcısı 10 saniye boyunca etkinleşir. Aktifken, koşmaya başlamak şu etkiyi tetikler: 5 saniye boyunca +%50 Hız Durum Etkisi verir. Arka Plan Oynatıcısı Bitkin durumdayken kullanılamaz. Arka Plan Oynatıcısı, kullanımdan sonra 30/25/20 saniye boyunca Tükenmiş Durum Etkisine neden olur.",
+        "name_tr":  "Arka Plan Oynatıcısı"
+    },
+    {
+        "name":  "Balanced Landing",
+        "role":  "survivor",
+        "slug":  "balanced-landing",
+        "desc":  "While falling from height, you benefit from the following effects: Suppresses all noises related to falling and landing. Reduces the duration of the Stagger upon landing by -75 %. Grants a +50 % Haste Status Effect for 3 seconds. Balanced Landing cannot be used while Exhausted. Balanced Landing causes the Exhausted Status Effect for 60/50/40 seconds after use.",
+        "owner":  "Nea Karlsson",
+        "desc_tr":  "Yüksekten düşerken aşağıdaki etkilerden yararlanırsınız: Düşme ve inişle ilgili tüm sesleri bastırır. İniş sonrasında Sendeletme süresini -%75 azaltır. 3 saniye boyunca +%50 Hız Statü Etkisi verir. Bitkin durumdayken Dengeli İniş kullanılamaz. Dengeli İniş, kullanımdan sonra 60/50/40 saniye boyunca Bitkinlik Durum Etkisine neden olur.",
+        "name_tr":  "Dengeli İniş"
+    },
+    {
+        "name":  "Bardic Inspiration",
+        "role":  "survivor",
+        "slug":  "bardic-nspiration",
+        "desc":  "It\u0027s time to give your audience a show. Will you bring the house down or will you choke? Press the Active Ability button while standing and motionless to enter the Performance interaction that lasts up to 15 seconds and empowers other Survivors within 16 metres of your location. The empowering effect depends on the result of you rolling a d20 and lasts for 90 seconds after completing the Performance: 1: You scream, but without notifying the Killer. 2 - 10: Skill Checks grant +1 % Progression. 11 - 19: Skill Checks grant +2 % Progression. 20: Skill Checks grant +3 % Progression. Bardic Inspiration has a cool-down of 110/100/90 seconds after completing the Performance or cancelling it.",
+        "owner":  "Aestri Yazar \u0026amp; Baermar Uraz",
+        "desc_tr":  "İzleyicilerinize bir gösteri sunmanın zamanı geldi. Evi yıkacak mısın yoksa boğulacak mısın? 15 saniyeye kadar süren ve konumunuza 16 metre mesafedeki diğer Hayatta Kalanları güçlendiren Performans etkileşimine girmek için ayakta ve hareketsizken Aktif Yetenek düğmesine basın. Güçlendirici etki, d20 yuvarlamanızın sonucuna bağlıdır ve Performansı tamamladıktan sonra 90 saniye sürer: 1: Çığlık atarsınız, ancak Katile haber vermeden. 2 - 10: Beceri Kontrolleri +%1 İlerleme sağlar. 11 - 19: Beceri Kontrolleri +%2 İlerleme sağlar. 20: Beceri Kontrolleri +%3 İlerleme sağlar. Bardic Inspiration\u0027ın Performans tamamlandıktan veya iptal edildikten sonra 110/100/90 saniyelik bir soğuma süresi vardır.",
+        "name_tr":  "Ozan İlhamı"
+    },
+    {
+        "name":  "Better Together",
+        "role":  "survivor",
+        "slug":  "better-together",
+        "desc":  "While repairing any Generator, you and the other Survivors benefit from the following primary effect: The Aura of that Generator is revealed to all Survivors and highlighted in yellow. Whenever the Killer downs another Survivor while you are repairing, you benefit from the following secondary effect: The Auras of all Survivors are revealed to you for 20/25/30 seconds.",
+        "owner":  "Nancy Wheeler",
+        "desc_tr":  "Herhangi bir Jeneratörü onarırken, siz ve diğer Hayatta Kalanlar aşağıdaki birincil etkiden yararlanırsınız: Bu Jeneratörün Aura\u0027sı tüm Hayatta Kalanlara gösterilir ve sarı renkle vurgulanır. Siz tamir ederken Katil başka bir Kurban\u0027ı yere serdiğinde, aşağıdaki ikincil etkiden faydalanırsınız: Tüm Hayatta Kalanların Auraları 20/25/30 saniye boyunca size gösterilir.",
+        "name_tr":  "Birlikte Daha İyi"
+    },
+    {
+        "name":  "Bite the Bullet",
+        "role":  "survivor",
+        "slug":  "bite-the-bullet",
+        "desc":  "Pain hurts you as much as anyone, but you would prefer others do not know that. When healing yourself or another Survivor, you benefit from the following effects: Suppresses all noises related to Healing and Grunts of Pain. Failed Healing Skill Checks do not trigger a Loud Noise Notification. Reduces the Penalty to 3/2/1 % of the total Progression.",
+        "owner":  "Leon Scott Kennedy",
+        "desc_tr":  "Acı herkes kadar seni de incitir ama sen bunu başkalarının bilmemesini tercih edersin. Kendinizi veya başka bir Hayatta Kalanı iyileştirirken aşağıdaki etkilerden yararlanırsınız: İyileşmeyle ilgili tüm sesleri ve Acı Homurtularını bastırır. Başarısız olan İyileştirme Becerisi Kontrolleri Yüksek Gürültü Bildirimini tetiklemez. Cezayı toplam İlerlemenin %3/2/1\u0027ine azaltır.",
+        "name_tr":  "Kurşunu Isır"
+    },
+    {
+        "name":  "Blast Mine",
+        "role":  "survivor",
+        "slug":  "blast-mine",
+        "desc":  "After repairing Generators for the equivalent of 40 % of Progression, Blast Mine activates. While active, press the Active Ability button while standing next to a Generator to install a trap to it with a countdown of 100/110/120 seconds: Trips half-way through the Killer attempting to damage the Trapped Generator: Stuns the Killer for 4 seconds. Blinds all Players within 12.5 metres of the Trapped Generator. The trap is deactivated after its countdown has elapsed or it is tripped. The Auras of Trapped Generators are revealed to all Survivors in yellow.",
+        "owner":  "Jill Valentine",
+        "desc_tr":  "İlerleme oranının %40\u0027ına eşdeğer miktarda Jeneratörleri onardıktan sonra Patlatma Madeni etkinleştirilir. Aktifken, 100/110/120 saniyelik geri sayımı olan bir tuzak kurmak için bir Jeneratörün yanında dururken Aktif Yetenek düğmesine basın: Katilin yarısına kadar takılıp Tuzağa Düşen Jeneratöre zarar vermeye çalışır: Katili 4 saniye boyunca sersemletir. Sıkışan Jeneratörün 12,5 metre yakınındaki tüm Oyuncuları kör eder. Geri sayım bittikten veya tetiklendikten sonra tuzak devre dışı bırakılır. Kapana kısılmış Jeneratörlerin Auraları tüm Hayatta Kalanlara sarı renkte gösterilir.",
+        "name_tr":  "Patlatma Madeni"
+    },
+    {
+        "name":  "Blood Pact",
+        "role":  "survivor",
+        "slug":  "blood-pact",
+        "desc":  "It is as if a latent part of yourself has awakened. You feel like you can reach out beyond yourself for assistance. When either you or the Obsession become injured by any means, Blood Pact activates: Your Auras are constantly revealed to one another. Completing a Healing Action on the Obsession or having them complete one on yourself, grants both of you a 5/6/7 % Haste Status Effect. This effect lasts for as long as you both remain within 16 metres of one another. Blood Pact is temporarily disabled if you yourself are the Obsession. Reduces your chance of becoming the initial Obsession by reducing the default value by -100 %. The Killer can only be obsessed with one Survivor at a time.",
+        "owner":  "Cheryl Mason",
+        "desc_tr":  "Sanki gizli bir parçanız uyanmış gibi. Yardım için kendinizin ötesine ulaşabileceğinizi hissediyorsunuz. Siz veya Takıntı herhangi bir şekilde yaralandığında Kan Paktı devreye girer: Auralarınız sürekli olarak birbirinize gösterilir. Takıntı üzerinde bir İyileştirme Eylemi tamamlamak veya onların kendinize bir tane tamamlamasını sağlamak, her ikinize de %5/6/7 Hız Statü Etkisi kazandırır. Bu etki, ikiniz de birbirinizden 16 metre uzakta kaldığınız sürece devam eder. Eğer siz Obsession iseniz, Kan Paktı geçici olarak devre dışı bırakılır. Varsayılan değeri -%100 azaltarak ilk Obsession olma şansınızı azaltır. Katil aynı anda yalnızca bir Hayatta Kalan\u0027a takıntılı olabilir.",
+        "name_tr":  "Kan Paktı"
+    },
+    {
+        "name":  "Blood Rush",
+        "role":  "survivor",
+        "slug":  "blood-rush",
+        "desc":  "After being unhooked by any means, Blood Rush activates for 40/50/60 seconds. While active, press the Active Ability button to trigger the following effect: Instantly recover from an existing Exhausted Status Effect. Blood Rush does not cause the Exhausted Status Effect. Blood Rush is deactivated prematurely when performing a Conspicuous Action. Blood Rush deactivates after use and is disabled for the remainder of the Trial once the Exit Gates are powered.",
+        "owner":  "Renato Lyra",
+        "desc_tr":  "Herhangi bir şekilde kancadan kurtulduktan sonra Blood Rush 40/50/60 saniye boyunca etkinleşir. Aktifken aşağıdaki efekti tetiklemek için Aktif Yetenek düğmesine basın: Mevcut bir Bitkinlik Durum Efektinden anında kurtulun. Blood Rush, Bitkin Durum Etkisine neden olmaz. Bir Göze Çarpan Eylem gerçekleştirilirken Blood Rush zamanından önce devre dışı bırakılır. Blood Rush kullanımdan sonra devre dışı bırakılır ve Çıkış Kapılarına güç verildiğinde Denemenin geri kalanı boyunca devre dışı bırakılır.",
+        "name_tr":  "Kan hücumu"
+    },
+    {
+        "name":  "Boil Over",
+        "role":  "survivor",
+        "slug":  "boil-over",
+        "desc":  "You are a battler and do everything to escape a foe\u0027s grasp. While being carried by the Killer, the following effects apply: Increases the strength of the Struggle Effects on the Killer from your Wiggling by 60/70/80 %. Suppresses the ability of the Killer to read the Auras of all Hooks within 16 metres. Grants +33 % of your current Wiggle progression upon landing, if the Killer drops from height.",
+        "owner":  "Kate Denson",
+        "desc_tr":  "Sen bir savaşçısın ve düşmanın elinden kaçmak için her şeyi yapıyorsun. Katil tarafından taşınırken aşağıdaki etkiler uygulanır: Kıpırdatmadan dolayı Katil üzerindeki Mücadele Etkilerinin gücünü %60/70/80 artırır. Katilin 16 metre içindeki tüm Kancaların Auralarını okuma yeteneğini bastırır. Katil yüksekten düşerse, iniş sırasında mevcut Wiggle ilerlemenizin +%33\u0027ünü sağlar.",
+        "name_tr":  "Kaynat"
+    },
+    {
+        "name":  "Bond",
+        "role":  "survivor",
+        "slug":  "bond",
+        "desc":  "Unlocks potential in your Aura-reading ability: The Auras of all other Survivors are revealed to you within 20/28/36 metres.",
+        "owner":  "Dwight Fairfield",
+        "desc_tr":  "Aura okuma yeteneğinizin potansiyelini açığa çıkarır: Diğer tüm Hayatta Kalanların Auraları 20/28/36 metre içinde size gösterilir.",
+        "name_tr":  "Bağlamak"
+    },
+    {
+        "name":  "Boon: Circle of Healing",
+        "role":  "survivor",
+        "slug":  "boon-circle-of-healing",
+        "desc":  "A Boon that offers comfort amidst the terror. Press and hold the Active Ability button on a Dull or Hex Totem to bless it and create a Boon Totem. All Survivors within 24 metres hear soft chimes ringing out and benefit from its Boon Effects: Increases the Altruistic Healing speeds by 50/75/100 % when not using a Med-Kit. If a Survivor is injured, their Aura is revealed to all other Survivors. Survivors can only be affected by one instance of Boon: Circle of Healing at a time. Only one Totem can be blessed by your Boon Perks at a time and all of their effects are active on the same Boon Totem.",
+        "owner":  "Mikaela Reid",
+        "desc_tr":  "Terörün ortasında rahatlık sunan bir Lütuf. Bir Donuk veya Efsun Totem\u0027i kutsamak ve bir Lütuf Totemi oluşturmak için üzerindeki Aktif Yetenek düğmesini basılı tutun. 24 metre içindeki tüm Hayatta Kalanlar yumuşak çanların çınladığını duyar ve Lütuf Etkilerinden faydalanır: Sağlık Kiti kullanılmadığında Fedakar İyileştirme hızlarını %50/75/100 artırır. Bir Kurban yaralanırsa, Aura\u0027sı diğer tüm Kurbanlara gösterilir. Hayatta kalanlar aynı anda yalnızca bir Lütuf: Circle of Healing örneğinden etkilenebilir. Lütuf Avantajlarınız tarafından aynı anda yalnızca bir Totem kutsanabilir ve bunların tüm etkileri aynı Lütuf Totem üzerinde aktiftir.",
+        "name_tr":  "Lütuf: Şifa Çemberi"
+    },
+    {
+        "name":  "Boon: Dark Theory",
+        "role":  "survivor",
+        "slug":  "boon-dark-theory",
+        "desc":  "Press and hold the Active Ability button on a Dull or Hex Totem to bless it and create a Boon Totem. All Survivors within 24 metres hear soft chimes ringing out and benefit from its Boon Effects: Grants a +3 % Haste Status Effect. This effect lingers for 2/3/4 seconds after leaving the Boon Totem\u0027s range. Only one Totem can be blessed by your Boon Perks at a time and all of their effects are active on the same Boon Totem.",
+        "owner":  "Yoichi Asakawa",
+        "desc_tr":  "Bir Donuk veya Efsun Totem\u0027i kutsamak ve bir Lütuf Totemi oluşturmak için üzerindeki Aktif Yetenek düğmesini basılı tutun. 24 metre içindeki tüm Hayatta Kalanlar yumuşak çanların çınladığını duyar ve Lütuf Etkilerinden faydalanır: +%3 Haste Statü Etkisi sağlar. Bu etki, Lütuf Totem\u0027in menzilinden çıktıktan sonra 2/3/4 saniye devam eder. Lütuf Avantajlarınız tarafından aynı anda yalnızca bir Totem kutsanabilir ve bunların tüm etkileri aynı Lütuf Totem üzerinde aktiftir.",
+        "name_tr":  "Lütuf: Karanlık Teori"
+    },
+    {
+        "name":  "Boon: Exponential",
+        "role":  "survivor",
+        "slug":  "boon-exponential",
+        "desc":  "Press and hold the Active Ability button on a Dull or Hex Totem to bless it and create a Boon Totem. All Survivors within 24 metres hear soft chimes ringing out and benefit from its Boon Effects: Increases the Recovery speed while in the Dying State by 90/95/100 %. Unlocks the Self-Recovery ability, allowing them to fully recover from the Dying State. Only one Totem can be blessed by your Boon Perks at a time and all of their effects are active on the same Boon Totem.",
+        "owner":  "Jonah Vasquez",
+        "desc_tr":  "Bir Donuk veya Efsun Totem\u0027i kutsamak ve bir Lütuf Totemi oluşturmak için üzerindeki Aktif Yetenek düğmesini basılı tutun. 24 metre içindeki tüm Hayatta Kalanlar yumuşak çanların çınladığını duyar ve Lütuf Etkilerinden yararlanır: Ölme Durumundayken İyileşme hızını %90/95/100 artırır. Kendini Kurtarma yeteneğinin kilidini açarak Ölme Durumundan tamamen kurtulmalarını sağlar. Lütuf Avantajlarınız tarafından aynı anda yalnızca bir Totem kutsanabilir ve bunların tüm etkileri aynı Lütuf Totem üzerinde aktiftir.",
+        "name_tr":  "Lütuf: Üstel"
+    },
+    {
+        "name":  "Boon: Illumination",
+        "role":  "survivor",
+        "slug":  "boon-llumination",
+        "desc":  "Press and hold the Active Ability button on a Dull or Hex Totem to bless it and create a Boon Totem. All Survivors within 24 metres hear soft chimes ringing out and benefit from its Boon Effects: The Auras of all Chests and Generators are highlighted to you in blue. Increases your Action speeds for Blessing and Cleansing by 6/8/10 % while you have a lit Boon Totem. Survivors can only be affected by one instance of Boon: Illumination at a time. Only one Totem can be blessed by your Boon Perks at a time and all of their effects are active on the same Boon Totem.",
+        "owner":  "Alan Wake",
+        "desc_tr":  "Bir Donuk veya Efsun Totem\u0027i kutsamak ve bir Lütuf Totemi oluşturmak için üzerindeki Aktif Yetenek düğmesini basılı tutun. 24 metre içindeki tüm Hayatta Kalanlar yumuşak çanların çınladığını duyar ve Lütuf Etkilerinden yararlanır: Tüm Sandıkların ve Jeneratörlerin Auraları mavi renkle vurgulanır. Yanan bir Lütuf Toteminiz varken, Kutsama ve Temizleme için Aksiyon hızınızı %6/8/10 artırır. Hayatta kalanlar aynı anda yalnızca bir Lütuf örneğinden etkilenebilir: Illumination. Lütuf Avantajlarınız tarafından aynı anda yalnızca bir Totem kutsanabilir ve bunların tüm etkileri aynı Lütuf Totem üzerinde aktiftir.",
+        "name_tr":  "Lütuf: Aydınlatma"
+    },
+    {
+        "name":  "Boon: Shadow Step",
+        "role":  "survivor",
+        "slug":  "boon-shadow-step",
+        "desc":  "A Boon that conceals the truth. Press and hold the Active Ability button on a Dull or Hex Totem to bless it and create a Boon Totem. All Survivors within 24 metres hear soft chimes ringing out and benefit from its Boon Effects: Scratch Marks are suppressed. Auras are hidden from The Killer. Both effects linger for 2/3/4 seconds after leaving the Boon Totem\u0027s range. Only one Totem can be blessed by your Boon Perks at a time and all of their effects are active on the same Boon Totem.",
+        "owner":  "Mikaela Reid",
+        "desc_tr":  "Gerçeği gizleyen bir Lütuf. Bir Donuk veya Efsun Totem\u0027i kutsamak ve bir Lütuf Totemi oluşturmak için üzerindeki Aktif Yetenek düğmesini basılı tutun. 24 metre içindeki tüm Hayatta Kalanlar yumuşak çanların çınladığını duyar ve Lütuf Etkilerinden faydalanır: Çizik İşaretleri bastırılır. Auralar Katil\u0027den gizlenir. Her iki etki de Lütuf Totem\u0027in menzilinden çıktıktan sonra 2/3/4 saniye sürer. Lütuf Avantajlarınız tarafından aynı anda yalnızca bir Totem kutsanabilir ve bunların tüm etkileri aynı Lütuf Totem üzerinde aktiftir.",
+        "name_tr":  "Lütuf: Gölge Adımı"
+    },
+    {
+        "name":  "Borrowed Time",
+        "role":  "survivor",
+        "slug":  "borrowed-time",
+        "desc":  "Whenever you unhook another Survivor, they benefit from the following effects: Extends the duration of the Endurance Status Effect by 6/8/10 seconds to 21/23/25 seconds. Endurance is cancelled prematurely when performing a Conspicuous Action of any kind. Extends the duration of the Haste Status Effect by +10 seconds to 25 seconds.",
+        "owner":  "Bill Overbeck",
+        "desc_tr":  "Başka bir Kurban\u0027ı kancadan çıkardığınızda, aşağıdaki etkilerden yararlanırlar: Dayanıklılık Durumu Etkisinin süresini 6/8/10 saniye artırarak 21/23/25 saniyeye uzatır. Herhangi bir türde Göze Çarpan Eylem gerçekleştirilirken dayanıklılık vaktinden önce iptal edilir. Acele Durum Etkisinin süresini +10 saniye artırarak 25 saniyeye uzatır.",
+        "name_tr":  "Ödünç Alınan Zaman"
+    },
+    {
+        "name":  "Botany Knowledge",
+        "role":  "survivor",
+        "slug":  "botany-knowledge",
+        "desc":  "You benefit from the following permanent effect: Increases your Healing speed by 30/40/50 %.",
+        "owner":  "Claudette Morel",
+        "desc_tr":  "Aşağıdaki kalıcı etkiden yararlanırsınız: İyileşme hızınızı %30/40/50 artırır.",
+        "name_tr":  "Botanik Bilgisi"
+    },
+    {
+        "name":  "Bound by Obsession",
+        "role":  "survivor",
+        "slug":  "bound-by-obsession",
+        "desc":  "Whenever the Killer reads your Aura, Bound by Obsession activates for the same duration as their Aura-reading action: The Aura of the Killer is revealed to you. Increases your Action speeds for Cleansing, Healing, and Repairing actions by 2/4/6 %. If you are the Killer\u0027s current Obsession, the following effect triggers automatically every 30 seconds: Your Aura is revealed to the Killer for 3 seconds. Increases your chance of becoming the initial Obsession by increasing the default value by +100 %. The Killer can only be obsessed with one Survivor at a time.",
+        "owner":  "General",
+        "desc_tr":  "Katil Aura\u0027nızı okuduğunda Bound by Obsession, Aura okuma eylemiyle aynı süre boyunca etkinleşir: Katilin Aura\u0027sı size gösterilir. Temizleme, İyileştirme ve Onarım eylemleri için Eylem hızlarınızı %2/4/6 artırır. Eğer Katilin mevcut Takıntısı iseniz, aşağıdaki efekt her 30 saniyede bir otomatik olarak tetiklenir: Auranız 3 saniye boyunca Katil\u0027e gösterilir. Varsayılan değeri +%100 artırarak ilk Obsession olma şansınızı artırır. Katil aynı anda yalnızca bir Hayatta Kalan\u0027a takıntılı olabilir.",
+        "name_tr":  "Takıntıya Bağlı"
+    },
+    {
+        "name":  "Breakdown",
+        "role":  "survivor",
+        "slug":  "breakdown",
+        "desc":  "After you are unhooked by any means, Breakdown triggers its effects: Instantly breaks that Hook. Increases its Auto-Repair timer to 180 seconds. The Aura of the Killer is revealed to you for 4/5/6 seconds.",
+        "owner":  "Jeff Johansen",
+        "desc_tr":  "Herhangi bir şekilde kancadan kurtulduğunuzda, Arıza etkilerini tetikler: Kancayı anında kırar. Otomatik Onarım zamanlayıcısını 180 saniyeye çıkarır. Katilin Aurası 4/5/6 saniye boyunca size gösterilir.",
+        "name_tr":  "Bozulma"
+    },
+    {
+        "name":  "Breakout",
+        "role":  "survivor",
+        "slug":  "breakout",
+        "desc":  "While within 5 metres of the Killer carrying another Survivor, the following effects apply: Grants you a 6/8/10 % Haste Status Effect. Increases the Wiggling speed of the carried Survivor by +25 %. Survivors can only be affected by one instance of Breakout at a time.",
+        "owner":  "Yui Kimura",
+        "desc_tr":  "Katilin 5 metre yakınında başka bir Kurban\u0027ı taşırken aşağıdaki etkiler uygulanır: Size %6/8/10 Hız Statü Etkisi kazandırır. Taşınan Survivor\u0027ın Kıpırdama hızını +%25 artırır. Hayatta kalanlar aynı anda yalnızca bir Kaçış örneğinden etkilenebilir.",
+        "name_tr":  "Kaçmak"
+    },
+    {
+        "name":  "Buckle Up",
+        "role":  "survivor",
+        "slug":  "buckle-up",
+        "desc":  "Whenever you are healing a dying Survivor, Buckle Up activates:During the Healing action, you and the dying Survivor benefit from the following primary effect: The Aura of the Killer is revealed to you both. After completing the Healing action, the other Survivor benefits from the following secondary effects for 3/4/5 seconds: Suppresses the creation of their Scratch Marks. Grants them a +50 % Haste Status Effect. Buckle Up does not cause the Exhausted Status Effect.",
+        "owner":  "Ash Williams",
+        "desc_tr":  "Ölmekte olan bir Kurban\u0027ı iyileştirdiğinizde Buckle Up etkinleştirilir: İyileştirme eylemi sırasında, siz ve ölmekte olan Kurban şu birincil etkiden faydalanırsınız: Katilin Aura\u0027sı ikinize de açıklanır. İyileştirme eylemini tamamladıktan sonra, diğer Kurban 3/4/5 saniye boyunca aşağıdaki ikincil etkilerden yararlanır: Kendi Çizik İşaretlerinin oluşturulmasını bastırır. Onlara +%50 Hız Statü Etkisi kazandırır. Buckle Up, Tükenmiş Durum Etkisine neden olmaz.",
+        "name_tr":  "Kemerinizi Bağlayın"
+    },
+    {
+        "name":  "Built to Last",
+        "role":  "survivor",
+        "slug":  "built-to-last",
+        "desc":  "While hiding inside a Locker with a depleted Item equipped, Built to Last triggers the following effect after 12/10/8 seconds: Recharges the Item to one of the following percentages: First time: 99 %. Second time: 66 %. Third time: 33 %. Built to Last is disabled for the remainder of the Trial after triggering its effect for the third time.",
+        "owner":  "Felix Richter",
+        "desc_tr":  "Bitmiş bir Öğe kuşanılmış bir Dolabın içinde saklanırken, Sona Kadar Tasarlanmış, 12/10/8 saniye sonra aşağıdaki etkiyi tetikler: Öğeyi aşağıdaki yüzdelerden birine yeniden yükler: İlk seferde: %99. İkinci kez: %66. Üçüncü kez: %33. Sonuna Kadar Geliştirilmiş, etkisi üçüncü kez tetiklendikten sonra Denemenin geri kalanı boyunca devre dışı bırakılır.",
+        "name_tr":  "Uzun süre dayanacak şekilde tasarlandı"
+    },
+    {
+        "name":  "Calm Spirit",
+        "role":  "survivor",
+        "slug":  "calm-spirit",
+        "desc":  "You experience the following effects during a Trial: Nearby Crows no longer fly off and alert others to your presence, unless you come within touching distance. Suppresses the urge to scream from any cause at all times. Suppresses all noises related to interacting with the following Props: Chests Totems Reduces the Action speeds for Blessing, Cleansing, and Unlocking by 40/35/30 %.",
+        "owner":  "Jake Park",
+        "desc_tr":  "Bir Deneme sırasında aşağıdaki etkileri yaşarsınız: Dokunma mesafesine gelmediğiniz sürece, Yakındaki Kargalar artık uçup başkalarını sizin varlığınız konusunda uyarmaz. Her zaman herhangi bir sebepten dolayı çığlık atma dürtüsünü bastırır. Aşağıdaki Nesnelerle etkileşime girmeyle ilgili tüm sesleri bastırır: Sandıklar Totemler Kutsama, Temizleme ve Kilit Açma için Eylem hızlarını %40/35/30 azaltır.",
+        "name_tr":  "Sakin Ruh"
+    },
+    {
+        "name":  "Camaraderie",
+        "role":  "survivor",
+        "slug":  "camaraderie",
+        "desc":  "If you are hooked and enter the Struggle Phase, Camaraderie activates: Pauses the Struggle Phase timer for 26/30/34 seconds as soon as any Survivor comes within 16 metres of your Hook.",
+        "owner":  "Steve Harrington",
+        "desc_tr":  "Bağlanırsanız ve Mücadele Aşamasına girerseniz, Yoldaşlık etkinleştirilir: Kancanızın 16 metre yakınına herhangi bir Hayatta Kalan geldiğinde Mücadele Aşaması zamanlayıcısını 26/30/34 saniye duraklatır.",
+        "name_tr":  "Dostluk"
+    },
+    {
+        "name":  "Champion of Light",
+        "role":  "survivor",
+        "slug":  "champion-of-light",
+        "desc":  "While shining a Flashlight, Champion of Light triggers its primary effect: Grants a +50 % Haste Status Effect. After blinding the Killer by any means, Champion of Light triggers its secondary effect: Causes the Killer to suffer from a -20 % Hindered Status Effect for 6 seconds. This effect does not stack. Champion of Light applies a cool-down of 60/50/40 seconds after blinding the Killer.",
+        "owner":  "Alan Wake",
+        "desc_tr":  "Bir El Feneri parlatırken, Işık Şampiyonu birincil etkisini tetikler: +%50 Hız Statü Etkisi kazandırır. Katili herhangi bir şekilde kör ettikten sonra, Işık Şampiyonu ikincil etkisini tetikler: Katilin 6 saniye boyunca -%20 Engellenmiş Durum Etkisine maruz kalmasına neden olur. Bu etki yığılmaz. Işık Şampiyonu, Katili kör ettikten sonra 60/50/40 saniyelik bir bekleme süresi uygular.",
+        "name_tr":  "Işık Şampiyonu"
+    },
+    {
+        "name":  "Chemical Trap",
+        "role":  "survivor",
+        "slug":  "chemical-trap",
+        "desc":  "After repairing Generators for a total of 20 %, Chemical Trap activates: Press the Active Ability button while near a dropped Pallet to install a Trap, which stays active for 40/50/60 seconds. When the Killer breaks the Trapped Pallet, its Trap explodes, spraying the Killer with a chemical compound: Causes the Killer to suffer from a -50 % Hindered Status Effect for 4 seconds. Chemical Trap deactivates after triggering successfully or once the timer runs out. The Auras of Trapped Pallets are revealed to all Survivors in yellow.",
+        "owner":  "Ellen Ripley",
+        "desc_tr":  "Jeneratörleri toplam %20 onardıktan sonra, Kimyasal Tuzak etkinleştirilir: 40/50/60 saniye boyunca aktif kalan bir Tuzak kurmak için, düşen bir Paletin yakınındayken Aktif Yetenek düğmesine basın. Katil, Sıkışan Paleti kırdığında, Tuzağı patlayarak Katile kimyasal bir bileşik püskürtür: Katilin 4 saniye boyunca -%50 Engellenmiş Durum Etkisine maruz kalmasına neden olur. Kimyasal Tuzak başarılı bir şekilde tetiklendikten sonra veya zamanlayıcı bittiğinde devre dışı kalır. Kapana kısılmış Paletlerin Auraları tüm Hayatta Kalanlara sarı renkte gösterilir.",
+        "name_tr":  "Kimyasal Tuzak"
+    },
+    {
+        "name":  "Clairvoyance",
+        "role":  "survivor",
+        "slug":  "clairvoyance",
+        "desc":  "After cleansing or blessing a Totem, Clairvoyance activates. While active, press and hold the Use Item button when empty-handed to unlock your full Aura-reading potential: The Auras of the following objects within 64 metres are revealed to you for as long as you uphold the interaction, up to a maximum of 10/11/12 seconds: Chests Exit Gate Switches Generators Hatch Hooks",
+        "owner":  "Mikaela Reid",
+        "desc_tr":  "Bir Totemi temizledikten veya kutsadıktan sonra Basiret etkinleşir. Etkin durumdayken, tam Aura okuma potansiyelinizi açmak için boş elinizle Öğe Kullan düğmesini basılı tutun: 64 metre içindeki aşağıdaki nesnelerin Auraları, etkileşimi sürdürdüğünüz sürece, maksimum 10/11/12 saniyeye kadar size gösterilir: Sandıklar Çıkış Kapısı Anahtarları Jeneratörler Kapak Kancaları",
+        "name_tr":  "Basiret"
+    },
+    {
+        "name":  "Clean Break",
+        "role":  "survivor",
+        "slug":  "clean-break",
+        "desc":  "After completing a Healing action on another Survivor, Clean Break activates. Press the Active Ability button while being healed by another Survivor to trigger the following effects: Suffer from the Broken Status Effect. You are automatically healed 1 Health State after 80/70/60 seconds. This effect is cancelled prematurely if you enter the Dying State. Clean Break does not activate if you already suffer from Broken. Clean Break deactivates after healing you.",
+        "owner":  "Taurie Cain",
+        "desc_tr":  "Başka bir Kurban üzerinde bir İyileştirme eylemi tamamlandıktan sonra Temiz Mola etkinleştirilir. Aşağıdaki etkileri tetiklemek için başka bir Hayatta Kalan tarafından iyileştirildiğinizde Aktif Yetenek düğmesine basın: Bozuk Durum Efektinden muzdarip olun. 80/70/60 saniye sonra otomatik olarak 1 Sağlık Durumu iyileşirsiniz. Ölme Durumuna girerseniz bu etki vaktinden önce iptal edilir. Zaten Kırıktan muzdaripseniz Clean Break etkinleşmez. Clean Break sizi iyileştirdikten sonra devre dışı kalır.",
+        "name_tr":  "Temiz Mola"
+    },
+    {
+        "name":  "Come and Get Me!",
+        "role":  "survivor",
+        "slug":  "come-and-get-me",
+        "desc":  "After unhooking a Survivor, while crouched and stationary, press the Active Ability button to trigger the following effects: Suppresses the creation of Grunts of Pain, Pools of Blood, and Scratch Marks for all injured or dying Survivors within 24 metres of your location for the next 10/12.5/15 seconds. Causes you to scream and reveal your Aura to the Killer for 5 seconds.",
+        "owner":  "Rick Grimes",
+        "desc_tr":  "Bir Kurban\u0027ı kancadan çıkardıktan sonra, çömelmiş ve hareketsiz durumdayken, aşağıdaki efektleri tetiklemek için Aktif Yetenek düğmesine basın: Sonraki 10/12,5/15 saniye boyunca konumunuza 24 metre mesafedeki tüm yaralı veya ölen Hayatta Kalanlar için Acı Homurtuları, Kan Havuzları ve Çizik İzleri oluşturulmasını engeller. 5 saniye boyunca çığlık atmanıza ve Auranızı Katile göstermenize neden olur.",
+        "name_tr":  "Gel ve Beni Al!"
+    },
+    {
+        "name":  "Conviction",
+        "role":  "survivor",
+        "slug":  "conviction",
+        "desc":  "After having completed a Healing action on another Survivor, whenever you are in the Dying State, Conviction activates. While active, press the Active Ability button after reaching at least 25 % Recovery progress to trigger the following effects: Unlocks the Self-Recovery ability, allowing you to fully recover from the Dying State. Inflicts the Broken Status Effect. Causes you to automatically re-enter the Dying State after 20/25/30 seconds.",
+        "owner":  "Michonne Grimes",
+        "desc_tr":  "Başka bir Hayatta Kalan üzerinde bir İyileştirme eylemini tamamladıktan sonra, Ölme Durumunda olduğunuzda, Mahkumiyet etkinleşir. Aktifken, aşağıdaki etkileri tetiklemek için en az %25 İyileşme ilerlemesine ulaştıktan sonra Aktif Yetenek düğmesine basın: Kendini Kurtarma yeteneğinin kilidini açarak Ölme Durumundan tamamen kurtulmanızı sağlar. Bozuk Durum Etkisini uygular. 20/25/30 saniye sonra otomatik olarak Ölme Durumuna yeniden girmenizi sağlar.",
+        "name_tr":  "Mahkumiyet"
+    },
+    {
+        "name":  "Corrective Action",
+        "role":  "survivor",
+        "slug":  "corrective-action",
+        "desc":  "You start the Trial with 1/2/3 Token(s) and succeeding a Great Skill Check grants +1 Token, up to a maximum of 5 Tokens. While any other Survivor performs a skilful interaction that can trigger Skill Checks, they benefit from the following effects: Converts any Failed Skill Check into a Good Skill Check. This consumes -1 Token. The Aura of that Survivor is revealed to you for 6 seconds. Corrective Action does not apply to special Skill Checks.",
+        "owner":  "Jonah Vasquez",
+        "desc_tr":  "Denemeye 1/2/3 Jetonla başlarsınız ve Büyük Beceri Kontrolünde başarılı olursanız, maksimum 5 Jeton olmak üzere +1 Jeton kazanırsınız. Diğer herhangi bir Hayatta Kalan, Beceri Kontrollerini tetikleyebilecek becerikli bir etkileşim gerçekleştirirken, aşağıdaki etkilerden faydalanırlar: Başarısız olan herhangi bir Beceri Kontrolünü İyi bir Beceri Kontrolüne dönüştürür. Bu -1 Jeton tüketir. O Hayatta Kalan\u0027ın Aura\u0027sı 6 saniye boyunca size gösterilir. Düzeltici Faaliyet, özel Beceri Kontrolleri için geçerli değildir.",
+        "name_tr":  "Düzeltici Faaliyet"
+    },
+    {
+        "name":  "Counterforce",
+        "role":  "survivor",
+        "slug":  "counterforce",
+        "desc":  "You benefit from the following permanent effect: Increases the default value of your Cleansing speed to 125 %. Whenever you cleanse a Totem, Counterforce triggers the following effects: Increases your Cleansing speed by a stack-able +25 %. The Aura of the Totem farthest from your current location is revealed to you for 10/12/14 seconds.",
+        "owner":  "Jill Valentine",
+        "desc_tr":  "Aşağıdaki kalıcı etkiden faydalanırsınız: Temizleme hızınızın varsayılan değerini %125\u0027e çıkarır. Bir Totemi her temizlediğinizde, Counterforce aşağıdaki etkileri tetikler: Temizleme hızınızı istiflenebilir +%25 artırır. Mevcut konumunuzdan en uzaktaki Totemin Aurası size 10/12/14 saniye boyunca gösterilir.",
+        "name_tr":  "Karşı kuvvet"
+    },
+    {
+        "name":  "Cut Loose",
+        "role":  "survivor",
+        "slug":  "cut-loose",
+        "desc":  "After performing a Rushed Vault action while being chased, Cut Loose activates for 4/5/6 seconds: Suppresses all noises related to the Rushed Vault action, including the Loud Noise Notification for the Killer. While active, performing another Rushed Vault action resets the timer each time. Cut Loose has a cool-down of 45 seconds after use and the timer has elapsed.",
+        "owner":  "Thalita Lyra",
+        "desc_tr":  "Kovalanırken bir Koşturulmuş Mahzen eylemi gerçekleştirdikten sonra, Gevşek Kes 4/5/6 saniye boyunca etkinleşir: Katil için Yüksek Gürültü Bildirimi de dahil olmak üzere Koşmuş Mahzen eylemiyle ilgili tüm sesleri bastırır. Etkin durumdayken, başka bir Hızlı Kasa eylemi gerçekleştirmek zamanlayıcıyı her seferinde sıfırlar. Cut Loose\u0027un kullanımdan sonra 45 saniyelik bir soğuma süresi vardır ve zamanlayıcı dolmuştur.",
+        "name_tr":  "Gevşek Kes"
+    },
+    {
+        "name":  "Dance With Me",
+        "role":  "survivor",
+        "slug":  "dance-with-me",
+        "desc":  "When performing a Rushed action to vault a Window or exit a Locker, Dance With Me triggers its effect: Suppresses the creation of your Scratch Marks for 5 seconds. Dance With Me has a cool-down of 20/20/15 seconds.",
+        "owner":  "Kate Denson",
+        "desc_tr":  "Bir Pencereden atlamak veya bir Dolaptan çıkmak için Koştu eylemi gerçekleştirirken, Dance With Me etkisini tetikler: Çizik İşaretlerinizin oluşturulmasını 5 saniye boyunca bastırır. Dance With Me\u0027nin 20/20/15 saniyelik bir soğuma süresi vardır.",
+        "name_tr":  "Benimle Dans Et"
+    },
+    {
+        "name":  "Dark Sense",
+        "role":  "survivor",
+        "slug":  "dark-sense",
+        "desc":  "Unlocks potential in your Aura-reading ability. Whenever a Generator is completed, Dark Sense activates: The Aura of the Killer is revealed to you for 5/7/10 seconds once they come within 24 metres of your location. Dark Sense deactivates after use.",
+        "owner":  "General",
+        "desc_tr":  "Aura okuma yeteneğinizdeki potansiyeli açığa çıkarır. Bir Jeneratör tamamlandığında Dark Sense etkinleştirilir: Katilin Aurası, bulunduğunuz yere 24 metre yaklaştığında 5/7/10 saniye boyunca size gösterilir. Dark Sense kullanımdan sonra devre dışı kalır.",
+        "name_tr":  "Karanlık Duygu"
+    },
+    {
+        "name":  "Dead Hard",
+        "role":  "survivor",
+        "slug":  "dead-hard",
+        "desc":  "After being unhooked by any means, Dead Hard activates:While injured and running, press the Active Ability button to trigger the following effect: Grants the Endurance Status Effect for 0.5 seconds. Dead Hard cannot be used while Exhausted. Dead Hard causes the Exhausted Status Effect for 60/50/40 seconds. Gonna \u0027ave some fun \u0027ere lads, let\u0027s get stuck in!",
+        "owner":  "David King",
+        "desc_tr":  "Herhangi bir şekilde kancadan kurtulduktan sonra Dead Hard etkinleştirilir: Yaralıyken ve koşarken, aşağıdaki etkiyi tetiklemek için Aktif Yetenek düğmesine basın: 0,5 saniye boyunca Dayanıklılık Durumu Efekti verir. Dead Hard, Bitkin durumdayken kullanılamaz. Dead Hard, 60/50/40 saniye boyunca Bitkin Durum Etkisine neden olur. Burada biraz eğleneceğiz beyler, haydi takılıp kalalım!",
+        "name_tr":  "Ölümcül Sert"
+    },
+    {
+        "name":  "Deadline",
+        "role":  "survivor",
+        "slug":  "deadline",
+        "desc":  "Whenever you are in the Injured State, Deadline activates: Increases the Odds of triggering Skill Checks by 6/8/10 % while repairing or healing. Causes Skill Checks to appear in random places. Reduces the penalty for missed Skill Checks by -50 %.",
+        "owner":  "Alan Wake",
+        "desc_tr":  "Yaralı Durumunda olduğunuzda, Son Tarih etkinleştirilir: Tamir veya iyileştirme sırasında Beceri Kontrollerini tetikleme olasılığını %6/8/10 artırır. Beceri Kontrollerinin rastgele yerlerde görünmesine neden olur. Kaçırılan Beceri Kontrollerinin cezasını %-50 azaltır.",
+        "name_tr":  "Son teslim tarihi"
+    },
+    {
+        "name":  "Deception",
+        "role":  "survivor",
+        "slug":  "deception",
+        "desc":  "Press and hold the Sprint button while interacting with a Locker for the following effects: Suppresses the creation of your Scratch Marks and Pools of Blood for 5 seconds. Causes you to run past the targeted Locker, instead of entering it. Causes its doors to swiftly open and close again, feining you having entered it in a rush. Triggers a Loud Noise Notification for the Killer at its location. Deception has a cool-down of 25/20/15 seconds.",
+        "owner":  "Élodie Rakoto",
+        "desc_tr":  "Aşağıdaki efektler için bir Locker ile etkileşimde bulunurken Sprint düğmesini basılı tutun: Çizik İşaretlerinizin ve Kan Havuzlarının oluşumunu 5 saniye boyunca bastırır. Hedeflenen Dolaba girmek yerine koşarak geçmenize neden olur. Kapılarının hızla açılıp tekrar kapanmasına neden olur, sanki aceleyle girmiş gibi olursunuz. Katil için bulunduğu yerde Yüksek Gürültü Bildirimini tetikler. Aldatmanın 25/20/15 saniyelik bir soğuma süresi vardır.",
+        "name_tr":  "Aldatma"
+    },
+    {
+        "name":  "Déjà Vu",
+        "role":  "survivor",
+        "slug":  "deja-vu",
+        "desc":  "Unlocks potential in your Aura-reading ability: The Auras of whichever 3 Generators are currently in closest proximity to one another are revealed to you. Increases your Repair speed on those Generators by 4/5/6 %.",
+        "owner":  "General",
+        "desc_tr":  "Aura okuma yeteneğinizdeki potansiyeli açığa çıkarır: Şu anda birbirine en yakın olan 3 Jeneratörün Auraları size gösterilir. Bu Jeneratörlerdeki Onarım hızınızı %4/5/6 artırır.",
+        "name_tr":  "Déjà Vu"
+    },
+    {
+        "name":  "Deliverance",
+        "role":  "survivor",
+        "slug":  "deliverance",
+        "desc":  "After safely unhooking another Survivor, Deliverance activates: Grants the ability to perform a successful Self-Unhook at any point during the first Hook Stage. Causes the Broken Status Effect for 100/80/60 seconds after unhooking yourself. Deliverance cannot be used during the second Hook Stage or if you are hooked as the Last Survivor Standing. Deliverance is disabled for the remainder of the Trial after use.",
+        "owner":  "Adam Francis",
+        "desc_tr":  "Başka bir Kurban\u0027ın kancasını güvenli bir şekilde çözdükten sonra, Kurtuluş etkinleştirilir: İlk Kanca Aşaması sırasında herhangi bir noktada başarılı bir Kendini Kancadan Kaldırma yeteneği verir. Kendinizi kancadan çıkardıktan sonra 100/80/60 saniye boyunca Kırık Durum Etkisine neden olur. Kurtuluş, ikinci Kanca Aşamasında veya Ayakta Kalan Son Hayatta Kalan olarak bağlandıysanız kullanılamaz. Kullanımdan sonra Deneme süresinin geri kalanında Teslimat devre dışı bırakılır.",
+        "name_tr":  "Kurtuluş"
+    },
+    {
+        "name":  "Desperate Measures",
+        "role":  "survivor",
+        "slug":  "desperate-measures",
+        "desc":  "Whenever any Survivor, including yourself, is not in the Healthy State, Desperate Measures activates: Increases your Action speeds for Healing and Unhooking by a stack-able 16/18/20 % per injured, dying, or hooked Survivor, up to a maximum of 64/72/80 %.",
+        "owner":  "Felix Richter",
+        "desc_tr":  "Siz de dahil olmak üzere herhangi bir Hayatta Kalan, Sağlıklı Durumda olmadığında, Umutsuz Tedbirler etkinleştirilir: İyileşme ve Kancayı Kaldırma için Aksiyon hızınızı, maksimum %64/72/80\u0027e kadar yaralı, ölmekte olan veya kancaya takılan Hayatta Kalan başına istiflenebilir %16/18/20 oranında artırır.",
+        "name_tr":  "Umutsuz Önlemler"
+    },
+    {
+        "name":  "Detective\u0027s Hunch",
+        "role":  "survivor",
+        "slug":  "detective-s-hunch",
+        "desc":  "Unlocks potential in your Aura-reading ability. Whenever a Generator is completed, Detective\u0027s Hunch triggers its effect: The Auras of the following objects within 32/48/64 metres of your location are revealed to you for 20 seconds: Chests Generators Totems",
+        "owner":  "David Tapp",
+        "desc_tr":  "Aura okuma yeteneğinizdeki potansiyeli açığa çıkarır. Bir Jeneratör tamamlandığında, Dedektifin Önsezisi etkisini tetikler: Bulunduğunuz yerden 32/48/64 metre uzaktaki aşağıdaki nesnelerin Auraları 20 saniye boyunca size gösterilir: Sandıklar Jeneratörler Totemler",
+        "name_tr":  "Dedektifin Önsezisi"
+    },
+    {
+        "name":  "Distortion",
+        "role":  "survivor",
+        "slug":  "distortion",
+        "desc":  "Start the Trial with 1 Token. Whenever the Killer attempts to read your Aura, Distortion automatically consumes -1 Token to trigger the following effects for 8/10/12 seconds: Blocks your Aura from being read. Suppresses the creation of your Scratch Marks. Distortion recharges +1 Token every 15 seconds of being chased by the Killer, and can hold 2 Tokens. Distortion does not trigger its effects while in the Dying State.",
+        "owner":  "Jeff Johansen",
+        "desc_tr":  "Denemeye 1 Token ile başlayın. Katil, Aura\u0027nızı okumaya çalıştığında Distortion, 8/10/12 saniye boyunca aşağıdaki efektleri tetiklemek için otomatik olarak -1 Jeton tüketir: Auranızın okunmasını engeller. Çizik İzlerinizin oluşumunu bastırır. Distortion, Katil tarafından kovalandığında her 15 saniyede bir +1 Jeton şarj eder ve 2 Jeton tutabilir. Distorsiyon, Ölme Durumundayken etkilerini tetiklemez.",
+        "name_tr":  "Çarpıtma"
+    },
+    {
+        "name":  "Diversion",
+        "role":  "survivor",
+        "slug":  "diversion",
+        "desc":  "After staying in the Terror Radius without being chased for 30/25/20 seconds, Diversion activates. While active, press the Active Ability button while crouched and motionless to throw a pebble in the direction you are facing: Creates a distraction for the Killer at its landing location 20 metres away: Triggers a Loud Noise Notification. Creates fake Scratch Marks. Diversion deactivates after use.",
+        "owner":  "Adam Francis",
+        "desc_tr":  "Terör Yarıçapında 30/25/20 saniye boyunca takip edilmeden kaldıktan sonra Yönlendirme etkinleştirilir. Aktifken, çömelmiş ve hareketsizken yüzünüzdeki yöne bir çakıl taşı atmak için Aktif Yetenek düğmesine basın: 20 metre uzaktaki iniş noktasında Katilin dikkatini dağıtır: Yüksek Gürültü Bildirimini tetikler. Sahte Çizik İşaretleri oluşturur. Yönlendirme kullanımdan sonra devre dışı kalır.",
+        "name_tr":  "Yönlendirme"
+    },
+    {
+        "name":  "Do No Harm",
+        "role":  "survivor",
+        "slug":  "do-no-harm",
+        "desc":  "When healing another Survivor, depending on their accumulated Hook Stages, you benefit from the following effects: Increases your Altruistic Healing speed by 30/40/50 % per Hook Stage, up to a maximum of 60/80/100 %. Increases the Progression bonus of Great Healing Skill Checks by +3 % per Hook Stage, up to a maximum of +6 %.",
+        "owner":  "Orela Rose",
+        "desc_tr":  "Başka bir Hayatta Kalanı iyileştirirken, biriken Kanca Aşamalarına bağlı olarak aşağıdaki etkilerden yararlanırsınız: Fedakar İyileştirme hızınızı Kanca Aşaması başına %30/40/50 oranında, maksimum %60/80/100\u0027e kadar artırır. Büyük İyileştirme Beceri Kontrollerinin İlerleme bonusunu, Kanca Aşaması başına +%3 oranında, maksimum +%6\u0027ya kadar artırır.",
+        "name_tr":  "Zarar Verme"
+    },
+    {
+        "name":  "Down to the Last",
+        "role":  "survivor",
+        "slug":  "down-to-the-last",
+        "desc":  "As more of your friends fall to the Killer, you become shrouded in isolation and the Killer\u0027s Aura-reading abilities towards you are disrupted. Each time a Survivor other than yourself is killed or sacrificed, Down to the Last gains 1 Token, up to a maximum of 3 Tokens: Grants a stack-able radius of 20/22/24 metres per Token around you, up to a maximum of 60/66/72 metres, within which you are immune to the Killer\u0027s Aura-reading abilities. When you are the Last Survivor Standing, you benefit from the following effects: Increases your Repair speed by +75 %. Increases your Gate and Hatch Opening speeds by +50 %. Increases your chance of becoming the initial Obsession by increasing the default value by +100 %. The Killer can only be obsessed with one Survivor at a time.",
+        "owner":  "General",
+        "desc_tr":  "Daha fazla arkadaşınız Katilin eline düştükçe, yalnızlığa bürünürsünüz ve Katilin size karşı Aura okuma yetenekleri bozulur. Sizden başka bir Kurban öldürüldüğünde veya kurban edildiğinde, Down to the Last, en fazla 3 Jeton olmak üzere 1 Jeton kazanır: Çevrenizdeki Jeton başına 20/22/24 metrelik, maksimum 60/66/72 metreye kadar istiflenebilir bir yarıçap sağlar; bu yarıçap içinde, Katilin Aura okuma yeteneklerine karşı bağışıksınızdır. Ayakta Kalan Son Hayatta Kalan olduğunuzda aşağıdaki etkilerden yararlanırsınız: Onarım hızınızı +%75 artırır. Kapı ve Ambar Açma hızınızı +%50 artırır. Varsayılan değeri +%100 artırarak ilk Obsession olma şansınızı artırır. Katil aynı anda yalnızca bir Hayatta Kalan\u0027a takıntılı olabilir.",
+        "name_tr":  "Sonuna kadar"
+    },
+    {
+        "name":  "Dramaturgy",
+        "role":  "survivor",
+        "slug":  "dramaturgy",
+        "desc":  "Whenever you are at full health, Dramaturgy activates. While active, press the Active Ability button while running to run with knees high for 0.5 seconds before benefitting from the following primary effect: Grants a +25 Haste Status Effect for 2 seconds. Afterwards, Dramaturgy triggers any one of the following secondary effects, but never the same one twice in a row: Grants a second instance of the primary Haste Status Effect. Inflicts the Exposed Status Effect for 12 seconds. Causes you to scream. Grants a randomly selected Rare Item pre-equipped with a random selection of Add-ons. This causes you to automatically drop any previously held Item. Dramaturgy cannot be used while Exhausted. Dramaturgy causes the Exhausted Status Effect for 60/50/40 seconds.",
+        "owner":  "Nicolas Cage",
+        "desc_tr":  "Sağlığınız tam olduğunda Dramaturji devreye girer. Aktifken, aşağıdaki birincil etkiden yararlanmadan önce 0,5 saniye boyunca dizler yüksekte koşmak için koşarken Aktif Yetenek düğmesine basın: 2 saniye boyunca +25 Haste Statü Etkisi kazandırır. Daha sonra Dramaturji aşağıdaki ikincil etkilerden herhangi birini tetikler, ancak asla arka arkaya iki kez aynı etkiyi tetiklemez: Birincil Acele Durum Etkisinin ikinci bir örneğini verir. 12 saniye boyunca Maruz Kalma Durum Etkisini uygular. Çığlık atmanıza neden olur. Rastgele seçilen Eklentilerle önceden donatılmış, rastgele seçilmiş bir Nadir Öğe verir. Bu, önceden tutulan herhangi bir Öğeyi otomatik olarak bırakmanıza neden olur. Yorgunken dramaturji kullanılamaz. Dramaturji, 60/50/40 saniye boyunca Bitkin Durum Etkisine neden olur.",
+        "name_tr":  "Dramaturji"
+    },
+    {
+        "name":  "Duty of Care",
+        "role":  "survivor",
+        "slug":  "duty-of-care",
+        "desc":  "While healthy, taking a Protection Hit causes all other Survivors within 12 metres of your location to benefit from the following effect: Grants them a +25 % Haste Status Effect for 4/5/6 seconds.",
+        "owner":  "Orela Rose",
+        "desc_tr":  "Sağlıklıyken bir Koruma Darbesi almak, konumunuza 12 metre mesafedeki diğer tüm Hayatta Kalanların aşağıdaki etkiden faydalanmasına neden olur: Onlara 4/5/6 saniye boyunca +%25 Haste Statü Etkisi kazandırır.",
+        "name_tr":  "Bakım Görevi"
+    },
+    {
+        "name":  "Empathic Connection",
+        "role":  "survivor",
+        "slug":  "empathic-connection",
+        "desc":  "You benefit from the following permanent primary effect: Increases your Altruistic Healing speed by 25/30/35 %. Whenever any other Survivor is injured, Empathic Connection applies its secondary effect: Your Aura as a potential Healer is revealed to them.",
+        "owner":  "Yoichi Asakawa",
+        "desc_tr":  "Aşağıdaki kalıcı birincil etkiden yararlanırsınız: Altruistic Healing hızınızı %25/30/35 artırır. Başka bir Kurban yaralandığında, Empatik Bağlantı ikincil etkisini uygular: Potansiyel bir Şifacı olarak Auranız onlara gösterilir.",
+        "name_tr":  "Empatik Bağlantı"
+    },
+    {
+        "name":  "Empathy",
+        "role":  "survivor",
+        "slug":  "empathy",
+        "desc":  "Unlocks potential in your Aura-reading ability: The Auras of injured or dying Survivors are revealed to you within 64/96/128 metres.",
+        "owner":  "Claudette Morel",
+        "desc_tr":  "Aura okuma yeteneğinizin potansiyelini açığa çıkarır: Yaralı veya ölmekte olan Hayatta Kalanların Auraları 64/96/128 metre içinde size gösterilir.",
+        "name_tr":  "Empati"
+    },
+    {
+        "name":  "Exultation",
+        "role":  "survivor",
+        "slug":  "exultation",
+        "desc":  "While holding an Item, stunning the Killer by dropping a Pallet causes the following effects: Recharges the Item by +75 %. Upgrades its Rarity to the next available Tier. Exultation has a cool-down of 30/25/20 seconds.",
+        "owner":  "Trevor Belmont",
+        "desc_tr":  "Bir Öğeyi tutarken, bir Paleti düşürerek Katili sersemletmek aşağıdaki etkilere neden olur: Öğeyi +%75 oranında yeniden şarj eder. Nadirliğini bir sonraki mevcut Seviyeye yükseltir. Coşkunun soğuma süresi 30/25/20 saniyedir.",
+        "name_tr":  "sevinç"
+    },
+    {
+        "name":  "Eyes of Belmont",
+        "role":  "survivor",
+        "slug":  "eyes-of-belmont",
+        "desc":  "Whenever a Generator is completed, the Aura of the Killer is revealed to you for 1/2/3 seconds. Extends the duration of all instances of the Killer\u0027s Aura being revealed to you by +2 seconds. Eyes of Belmont benefits from its own effect.",
+        "owner":  "Trevor Belmont",
+        "desc_tr":  "Bir Jeneratör tamamlandığında, Katilin Aurası 1/2/3 saniye boyunca size gösterilir. Katilin Aurasının tüm örneklerinin size gösterilme süresini +2 saniye uzatır. Belmont\u0027un Gözleri kendi etkisinden yararlanır.",
+        "name_tr":  "Belmont\u0027un Gözleri"
+    },
+    {
+        "name":  "Fast Track",
+        "role":  "survivor",
+        "slug":  "fast-track",
+        "desc":  "Whenever you unhook a Survivor, Fast Track is granted 1 Token, up to a maximum of 1/2/3 Token(s) Succeeding a Great Repair Skill Check consumes all accumulated Tokens. Permanently reduces the Repair Charges requirement of that Generator by 5 charges per Token.",
+        "owner":  "Lee Yun-jin",
+        "desc_tr":  "Bir Kurban\u0027ın kancasını açtığınızda, Hızlı Yol\u0027a 1 Jeton verilir, bu maksimum 1/2/3 Jetondur. Büyük Onarım Beceri Kontrolünde başarılı olmak, biriken tüm Jetonları tüketir. Söz konusu Jeneratörün Onarım Ücreti ihtiyacını Jeton başına 5 yük oranında kalıcı olarak azaltır.",
+        "name_tr":  "Hızlı Yol"
+    },
+    {
+        "name":  "Finesse",
+        "role":  "survivor",
+        "slug":  "finesse",
+        "desc":  "The threat of danger can motivate any creature to strengthen its resolve. Whenever you are healthy, Finesse activates: Increases your Vaulting speed for a Fast Vault by +20 %. Finesse has a cool-down of 40/35/30 seconds after performing a Fast Vault.",
+        "owner":  "Lara Croft",
+        "desc_tr":  "Tehlike tehdidi her canlıyı kararlılığını güçlendirmeye motive edebilir. Sağlıklı olduğunuzda, Finesse etkinleştirilir: Hızlı Vault için Atlama hızınızı +%20 artırır. Finesse\u0027in Hızlı Vault gerçekleştirdikten sonra 40/35/30 saniyelik bir soğuma süresi vardır.",
+        "name_tr":  "İncelik"
+    },
+    {
+        "name":  "Fixated",
+        "role":  "survivor",
+        "slug":  "fixated",
+        "desc":  "You benefit from the following permanent effects: Increases your Walking speed by 10/15/20 %. Unlocks the ability to see your own Scratch Marks.",
+        "owner":  "Nancy Wheeler",
+        "desc_tr":  "Aşağıdaki kalıcı etkilerden faydalanırsınız: Yürüme hızınızı %10/15/20 artırır. Kendi Çizik İşaretlerinizi görme yeteneğinin kilidini açar.",
+        "name_tr":  "Sabit"
+    },
+    {
+        "name":  "Flashbang",
+        "role":  "survivor",
+        "slug":  "flashbang",
+        "desc":  "You have adapted to a world in chaos and making what you can from the debris. After repairing Generators for a total of 50/45/40 %, Flashbang activates: Press the Active Ability button while hiding inside a Locker to craft a Flash Grenade. Flashbang deactivates after use.",
+        "owner":  "Leon Scott Kennedy",
+        "desc_tr":  "Kaosun hakim olduğu ve enkazdan elinizden geleni yaptığınız bir dünyaya uyum sağladınız. Jeneratörleri toplam %50/45/40 onardıktan sonra Flashbang etkinleştirilir: Bir Flaş Bombası oluşturmak için bir Dolabının içinde saklanırken Aktif Yetenek düğmesine basın. Flashbang kullanımdan sonra devre dışı kalır.",
+        "name_tr":  "Flaş patlaması"
+    },
+    {
+        "name":  "Flip-Flop",
+        "role":  "survivor",
+        "slug":  "flip-flop",
+        "desc":  "Recovering in the Dying State also charges the Wiggle Meter at 50 % of the Recovery rate and up to a maximum of 40/45/50 % of Wiggle Progression.",
+        "owner":  "Ash Williams",
+        "desc_tr":  "Ölme Durumunda iyileşme aynı zamanda Wiggle Meter\u0027ı İyileşme oranının %50\u0027si ve Wiggle İlerlemesinin maksimum %40/45/50\u0027sine kadar şarj eder.",
+        "name_tr":  "Takla"
+    },
+    {
+        "name":  "Fogwise",
+        "role":  "survivor",
+        "slug":  "fogwise",
+        "desc":  "Unlocks potential in your Aura-reading ability while repairing Generators: The Aura of the Killer is revealed to you for 4/5/6 seconds after succeeding a Great Repair Skill Check.",
+        "owner":  "Vittorio Toscano",
+        "desc_tr":  "Jeneratörleri onarırken Aura okuma yeteneğinizin potansiyelini açar: Büyük Onarım Beceri Kontrolü\u0027nü tamamladıktan sonra Katilin Aura\u0027sı 4/5/6 saniye boyunca size gösterilir.",
+        "name_tr":  "Sis yönünde"
+    },
+    {
+        "name":  "For the People",
+        "role":  "survivor",
+        "slug":  "for-the-people",
+        "desc":  "While healthy and healing another Survivor without using a Med-Kit, press the Active Ability button to trigger the following effects: Trade 1 Health State with the other Survivor: Instantly heals them to the Injured State, if they were dying or suffering from the Deep Wound Status Effect. Instantly heals them to full health, if they were injured. You yourself become injured and suffer from the Broken Status Effect for 80/70/60 seconds. You become the Killer\u0027s Obsession, if not already. Reduces your chance of becoming the initial Obsession by reducing the default value by -100 %. The Killer can only be obsessed with one Survivor at a time.",
+        "owner":  "Zarina Kassir",
+        "desc_tr":  "Sağlıklıyken ve başka bir Kurban\u0027ı Sağlık Kiti kullanmadan iyileştirirken, aşağıdaki etkileri tetiklemek için Aktif Yetenek düğmesine basın: 1 Sağlık Durumunu diğer Kurbanla takas edin: Eğer ölüyorsa veya Derin Yara Durumu Efektinden muzdaripse, onu anında Yaralı Devlete iyileştirir. Yaralanmışlarsa onları anında tam sağlıklarına kavuşturur. Siz kendiniz yaralanırsınız ve 80/70/60 saniye boyunca Kırık Durum Etkisine maruz kalırsınız. Henüz olmasa bile Katilin Takıntısı olursunuz. Varsayılan değeri -%100 azaltarak ilk Obsession olma şansınızı azaltır. Katil aynı anda yalnızca bir Hayatta Kalan\u0027a takıntılı olabilir.",
+        "name_tr":  "İnsanlar için"
+    },
+    {
+        "name":  "Friendly Competition",
+        "role":  "survivor",
+        "slug":  "friendly-competition",
+        "desc":  "Each time you complete a Generator together with at least one other Survivor, Friendly Competition activates: Increases the Repair speed of all participating Survivors, including yourself, by +5 % for 100/110/120 seconds.",
+        "owner":  "Thalita Lyra",
+        "desc_tr":  "En az bir diğer Kurbanla birlikte bir Jeneratörü tamamladığınızda, Dostluk Yarışması etkinleştirilir: Siz de dahil olmak üzere katılan tüm Hayatta Kalanların Onarım hızını 100/110/120 saniye boyunca +%5 artırır.",
+        "name_tr":  "Dostça Rekabet"
+    },
+    {
+        "name":  "Ghost Notes",
+        "role":  "survivor",
+        "slug":  "ghost-notes",
+        "desc":  "While suffering from the Exhausted Status Effect, you benefit from the following effects: Causes your Scratch Marks to disappear +50 % faster. Increases your Recovery rate from that Status Effect by 5/7.5/10 %. Ghost Notes does not cause the Exhausted Status Effect.",
+        "owner":  "Vee Boonyasak",
+        "desc_tr":  "Bitkin Durum Etkisinden muzdaripken aşağıdaki etkilerden yararlanırsınız: Çizik İşaretlerinizin +%50 daha hızlı kaybolmasını sağlar. Bu Durum Efektinden kurtulma oranınızı %5/7,5/10 artırır. Hayalet Notlar Bitkin Durum Etkisine neden olmaz.",
+        "name_tr":  "Hayalet Notları"
+    },
+    {
+        "name":  "Hardened",
+        "role":  "survivor",
+        "slug":  "hardened",
+        "desc":  "Live long enough, and survival will run in your blood. After unlocking a Chest and either blessing or cleansing a Totem, Hardened activates: Suppresses the urge to scream from any cause and instead causes the Aura of the Killer to be revealed to you for 3/4/5 seconds.",
+        "owner":  "Lara Croft",
+        "desc_tr":  "Yeterince uzun yaşarsanız hayatta kalmak kanınıza işleyecektir. Bir Sandığın kilidini açtıktan ve bir Totemi kutsadıktan veya temizledikten sonra, Sertleştirilmiş etkinleştirilir: Herhangi bir nedenden dolayı çığlık atma dürtüsünü bastırır ve bunun yerine Katilin Aurasının 3/4/5 saniye boyunca size gösterilmesini sağlar.",
+        "name_tr":  "Sertleştirilmiş"
+    },
+    {
+        "name":  "Head On",
+        "role":  "survivor",
+        "slug":  "head-on",
+        "desc":  "After hiding in a Locker for 3 seconds, Head On activates. While active, hold the Sprint button while exiting the Locker to trigger its effect: Causes you to forcefully launch yourself from the Locker, stunning the Killer if they are too close to it: Has a Stun range of 2.5 metres. Has a Stun duration of 3 seconds. Triggers a Loud Noise Notification for the Killer upon missing. Head On cannot be used while Exhausted. Head On causes the Exhausted Status Effect for 60/50/40 seconds on a successful stun.",
+        "owner":  "Jane Romero",
+        "desc_tr":  "3 saniye boyunca bir Dolapta saklandıktan sonra Head On etkinleşir. Etkinken, etkisini tetiklemek için Dolaptan çıkarken Sprint düğmesini basılı tutun: Kendinizi Dolaptan zorla fırlatmanıza neden olur, eğer Katil ona çok yakınsa onu sersemletir: 2,5 metrelik Sersemletme menziline sahiptir. 3 saniyelik Sersemletme süresi vardır. Katil kaybolduğunda Yüksek Gürültü Bildirimini tetikler. Yorgunken Head On kullanılamaz. Head On, başarılı bir sersemletme sonrasında 60/50/40 saniye boyunca Bitkin Durum Etkisine neden olur.",
+        "name_tr":  "Doğrudan"
+    },
+    {
+        "name":  "Hope",
+        "role":  "survivor",
+        "slug":  "hope",
+        "desc":  "Once the Exit Gates are powered, Hope activates for the remainder of the Trial: Grants a 3/4/5 % Haste Status Effect.",
+        "owner":  "General",
+        "desc_tr":  "Çıkış Kapılarına güç verildiğinde, Denemenin geri kalanı boyunca Hope etkinleştirilir: %3/4/5 Hız Statü Etkisi kazandırır.",
+        "name_tr":  "Umut"
+    },
+    {
+        "name":  "Inner Focus",
+        "role":  "survivor",
+        "slug":  "nner-focus",
+        "desc":  "You have honed your ability to see through the haze of the Ravage. Grants the ability to see the Scratch Marks of other Survivors. Whenever another Survivor loses a Health State due to the Killer, the Aura of the latter is revealed to your for 6/8/10 seconds.",
+        "owner":  "Haddie Kaur",
+        "desc_tr":  "Yıkım\u0027ın bulanıklığının arkasını görme yeteneğinizi geliştirdiniz. Diğer Hayatta Kalanların Çizik İzlerini görme yeteneği verir. Ne zaman başka bir Kurban, Katil yüzünden bir Sağlık Durumunu kaybederse, katilin Aura\u0027sı 6/8/10 saniye boyunca size gösterilir.",
+        "name_tr":  "İç Odak"
+    },
+    {
+        "name":  "Inner Strength",
+        "role":  "survivor",
+        "slug":  "nner-strength",
+        "desc":  "After cleansing a Totem of any kind, Inner Strength activates. While active, hiding inside a Locker for 10/9/8 seconds triggers the following effect: Heals you to the next Health State. Inner Strength deactivates after use.Inner Strength cannot be used while suffering from the Broken Status Effect.",
+        "owner":  "Nancy Wheeler",
+        "desc_tr":  "Herhangi bir Totem temizlendikten sonra İç Güç etkinleşir. Aktifken, 10/9/8 saniye boyunca bir Dolapta saklanmak şu etkiyi tetikler: Sizi bir sonraki Sağlık Durumuna iyileştirir. Inner Strength, kullanımdan sonra devre dışı bırakılır. Inner Strength, Kırık Durum Etkisine maruz kaldığında kullanılamaz.",
+        "name_tr":  "İç Güç"
+    },
+    {
+        "name":  "Invocation: Treacherous Crows",
+        "role":  "survivor",
+        "slug":  "nvocation-treacherous-crows",
+        "desc":  "When in the Basement near the circle, press the Active Ability button to begin the Invocation, which takes 60 seconds to complete. During an Invocation, your Aura is revealed to all other Survivors and they can join in, accelerating the process by +100 %, if they too have an Invocation Perk equipped, or by +50 %, if they have not. Once the Invocation is completed, the following effects apply: Whenever the Killer scares a Crow while a Survivor is inside their Terror Radius, their Aura is revealed to all Survivors for 1/1.5/2 seconds. You automatically enter the Injured State from any previous Health State, and suffer from the Broken Status Effect for the remainder of the Trial.",
+        "owner":  "Taurie Cain",
+        "desc_tr":  "Bodrum katında dairenin yakınındayken, tamamlanması 60 saniye süren Çağırmayı başlatmak için Aktif Yetenek düğmesine basın. Bir Yakarış sırasında, Auranız diğer tüm Hayatta Kalanlara açıklanır ve onlar da katılarak, eğer onlar da bir Çağırma Yeteneğine sahiplerse +%100, yoksa +%50 oranında süreci hızlandırabilirler. Çağırma tamamlandığında aşağıdaki etkiler uygulanır: Bir Kurban Terör Yarıçapındayken Katil bir Kargayı korkuttuğunda, Aura\u0027sı 1/1,5/2 saniye boyunca tüm Hayatta Kalanlara gösterilir. Önceki herhangi bir Sağlık Durumundan otomatik olarak Yaralı Duruma girersiniz ve Denemenin geri kalanı boyunca Bozuk Durum Etkisinden muzdarip olursunuz.",
+        "name_tr":  "Yakarış: Hain Kargalar"
+    },
+    {
+        "name":  "Invocation: Weaving Spiders",
+        "role":  "survivor",
+        "slug":  "nvocation-weaving-spiders",
+        "desc":  "When in the Basement near the circle, press the Active Ability button to begin the Invocation, which takes 60 seconds to complete. During an Invocation, your Aura is revealed to all other Survivors and they can join in, accelerating the process by +100 %, if they too have an Invocation Perk equipped, or by +50 %, if they have not. Once the Invocation is completed, the following effects apply: Permanently reduces the Repair Charges requirement of all Generators in the Trial by 8/9/10 Charges. You automatically enter the Injured State from any previous Health State, and suffer from the Broken Status Effect for the remainder of the Trial. Completing this Invocation disables all other instances of Invocation: Weaving Spiders for the remainder of the Trial.",
+        "owner":  "Sable Ward",
+        "desc_tr":  "Bodrum katında dairenin yakınındayken, tamamlanması 60 saniye süren Çağırmayı başlatmak için Aktif Yetenek düğmesine basın. Bir Yakarış sırasında, Auranız diğer tüm Hayatta Kalanlara açıklanır ve onlar da katılarak, eğer onlar da bir Çağırma Yeteneğine sahiplerse +%100, yoksa +%50 oranında süreci hızlandırabilirler. Çağırma tamamlandığında aşağıdaki etkiler uygulanır: Denemedeki tüm Jeneratörlerin Onarım Ücreti ihtiyacını 8/9/10 Yük oranında kalıcı olarak azaltır. Önceki herhangi bir Sağlık Durumundan otomatik olarak Yaralı Duruma girersiniz ve Denemenin geri kalanı boyunca Bozuk Durum Etkisinden muzdarip olursunuz. Bu Çağırmayı tamamlamak, Denemenin geri kalanı boyunca diğer tüm Yakarış: Örümcek Dokuma örneklerini devre dışı bırakır.",
+        "name_tr":  "Yakarış: Örümcekler Dokuma"
+    },
+    {
+        "name":  "Iron Will",
+        "role":  "survivor",
+        "slug":  "ron-will",
+        "desc":  "While injured, you benefit from the following effects: Reduces the volume of Grunts of Pain by 80/90/100 %. Iron Will cannot be used while Exhausted, but does not cause the Status Effect.",
+        "owner":  "Jake Park",
+        "desc_tr":  "Yaralıyken aşağıdaki etkilerden yararlanırsınız: Grunts of Pain\u0027in hacmini %80/90/100 azaltır. Demir İrade, Bitkin durumdayken kullanılamaz ancak Durum Etkisine neden olmaz.",
+        "name_tr":  "Demir İrade"
+    },
+    {
+        "name":  "Kindred",
+        "role":  "survivor",
+        "slug":  "kindred",
+        "desc":  "Unlocks potential in your Aura-reading ability. Whenever any Survivor is hooked, Kindred activates and applies the following effects: The Aura of the Killer is revealed to all Survivors whenever the Killer comes within 8/12/16 metres of the Hook. If you are the Hooked Survivor, the Auras of all Survivors are revealed to each other. If you are not the Hooked Survivor, the Auras of all other Survivors are only revealed to you.",
+        "owner":  "General",
+        "desc_tr":  "Aura okuma yeteneğinizdeki potansiyeli açığa çıkarır. Herhangi bir Kurban kancaya takıldığında, Kindred etkinleştirilir ve aşağıdaki efektleri uygular: Katilin Aurası, Katilin Kancaya 8/12/16 metre yakınına geldiğinde tüm Hayatta Kalanlara gösterilir. Eğer Kancalı Hayatta Kalan iseniz, tüm Hayatta Kalanların Auraları birbirlerine açıklanır. Eğer Kancalı Hayatta Kalan değilseniz, diğer tüm Hayatta Kalanların Auraları yalnızca size açıklanır.",
+        "name_tr":  "Akraba"
+    },
+    {
+        "name":  "Last Stand",
+        "role":  "survivor",
+        "slug":  "last-stand",
+        "desc":  "After staying in the Terror Radius without being chased for 120/105/90 seconds, Last Stand activates. While active, perform a Rushed Vault action to trigger its effect: Stuns the Killer for 3 seconds, if they are within 2.5 metres of that Vault location. Last Stand is disabled for the remainder of the Trial after use.",
+        "owner":  "Michonne Grimes",
+        "desc_tr":  "Terör Yarıçapında 120/105/90 saniye boyunca takip edilmeden kaldıktan sonra Son Direniş etkinleşir. Aktifken, etkisini tetiklemek için bir Koşturulmuş Mahzen eylemi gerçekleştirin: Katil, eğer o Mahzen konumunun 2,5 metre yakınındaysa 3 saniye boyunca Sersemletir. Son Direniş, kullanımdan sonra Deneme süresinin geri kalanı boyunca devre dışı bırakılır.",
+        "name_tr":  "Son stand"
+    },
+    {
+        "name":  "Leader",
+        "role":  "survivor",
+        "slug":  "leader",
+        "desc":  "All other Survivors within 10 metres of your location benefit from the following effect: Increases their Action speeds for Cleansing, Gate-Opening, Healing, Sabotaging, Unhooking, and Unlocking by 20/25/30 %. This effect lingers for 15 seconds after leaving its Area of Effect. Survivors can only be affected by one instance of Leader at a time.",
+        "owner":  "Dwight Fairfield",
+        "desc_tr":  "Konumunuza 10 metre mesafedeki diğer tüm Hayatta Kalanlar şu etkiden yararlanır: Temizleme, Kapı Açma, İyileştirme, Sabotaj, Kancayı Açma ve Kilit Açma için Eylem hızlarını %20/25/30 artırır. Bu etki, Etki Alanından ayrıldıktan sonra 15 saniye boyunca devam eder. Hayatta kalanlar aynı anda Liderin yalnızca bir örneğinden etkilenebilir.",
+        "name_tr":  "Lider"
+    },
+    {
+        "name":  "Left Behind",
+        "role":  "survivor",
+        "slug":  "left-behind",
+        "desc":  "Once you are the Last Survivor Standing, Left Behind activates: The Aura of the Hatch is revealed to you within 24/28/32 metres.",
+        "owner":  "General",
+        "desc_tr":  "Ayakta Kalan Son Hayatta Kalan olduğunuzda, Geride Kalan etkinleşir: Ambarın Aurası 24/28/32 metre içinde size gösterilir.",
+        "name_tr":  "Geride Kalan"
+    },
+    {
+        "name":  "Light-Footed",
+        "role":  "survivor",
+        "slug":  "light-footed",
+        "desc":  "Whenever you are healthy, Light-Footed activates: Suppresses the sound of your footsteps while running. Light-Footed has a cool-down of 14/12/10 seconds after performing a Rush Vault action.",
+        "owner":  "Ellen Ripley",
+        "desc_tr":  "Sağlıklı olduğunuzda, Hafif Ayaklı etkinleşir: Koşarken ayak seslerinizi bastırır. Light-Footed, Rush Vault eylemi gerçekleştirdikten sonra 14/12/10 saniyelik bir soğuma süresine sahiptir.",
+        "name_tr":  "Hafif Ayaklı"
+    },
+    {
+        "name":  "Lightweight",
+        "role":  "survivor",
+        "slug":  "lightweight",
+        "desc":  "Your running is light and soft, making your tracks harder to follow. Reduces the Lifetime of your Scratch Marks by 3/4/5 seconds. Reduces the Spawn chance of patches of Scratch Marks by -60 %, making their spacing inconsistent.",
+        "owner":  "General",
+        "desc_tr":  "Koşunuz hafif ve yumuşaktır, bu da izlerinizi takip etmeyi zorlaştırır. Çizik İşaretlerinizin Ömrünü 3/4/5 saniye azaltır. Çizik İşaretlerinin yamalarının ortaya çıkma şansını %-60 azaltır, böylece aralıkları tutarsız hale gelir.",
+        "name_tr":  "Hafif"
+    },
+    {
+        "name":  "Lithe",
+        "role":  "survivor",
+        "slug":  "lithe",
+        "desc":  "Whenever you perform a Rushed Vault action, Lithe triggers its effect: Grants a +50 % Haste Status Effect for 3 seconds. Lithe cannot be used while Exhausted. Lithe causes the Exhausted Status Effect for 60/50/40 seconds.",
+        "owner":  "Feng Min",
+        "desc_tr":  "Ne zaman bir Koşmalı Mahzen eylemi gerçekleştirseniz, Lithe bunun etkisini tetikler: 3 saniye boyunca +%50 Hız Statü Etkisi verir. Lithe, Bitkin durumdayken kullanılamaz. Lithe, 60/50/40 saniye boyunca Bitkinlik Durum Etkisine neden olur.",
+        "name_tr":  "Kıvrak"
+    },
+    {
+        "name":  "Lucky Break",
+        "role":  "survivor",
+        "slug":  "lucky-break",
+        "desc":  "Whenever you are in the Injured State, Lucky Break activates: Suppresses the creation of Pools of Blood and Scratch Marks for up to 40/50/60 seconds. Whenever you are healing another Survivor, Lucky Break recharges by the same amount of time spent performing the Healing action, up to its initial maximum. Lucky Break deactivates once its timer runs out or whenever your Health State updates to any other but the Injured State.",
+        "owner":  "Yui Kimura",
+        "desc_tr":  "Yaralı Durumunda olduğunuzda Lucky Break etkinleştirilir: 40/50/60 saniyeye kadar Kan Havuzları ve Çizik İzlerinin oluşumunu engeller. Başka bir Hayatta Kalanı iyileştirdiğinizde, Lucky Break, İyileştirme eylemini gerçekleştirmek için harcadığınız süre kadar, başlangıçtaki maksimum değerine kadar yeniden şarj olur. Lucky Break, zamanlayıcısı bittiğinde veya Sağlık Durumunuz Yaralı Durum dışında herhangi bir duruma güncellendiğinde devre dışı kalır.",
+        "name_tr":  "Şanslı Mola"
+    },
+    {
+        "name":  "Lucky Star",
+        "role":  "survivor",
+        "slug":  "lucky-star",
+        "desc":  "While hiding inside a Locker, you benefit from the following effect: Suppresses your Grunts of Pain. After exiting the Locker you benefit from the following effects for 30 seconds: Suppresses your Grunts of Pain and the creation of Pools of Blood. The Auras of all other Survivors are revealed to you. The Aura of the nearest Generator is revealed to you and highlighted in yellow. Lucky Star has a cool-down of 35/30/25 seconds.",
+        "owner":  "Ellen Ripley",
+        "desc_tr":  "Bir Dolapta saklanırken aşağıdaki etkiden yararlanırsınız: Acı Homurtularınızı bastırır. Dolaptan çıktıktan sonra 30 saniye boyunca aşağıdaki etkilerden yararlanırsınız: Acı Homurtularınızı ve Kan Havuzu oluşumunu bastırır. Diğer tüm Hayatta Kalanların Auraları size açıklanır. En yakın Jeneratörün Aurası size gösterilir ve sarı renkle vurgulanır. Lucky Star\u0027ın 35/30/25 saniyelik bir bekleme süresi vardır.",
+        "name_tr":  "Şanslı Yıldız"
+    },
+    {
+        "name":  "Made for This",
+        "role":  "survivor",
+        "slug":  "made-for-this",
+        "desc":  "Whenever you are in the Injured State, Made for This activates. While active, completing a Healing action on another Survivor triggers the following primary effect: Grants the Endurance Status Effect for 6/8/10 seconds. Endurance is cancelled prematurely when performing a Conspicuous Action of any kind. While active and suffering from the Deep Wound Status Effect, running triggers the following secondary effect: Grants a 1/2/3 % Haste Status Effect.",
+        "owner":  "Gabriel Soma",
+        "desc_tr":  "Yaralı Durumunda olduğunuzda, Made for This etkinleşir. Aktifken, başka bir Kurban üzerinde bir İyileştirme eyleminin tamamlanması aşağıdaki birincil etkiyi tetikler: 6/8/10 saniye boyunca Dayanıklılık Durumu Etkisi kazandırır. Herhangi bir türde Göze Çarpan Eylem gerçekleştirilirken dayanıklılık vaktinden önce iptal edilir. Aktifken ve Derin Yara Durumu Efektinden muzdaripken, koşmak aşağıdaki ikincil etkiyi tetikler: %1/2/3 Hız Statü Etkisi kazandırır.",
+        "name_tr":  "Bunun İçin Yapıldı"
+    },
+    {
+        "name":  "Mettle of Man",
+        "role":  "survivor",
+        "slug":  "mettle-of-man",
+        "desc":  "After triggering a third Protection Hit by any means, Mettle of Man activates: While in the Injured State, Mettle of Man shields you from the next attack that would put you into the Dying State. After healing back to full health by any means, Mettle of Man reveals your Aura to the Killer whenever you are farther than 12/14/16 metres from their location. Mettle of Man deactivates after entering the Dying State by any means. Increases your chance of becoming the initial Obsession by increasing the default value by +100 %. The Killer can only be obsessed with one Survivor at a time.",
+        "owner":  "Ash Williams",
+        "desc_tr":  "Herhangi bir şekilde üçüncü bir Koruma Darbesini tetikledikten sonra, Mettle of Man etkinleştirilir: Yaralı Durumundayken Mettle of Man, sizi Ölen Durumuna sokacak bir sonraki saldırıya karşı sizi korur. Herhangi bir şekilde tam sağlığına kavuştuktan sonra Mettle of Man, Katil\u0027in bulunduğu yerden 12/14/16 metreden daha uzak olduğunuzda Auranızı ona gösterir. Mettle of Man, Ölme Durumuna girdikten sonra herhangi bir şekilde devre dışı kalır. Varsayılan değeri +%100 artırarak ilk Obsession olma şansınızı artırır. Katil aynı anda yalnızca bir Hayatta Kalan\u0027a takıntılı olabilir.",
+        "name_tr":  "Adamın Mettle\u0027ı"
+    },
+    {
+        "name":  "Mirrored Illusion",
+        "role":  "survivor",
+        "slug":  "mirrored-llusion",
+        "desc":  "A familiar spell made unfamiliar in this corrupted landscape. After repairing Generators for a total of 20 %, Mirrored Illusion activates: Press the Active Ability button when next to either a Chest, Exit Gate, Generator, or a Totem to spawn a Static Illusion that lasts for 40/50/60 seconds. Mirrored Illusion deactivates after triggering successfully.",
+        "owner":  "Aestri Yazar \u0026amp; Baermar Uraz",
+        "desc_tr":  "Tanıdık bir Efsun, bu yozlaşmış manzarada alışılmadık hale geldi. Jeneratörleri toplam %20 onardıktan sonra Aynalı İllüzyon etkinleştirilir: 40/50/60 saniye süren bir Statik İllüzyon oluşturmak için bir Sandık, Çıkış Kapısı, Jeneratör veya Totem\u0027in yanındayken Aktif Yetenek düğmesine basın. Aynalı İllüzyon başarıyla tetiklendikten sonra devre dışı kalır.",
+        "name_tr":  "Aynalı İllüzyon"
+    },
+    {
+        "name":  "Moment of Glory",
+        "role":  "survivor",
+        "slug":  "moment-of-glory",
+        "desc":  "After performing the Unlocking or Rummaging action on Chests a total of 2 times, Moment of Glory activates: When you become injured, you instantly suffer from the Broken Status Effect. You are automatically healed 1 Health State after 80/70/60 seconds. This effect is cancelled prematurely if you enter the Dying State. Moment of Glory does not activate if you already suffer from the Broken Status Effect. Moment of Glory deactivates after healing you.",
+        "owner":  "Trevor Belmont",
+        "desc_tr":  "Sandıklar üzerinde Kilit Açma veya Rummaging eylemini toplam 2 kez gerçekleştirdikten sonra Moment of Glory etkinleştirilir: Yaralandığınızda, anında Kırık Durum Etkisine maruz kalırsınız. 80/70/60 saniye sonra otomatik olarak 1 Sağlık Durumu iyileşirsiniz. Ölme Durumuna girerseniz bu etki vaktinden önce iptal edilir. Zaten Kırık Durum Efektinden muzdaripseniz Zafer Anı etkinleşmez. Moment of Glory, sizi iyileştirdikten sonra devre dışı kalır.",
+        "name_tr":  "Zafer Anı"
+    },
+    {
+        "name":  "No Mither",
+        "role":  "survivor",
+        "slug":  "no-mither",
+        "desc":  "You suffer permanently from the Broken Status Effect in exchange for the following benefits: Suppresses the creation of Pools of Blood. Suppresses your Grunts of Pain while in the Injured State or in the Dying State. Unlocks the Self-Recovery ability, allowing you to fully recover from the Dying State: Increases the Recovery speed by 15/20/25 %.",
+        "owner":  "David King",
+        "desc_tr":  "Aşağıdaki faydalar karşılığında Kırık Durum Etkisinden kalıcı olarak acı çekersiniz: Kan Havuzlarının oluşumunu bastırır. Yaralı Durumda veya Ölmekte Olan Durumdayken Acı Homurtularınızı bastırır. Kendini Kurtarma yeteneğinin kilidini açarak Ölme Durumundan tamamen kurtulmanızı sağlar: İyileşme hızını %15/20/25 artırır.",
+        "name_tr":  "Gönye yok"
+    },
+    {
+        "name":  "No One Left Behind",
+        "role":  "survivor",
+        "slug":  "no-one-left-behind",
+        "desc":  "Once the Exit Gates are powered, No One Left Behind activates: The Auras of all other Survivors are revealed to you. Increases your Action speeds for Healing and Unhooking by 50/75/100 %. Increases the strength and duration of the Haste Status Effect granted to Survivors you unhook by +10 % and +5 seconds respectively: Causes them to benefit from a 20 % Haste Status Effect for 15 seconds.",
+        "owner":  "General",
+        "desc_tr":  "Çıkış Kapılarına güç verildiğinde, Geride Kalan Kimse etkinleştirilmez: Diğer tüm Hayatta Kalanların Auraları size gösterilir. İyileştirme ve Kancayı Kaldırma için Eylem hızınızı %50/75/100 artırır. Çözdüğünüz Hayatta Kalanlara verilen Haste Durum Etkisinin gücünü ve süresini sırasıyla +%10 ve +5 saniye artırır: 15 saniye boyunca %20 Haste Durum Etkisinden faydalanmalarını sağlar.",
+        "name_tr":  "Geride Kimse Kalmadı"
+    },
+    {
+        "name":  "Off the Record",
+        "role":  "survivor",
+        "slug":  "off-the-record",
+        "desc":  "After being unhooked or unhooking yourself, Off the Record activates for 30/35/40 seconds: Blocks your Aura from being revealed. Suppresses your Grunts of Pain while in the Injured State. Suppresses the creation of your Scratch Marks. Grants the Endurance Status Effect. Endurance is cancelled prematurely when performing a Conspicuous Action of any kind. Off the Record deactivates prematurely and is disabled for the remainder of the Trial upon powering the Exit Gates.",
+        "owner":  "Zarina Kassir",
+        "desc_tr":  "Bağlantıyı kaldırdıktan veya kendinizi çözdükten sonra, Kayıt Dışı 30/35/40 saniye boyunca etkinleşir: Auranızın ortaya çıkmasını engeller. Yaralı Durumdayken Acı Homurtularınızı bastırır. Çizik İzlerinizin oluşumunu bastırır. Dayanıklılık Durumu Etkisini verir. Herhangi bir türde Göze Çarpan Eylem gerçekleştirilirken dayanıklılık vaktinden önce iptal edilir. Kayıt Dışı erken devre dışı bırakılır ve Çıkış Kapılarına güç verildiğinde Denemenin geri kalanı boyunca devre dışı bırakılır.",
+        "name_tr":  "Kayıt Dışı"
+    },
+    {
+        "name":  "One-Two-Three-Four!",
+        "role":  "survivor",
+        "slug":  "one-two-three-four",
+        "desc":  "While standing and idle, press the Active Ability button to start a Performance: Lasts for up to 15 seconds. Empowers Survivors within 16 metres of your location. Triggers continuous Skill Checks. After successfully completing the Performance, empowered Survivors performing Healing or Repairing actions benefit from the following effect for 90 seconds: Increases the chances of triggering Skill Checks by +20 %. One-Two-Three-Four! has a cool-down of 110/100/90 seconds after cancelling or completing the Performance.",
+        "owner":  "Vee Boonyasak",
+        "desc_tr":  "Ayakta ve boştayken bir Performans başlatmak için Aktif Yetenek düğmesine basın: 15 saniyeye kadar sürer. Bulunduğunuz yerden 16 metre uzaktaki Hayatta Kalanları güçlendirir. Sürekli Beceri Kontrollerini tetikler. Performansı başarıyla tamamladıktan sonra, İyileştirme veya Onarım eylemlerini gerçekleştiren güçlendirilmiş Hayatta Kalanlar, 90 saniye boyunca aşağıdaki etkiden yararlanır: Beceri Kontrollerini tetikleme şansını +%20 artırır. Bir-İki-Üç-Dört! Performans iptal edildikten veya tamamlandıktan sonra 110/100/90 saniyelik bir soğuma süresi vardır.",
+        "name_tr":  "Bir-İki-Üç-Dört!"
+    },
+    {
+        "name":  "Open-Handed",
+        "role":  "survivor",
+        "slug":  "open-handed",
+        "desc":  "All Survivors benefit from the following permanent effect: Increases the radius of all Aura-reading abilities by 8/12/16 metres. Open-Handed only affects Auras that emanate from the Survivor causing them. Survivors can only be affected by one instance of Open-Handed at a time.",
+        "owner":  "Ace Visconti",
+        "desc_tr":  "Tüm Hayatta Kalanlar aşağıdaki kalıcı etkiden yararlanır: Tüm Aura okuma yeteneklerinin yarıçapını 8/12/16 metre artırır. Open-Handed yalnızca onlara neden olan Survivor\u0027dan yayılan Auraları etkiler. Hayatta kalanlar aynı anda yalnızca bir Açık El örneğinden etkilenebilir.",
+        "name_tr":  "eli açık"
+    },
+    {
+        "name":  "Overcome",
+        "role":  "survivor",
+        "slug":  "overcome",
+        "desc":  "Whenever you enter the Injured State from full health, Overcome triggers its effect: Extends the duration of the On-hit Sprint boost by +2 seconds. Overcome cannot be used while Exhausted. Overcome causes the Exhausted Status Effect for 60/50/40 seconds.",
+        "owner":  "Jonah Vasquez",
+        "desc_tr":  "Yaralı Durumuna tam sağlık durumundan girdiğinizde, Üstesinden Gelme etkisini tetikler: İsabet Halinde Sprint takviyesinin süresini +2 saniye uzatır. Yorgunken Üstesinden Gelmek kullanılamaz. Üstesinden gelmek, 60/50/40 saniye boyunca Bitkinlik Durum Etkisine neden olur.",
+        "name_tr":  "Üstesinden gelmek"
+    },
+    {
+        "name":  "Overzealous",
+        "role":  "survivor",
+        "slug":  "overzealous",
+        "desc":  "Fighting back against the Ravage motivates and inspires you. After cleansing or blessing a Totem, Overzealous activates: Dull Totem: Increases your Repair speed by 8/9/10 %. Hex Totem: Increases your Repair speed by 16/18/20 %. Overzealous deactivates after losing a Health State by any means.",
+        "owner":  "Haddie Kaur",
+        "desc_tr":  "Ravage\u0027a karşı mücadele etmek sizi motive eder ve ilham verir. Bir Totemi temizledikten veya kutsadıktan sonra Overzealous şunları etkinleştirir: Donuk Totem: Onarım hızınızı %8/9/10 artırır. Efsun Totem: Onarım hızınızı %16/18/20 artırır. Aşırı hevesli, herhangi bir şekilde Sağlık Durumunu kaybettikten sonra devre dışı kalır.",
+        "name_tr":  "Aşırı hevesli"
+    },
+    {
+        "name":  "Parental Guidance",
+        "role":  "survivor",
+        "slug":  "parental-guidance",
+        "desc":  "After stunning the Killer by any means, Parental Guidance triggers its effect: Suppresses your Grunts of Pain and the creation of Scratch Marks and Pools of Blood for 5/6/7 seconds.",
+        "owner":  "Yoichi Asakawa",
+        "desc_tr":  "Katili herhangi bir şekilde sersemlettikten sonra, Ebeveyn Rehberliği etkisini tetikler: 5/6/7 saniye boyunca Acı Homurtularınızı ve Çizik İzleri ve Kan Havuzlarının oluşumunu bastırır.",
+        "name_tr":  "Ebeveyn Rehberliği"
+    },
+    {
+        "name":  "Pharmacy",
+        "role":  "survivor",
+        "slug":  "pharmacy",
+        "desc":  "While unlocking a Chest, you benefit from the following effects: Increases the Unlocking speed by 75/100/125 %. Reduces the audible range of all noises related to the Unlocking interaction by -12 metres. Guarantees an Emergency Med-Kit after completing the interaction.",
+        "owner":  "Quentin Smith",
+        "desc_tr":  "Bir Sandığı açarken aşağıdaki etkilerden yararlanırsınız: Kilit Açma hızını %75/100/125 artırır. Kilit Açma etkileşimiyle ilgili tüm seslerin duyulabilir aralığını -12 metre azaltır. Etkileşim tamamlandıktan sonra Acil Sağlık Kitini garanti eder.",
+        "name_tr":  "Eczane"
+    },
+    {
+        "name":  "Plot Twist",
+        "role":  "survivor",
+        "slug":  "plot-twist",
+        "desc":  "Whenever you are in the Injured State, Plot Twist activates. While active, press the Active Ability button while crouching and stationary to trigger the following primary effects: Silently enter the Dying State without notifying the Killer. Suppresses your Grunts of Pain and the creation of Pools of Blood. Unlocks the Self-Recovery ability, allowing you to fully recover from the Dying State: Increases the Recovery speed by +25 %. After self-recovering from the Dying State, you benefit from the following secondary effects: Instantly heals you to full health. Grants a +50 % Haste Status Effect for 2/3/4 seconds. Plot Twist is disabled after recovering by any means, but can be reactivated once more upon powering the Exit Gates.",
+        "owner":  "Nicolas Cage",
+        "desc_tr":  "Yaralı Durumunda olduğunuzda Plot Twist etkinleşir. Aktifken, aşağıdaki temel efektleri tetiklemek için çömelmiş ve hareketsiz durumdayken Aktif Yetenek düğmesine basın: Katile haber vermeden sessizce Ölme Durumuna girin. Acı Homurtularınızı ve Kan Havuzlarının oluşumunu bastırır. Kendini Kurtarma yeteneğinin kilidini açarak Ölme Durumundan tamamen kurtulmanızı sağlar: İyileşme hızını +%25 artırır. Ölme Durumundan kendinizi kurtardıktan sonra, aşağıdaki ikincil etkilerden yararlanırsınız: Sizi anında tam sağlığına kavuşturur. 2/3/4 saniye boyunca +%50 Hız Statü Etkisi verir. Plot Twist herhangi bir şekilde iyileştikten sonra devre dışı bırakılır, ancak Çıkış Kapılarına güç verildiğinde bir kez daha etkinleştirilebilir.",
+        "name_tr":  "Olay örgüsü"
+    },
+    {
+        "name":  "Plunderer\u0027s Instinct",
+        "role":  "survivor",
+        "slug":  "plunderer-s-nstinct",
+        "desc":  "Unlocks potential in your Aura-reading ability: The Auras of the following objects are revealed to you within 32/48/64 metres: Closed Chests located in the environment. Items sitting inside opened Chests. Items dropped in the environment. When unlocking or rummaging through Chests, you benefit from the following effect: Increases the chances of finding rarer Items by +50 %.",
+        "owner":  "General",
+        "desc_tr":  "Aura okuma yeteneğinizdeki potansiyeli açığa çıkarır: Aşağıdaki nesnelerin Auraları 32/48/64 metre içinde size gösterilir: Çevrede bulunan Kapalı Sandıklar. Açık Sandıklarda bulunan eşyalar. Eşyalar çevreye düştü. Sandıkların kilidini açarken veya sandıkları karıştırırken aşağıdaki etkiden yararlanırsınız: Daha nadir Öğeler bulma şansını +%50 artırır.",
+        "name_tr":  "Yağmacının İçgüdüsü"
+    },
+    {
+        "name":  "Poised",
+        "role":  "survivor",
+        "slug":  "poised",
+        "desc":  "Whenever a Generator is completed, Poised triggers its primary effect: Suppresses the creation of your Scratch Marks for 20/25/30 seconds. Whenever you start repairing a Generator for the first time, Poised triggers its secondary effect: The Aura of the Killer is revealed to you for 8 seconds.",
+        "owner":  "Jane Romero",
+        "desc_tr":  "Bir Jeneratör tamamlandığında, Poised birincil etkisini tetikler: 20/25/30 saniye boyunca Çizik İşaretlerinizin oluşmasını engeller. Bir Jeneratörü ilk kez onarmaya başladığınızda, Poised ikincil etkisini tetikler: Katilin Aurası 8 saniye boyunca size gösterilir.",
+        "name_tr":  "Dengede"
+    },
+    {
+        "name":  "Potential Energy",
+        "role":  "survivor",
+        "slug":  "potential-energy",
+        "desc":  "While repairing a Generator, press the Active Ability button to Store Potential Energy: Repair Charges no longer progress the Generator and are instead converted into Tokens: Gain 1 Token for the equivalent of 1 % Progression, up to a maximum of 10/15/20 Tokens. Failed Repair Skill Checks incur a penalty depending on how many Tokens have been accumulated: Not at Token Limit: Reduces the number of accumulated Tokens by -20 %. At Token Limit: Regresses the Generator by -10 %. Having accumulated at least 1 Token, press the Active Ability button again on the same or a different Generator to Release Potential Energy: Consumes all accumulated Tokens. Instantly progresses that Generator by +1 % per Token. Potential Energy deactivates after use or losing a Health State by any means, and will lose all accumulated Tokens in case of the latter.",
+        "owner":  "Vittorio Toscano",
+        "desc_tr":  "Bir Jeneratörü onarırken, Potansiyel Enerjiyi Depolamak için Aktif Yetenek düğmesine basın: Onarım Yükleri artık Jeneratörü ilerletmez ve bunun yerine Jetonlara dönüştürülür: Maksimum 10/15/20 Jeton\u0027a kadar %1 İlerlemeye eşdeğer 1 Jeton kazanın. Başarısız Onarım Beceri Kontrolleri, biriktirilen Jeton sayısına bağlı olarak bir cezaya neden olur: Jeton Sınırında Değil: Biriken Jeton sayısını %-20 azaltır. Jeton Limitinde: Jeneratörü %-10 Geriler. En az 1 Jeton biriktirdikten sonra, Potansiyel Enerjiyi Serbest Bırakmak için aynı veya farklı bir Jeneratördeki Aktif Yetenek düğmesine tekrar basın: Birikmiş tüm Jetonları tüketir. Bu Jeneratörü anında Jeton başına +%1 ilerletir. Potansiyel Enerji, herhangi bir şekilde Sağlık Durumunun kullanılmasından veya kaybedilmesinin ardından devre dışı bırakılır ve Sağlık Durumunun kaybedilmesi durumunda birikmiş tüm Jetonları kaybeder.",
+        "name_tr":  "Potansiyel Enerji"
+    },
+    {
+        "name":  "Power Struggle",
+        "role":  "survivor",
+        "slug":  "power-struggle",
+        "desc":  "Whenever you are in the Dying State, you benefit from the following primary effect: The Auras of upright Pallets are revealed to you. After reaching 25/20/15 % of Wiggle progression, Power Struggle unlocks the following secondary effect: Grants the ability to drop a nearby Pallet while being carried by the Killer. Stuns the Killer and causes them to release you from their grasp. Power Struggle deactivates after use. — Élodie Rakoto",
+        "owner":  "Élodie Rakoto",
+        "desc_tr":  "Ölme Durumunda olduğunuzda, aşağıdaki birincil etkiden yararlanırsınız: Dik Paletlerin Auraları size açıklanır. Wiggle ilerlemesinin %25/20/15\u0027ine ulaştıktan sonra, Güç Mücadelesi aşağıdaki ikincil etkinin kilidini açar: Katil tarafından taşınırken yakındaki bir Paleti düşürme yeteneği verir. Katili sersemletir ve sizi ellerinden kurtarmasına neden olur. Güç Mücadelesi kullanımdan sonra devre dışı kalır. — Élodie Rakoto",
+        "name_tr":  "Güç Mücadelesi"
+    },
+    {
+        "name":  "Premonition",
+        "role":  "survivor",
+        "slug":  "premonition",
+        "desc":  "Projects an invisible cone in the direction you are looking, with a Detection angle of 45 ° and a range of 36 metres: Triggers an audio cue when detecting the Killer within it. Premonition has a cool-down of 60/45/30 seconds.",
+        "owner":  "General",
+        "desc_tr":  "45 ° Tespit açısı ve 36 metre menzil ile baktığınız yöne görünmez bir koni yansıtır: İçindeki Katili tespit ettiğinde bir sesli işareti tetikler. Premonition\u0027ın soğuma süresi 60/45/30 saniyedir.",
+        "name_tr":  "Önsezi"
+    },
+    {
+        "name":  "Prove Thyself",
+        "role":  "survivor",
+        "slug":  "prove-thyself",
+        "desc":  "Increases the Repair speed by a stack-able 6/8/10 % per other Survivor within 4 metres of your location, up to a maximum of 18/24/30 %. Prove Thyself extends its effect to all Survivors within its range. Survivors can only be affected by one instance of Prove Thyself at a time.",
+        "owner":  "Dwight Fairfield",
+        "desc_tr":  "Tamir hızını, konumunuza 4 metre mesafedeki diğer Hayatta Kalan başına istiflenebilir %6/8/10 oranında, maksimum %18/24/30\u0027a kadar artırır. Kendini Kanıtla, etkisini menzilindeki tüm Hayatta Kalanlara yayar. Hayatta kalanlar aynı anda yalnızca bir Prove Thyself örneğinden etkilenebilir.",
+        "name_tr":  "Kendini Kanıtla"
+    },
+    {
+        "name":  "Quick \u0026 Quiet",
+        "role":  "survivor",
+        "slug":  "quick-quiet",
+        "desc":  "When performing a Rushed action to vault across Pallets or Windows, or to enter or exit Lockers, Quick \u0026 Quiet triggers its effect: Suppresses all noises related to those interactions and the accompanying Loud Noise Notification. Quick \u0026 Quiet has a cool-down of 25/20/15 seconds.",
+        "owner":  "Meg Thomas",
+        "desc_tr":  "Paletler veya Pencereler arasında geçiş yapmak veya Dolaplara girmek veya çıkmak için Hızlı bir eylem gerçekleştirirken Hızlı ve Sessiz, etkisini tetikler: Bu etkileşimlerle ve beraberindeki Yüksek Gürültü Bildirimiyle ilgili tüm sesleri bastırır. Hızlı ve Sessiz\u0027in soğuma süresi 25/20/15 saniyedir.",
+        "name_tr":  "Hızlı ve Sessiz"
+    },
+    {
+        "name":  "Quick Gambit",
+        "role":  "survivor",
+        "slug":  "quick-gambit",
+        "desc":  "While being chased by the Killer, the following effects apply: The Auras of other Survivors are revealed to you. Increases the Repair speed of other Survivors by 3/4/5 %. Quick Gambit has a cool-down of 40 seconds upon losing a Health State.",
+        "owner":  "Vittorio Toscano",
+        "desc_tr":  "Katil tarafından kovalanırken aşağıdaki etkiler geçerli olur: Diğer Hayatta Kalanların Auraları size gösterilir. Diğer Hayatta Kalanların Onarım hızını %3/4/5 artırır. Quick Gambit\u0027in Sağlık Durumunu kaybettiğinde 40 saniyelik bir soğuma süresi vardır.",
+        "name_tr":  "Hızlı Kumar"
+    },
+    {
+        "name":  "Rapid Response",
+        "role":  "survivor",
+        "slug":  "rapid-response",
+        "desc":  "Whenever you become afflicted by the Exhausted Status Effect, Rapid Response triggers its effect: The Aura of the Killer is revealed to you for 2 seconds. Perform a Rushed action to exit a Locker to voluntarily trigger the Status Effect for 30/25/20 seconds. Rapid Response cannot be used to override an existing Exhausted Status Effect.",
+        "owner":  "Orela Rose",
+        "desc_tr":  "Ne zaman Bitkin Durum Etkisinden etkilenseniz, Hızlı Tepki etkisini tetikler: Katilin Aurası size 2 saniye boyunca gösterilir. Durum Efektini 30/25/20 saniye boyunca gönüllü olarak tetiklemek amacıyla bir Dolaptan çıkmak için bir Koşturma eylemi gerçekleştirin. Hızlı Yanıt, mevcut bir Tükenmiş Durum Etkisini geçersiz kılmak için kullanılamaz.",
+        "name_tr":  "Hızlı Yanıt"
+    },
+    {
+        "name":  "Red Herring",
+        "role":  "survivor",
+        "slug":  "red-herring",
+        "desc":  "After repairing a Generator for at least 1 second, Red Herring triggers its primary effect: The Aura of that Generator is highlighted to you in yellow. The highlight persists until either of the following occurs: The Generator is completed. You start repairing a different Generator. You enter a Locker. When entering a Locker, Red Herring triggers its secondary effect: Triggers a Loud Noise Notification for the Killer on the highlighted Generator. Red Herring has a cool-down of 25/20/15 seconds.",
+        "owner":  "Zarina Kassir",
+        "desc_tr":  "Bir Jeneratörü en az 1 saniye onardıktan sonra Red Herring birincil etkisini tetikler: O Jeneratörün Aura\u0027sı size sarı renkle vurgulanır. Vurgu aşağıdakilerden biri gerçekleşene kadar devam eder: Jeneratör tamamlanır. Farklı bir Jeneratörü onarmaya başlıyorsunuz. Bir Dolaba giriyorsunuz. Bir Dolaba girerken, Red Herring ikincil etkisini tetikler: Vurgulanan Jeneratörde Katil için Yüksek Gürültü Bildirimini tetikler. Red Herring\u0027in 25/20/15 saniyelik bir soğuma süresi vardır.",
+        "name_tr":  "Kırmızı Ringa balığı"
+    },
+    {
+        "name":  "Repressed Alliance",
+        "role":  "survivor",
+        "slug":  "repressed-alliance",
+        "desc":  "You are accustomed to being hunted by malicious forces, and you have begun using it to your advantage. After repairing Generators for a total of 55/50/45 seconds, Repressed Alliance activates: Press the Active Ability button to call upon The Entity to block the Generator you are currently repairing for 30 seconds, after which Repressed Alliance deactivates. The Aura of the blocked Generator is revealed to all Survivors in white. Repressed Alliance can only be triggered when no other Survivors are repairing your Generator.",
+        "owner":  "Cheryl Mason",
+        "desc_tr":  "Kötü niyetli güçler tarafından avlanmaya alışkınsınız ve bunu kendi avantajınıza kullanmaya başladınız. Toplam 55/50/45 saniye boyunca Jeneratörleri onardıktan sonra, Bastırılmış İttifak etkinleştirilir: Şu anda onarmakta olduğunuz Jeneratörü 30 saniye boyunca bloke etmesi için Varlığı çağırmak için Aktif Yetenek düğmesine basın, ardından Bastırılmış İttifak devre dışı kalır. Engellenen Jeneratörün Aurası tüm Hayatta Kalanlara beyaz renkte gösterilir. Bastırılmış İttifak yalnızca Jeneratörünüzü başka hiçbir Hayatta Kalan tamir etmediğinde tetiklenebilir.",
+        "name_tr":  "Bastırılmış İttifak"
+    },
+    {
+        "name":  "Residual Manifest",
+        "role":  "survivor",
+        "slug":  "residual-manifest",
+        "desc":  "A lifetime of chasing the darkness has taught you that the best disinfectant is light. After a successful Killer Blind, the Killer suffers from the Blindness Status Effect for 20/25/30 seconds. Residual Manifest grants the ability to rummage through an opened Chest once per Trial and will guarantee a basic Flashlight.",
+        "owner":  "Haddie Kaur",
+        "desc_tr":  "Bir ömür boyu karanlığı kovalamak sana en iyi dezenfektanın ışık olduğunu öğretti. Başarılı bir Katil Körlemenin ardından Katil, 20/25/30 saniye boyunca Körlük Durumu Etkisine maruz kalır. Kalıntı Bildirimi, Deneme başına bir kez açılmış bir Sandığı karıştırma yeteneği verir ve temel bir El Fenerini garanti eder.",
+        "name_tr":  "Kalıntı Bildirimi"
+    },
+    {
+        "name":  "Resilience",
+        "role":  "survivor",
+        "slug":  "resilience",
+        "desc":  "Whenever you are in the Injured State, Resilience activates: Increases the Action speeds for the following interactions by 3/6/9 %: Blessing or Cleansing Totems. Healing yourself or other Survivors. Opening Exit Gates. Repairing Generators. Sabotaging Hooks. Searching Chests. Unhooking other Survivors. Vaulting Windows.",
+        "owner":  "General",
+        "desc_tr":  "Yaralı Durumda olduğunuzda, Direnç etkinleştirilir: Aşağıdaki etkileşimler için Eylem hızlarını %3/6/9 artırır: Kutsama veya Temizleme Totemleri. Kendinizi veya diğer Hayatta Kalanları iyileştirmek. Çıkış Kapılarının Açılması. Jeneratörlerin Tamiri. Kancaları Sabote Etmek. Sandıklar Aranıyor. Diğer Hayatta Kalanların kancalarını çözüyoruz. Windows\u0027u tonozlama.",
+        "name_tr":  "Dayanıklılık"
+    },
+    {
+        "name":  "Resurgence",
+        "role":  "survivor",
+        "slug":  "resurgence",
+        "desc":  "After you are unhooked by any means, Resurgence triggers the following effect: Grants you 50/60/70 % of Healing progression.",
+        "owner":  "Jill Valentine",
+        "desc_tr":  "Herhangi bir şekilde kancadan kurtulduktan sonra, Diriliş şu etkiyi tetikler: Size %50/60/70 İyileşme ilerlemesi sağlar.",
+        "name_tr":  "Diriliş"
+    },
+    {
+        "name":  "Road Life",
+        "role":  "survivor",
+        "slug":  "road-life",
+        "desc":  "While injured and repairing a Generator, regular Skill Checks have the following effects: Gain +1 Token for Great Repair Skill Checks. Gain 0 Tokens for Good Repair Skill Checks. Lose -1 Token for Failed Repair Skill Checks. Once you accumulate 6/5/4 Tokens, consume all Tokens to benefit from the following effect: Increases your Healing speed by +100 % until you stop healing. Road Life deactivates after use and does not activate while suffering from the Broken Status Effect. Road Life does not interact with special Skill Checks triggered by outside effects.",
+        "owner":  "Vee Boonyasak",
+        "desc_tr":  "Bir Jeneratör yaralanırken ve onarılırken, düzenli Beceri Kontrolleri aşağıdaki etkilere sahiptir: Büyük Onarım Beceri Kontrolleri için +1 Jeton kazanın. İyi Onarım Beceri Kontrolleri için 0 Jeton kazanın. Başarısız Onarım Beceri Kontrolleri için -1 Jeton Kaybedin. 6/5/4 Jeton biriktirdikten sonra, aşağıdaki etkiden yararlanmak için tüm Jetonları tüketin: İyileşmeyi durdurana kadar İyileşme hızınızı +%100 artırır. Road Life, kullanımdan sonra devre dışı kalır ve Bozuk Durum Etkisine maruz kaldığınızda etkinleşmez. Road Life, dış etkenlerin tetiklediği özel Beceri Kontrolleriyle etkileşime girmez.",
+        "name_tr":  "Yol Hayatı"
+    },
+    {
+        "name":  "Rookie Spirit",
+        "role":  "survivor",
+        "slug":  "rookie-spirit",
+        "desc":  "You keep a careful eye on objectives when they are slipping away. While repairing Generators, succeed 5/4/3 Good or Great Skill Checks to activate Rookie Spirit for the remainder of the Trial: The Auras of any regressing Generators are revealed to you until they stop regressing by any means.",
+        "owner":  "Leon Scott Kennedy",
+        "desc_tr":  "Kaybolurken hedeflere dikkatle bakarsınız. Jeneratörleri onarırken, Denemenin geri kalanında Çaylak Ruhunu etkinleştirmek için 5/4/3 İyi veya Harika Beceri Kontrollerini başarın: Gerileyen Jeneratörlerin Auraları, gerilemeyi bırakana kadar size gösterilir.",
+        "name_tr":  "Çaylak Ruhu"
+    },
+    {
+        "name":  "Saboteur",
+        "role":  "survivor",
+        "slug":  "saboteur",
+        "desc":  "Unlocks potential in your Aura-reading ability: While the Killer is carrying another Survivor, the Auras of all Hooks within 56 metres of their original Pick-up location are revealed to you: The Auras of normal Hooks are white. The Auras of Scourge Hooks are yellow. Unlocks the ability to sabotage Hooks without Toolboxes: Increases the Sabotage speed without a Toolbox by +30 %. This effect has a cool-down of 70/65/60 seconds after use.",
+        "owner":  "Jake Park",
+        "desc_tr":  "Aura okuma yeteneğinizin potansiyelini açığa çıkarır: Katil başka bir Kurban\u0027ı taşırken, orijinal Alınış konumlarına 56 metre mesafedeki tüm Kancaların Auraları size gösterilir: Normal Kancaların Auraları beyazdır. Ceza Kancasıs\u0027un Auraları sarıdır. Alet Kutusu olmadan Kancaları sabote etme yeteneğinin kilidini açar: Alet Kutusu olmadan Sabotaj hızını +%30 artırır. Bu etkinin kullanımdan sonra 70/65/60 saniyelik bir soğuma süresi vardır.",
+        "name_tr":  "Sabotajcı"
+    },
+    {
+        "name":  "Scavenger",
+        "role":  "survivor",
+        "slug":  "scavenger",
+        "desc":  "While holding a depleted Toolbox, Scavenger activates: Succeeding at Great Repairing Skill Checks grants 1 Token, up to a maximum of 5 Tokens. Reaching the maximum number of Tokens automatically consumes them and fully recharges the Toolbox. Recharging a Toolbox will reduce your Repair speed by -50 % for the next 40/35/30 seconds. Scavenger grants the ability to rummage through an opened Chest once per Trial and will guarantee a basic Toolbox.",
+        "owner":  "Gabriel Soma",
+        "desc_tr":  "Boşalmış bir Alet Kutusunu tutarken, Çöpçü etkinleştirilir: Büyük Tamir Beceri Kontrollerinde başarılı olmak, maksimum 5 Jeton olmak üzere 1 Jeton kazandırır. Maksimum Token sayısına ulaşıldığında, bunlar otomatik olarak tüketilir ve Araç Kutusu tamamen yeniden yüklenir. Bir Alet Kutusunu yeniden şarj etmek, sonraki 40/35/30 saniye boyunca Onarım hızınızı %-50 azaltacaktır. Çöpçü, her Denemede bir kez açılmış bir Sandığı karıştırma yeteneği verir ve temel bir Alet Kutusunu garanti eder.",
+        "name_tr":  "Çöpçü"
+    },
+    {
+        "name":  "Scene Partner",
+        "role":  "survivor",
+        "slug":  "scene-partner",
+        "desc":  "Whenever you are inside the Terror Radius, Scene Partner activates: Looking at the Killer causes you to scream, which reveals their Aura for 4/5/6 seconds. There is a chance of 50 % that you will scream again, extending the Aura-reveal duration by another +2 seconds. Scene Partner has a cool-down of 40 seconds.",
+        "owner":  "Nicolas Cage",
+        "desc_tr":  "Terör Yarıçapının içinde olduğunuzda, Sahne Ortağı etkinleşir: Katile bakmak çığlık atmanıza neden olur, bu da onun Aura\u0027sını 4/5/6 saniye boyunca ortaya çıkarır. Aura açığa çıkma süresini +2 saniye daha uzatarak tekrar çığlık atma şansınız %50\u0027dir. Scene Partner\u0027ın 40 saniyelik bir soğuma süresi vardır.",
+        "name_tr":  "Sahne Ortağı"
+    },
+    {
+        "name":  "Second Wind",
+        "role":  "survivor",
+        "slug":  "second-wind",
+        "desc":  "When you heal another Survivor for the equivalent of 1 Health State, Second Wind activates: The next time you are unhooked or unhook yourself, you suffer from the Broken Status Effect until Second Wind deactivates. You are automatically healed 1 Health State after 28/24/20 seconds. While Second Wind is active, the following conditions will deactivate it: Successfully being healed by Second Wind. Being put into the Dying State before the timer elapses. Second Wind does not activate if you already suffer from the Broken Status Effect.",
+        "owner":  "Steve Harrington",
+        "desc_tr":  "1 Sağlık Durumuna eşdeğer başka bir Kurban\u0027ı iyileştirdiğinizde, İkinci Rüzgar etkinleştirilir: Bir sonraki kancadan kurtulduğunuzda veya kendinizi kancadan çıkardığınızda, İkinci Rüzgar devre dışı bırakılıncaya kadar Kırık Durum Etkisinden muzdarip olursunuz. 28/24/20 saniye sonra otomatik olarak 1 Sağlık Durumu iyileşirsiniz. İkinci Rüzgar aktifken, aşağıdaki koşullar onu devre dışı bırakacaktır: İkinci Rüzgar tarafından başarılı bir şekilde iyileşmek. Zamanlayıcı dolmadan önce Ölme Durumuna geçirilmek. Zaten Kırık Durum Efektinden muzdaripseniz İkinci Rüzgar etkinleşmez.",
+        "name_tr":  "İkinci Rüzgar"
+    },
+    {
+        "name":  "Self-Care",
+        "role":  "survivor",
+        "slug":  "self-care",
+        "desc":  "Unlocks the Self-Care ability: Grants the ability to self-heal without needing a Med-Kit at 25/30/35 % of the regular Healing speed.",
+        "owner":  "Claudette Morel",
+        "desc_tr":  "Kişisel Bakım yeteneğinin kilidini açar: Normal İyileştirme hızının %25/30/35\u0027inde bir Med-Kit\u0027e ihtiyaç duymadan kendi kendini iyileştirme yeteneği verir.",
+        "name_tr":  "Kendi kendine bakım"
+    },
+    {
+        "name":  "Self-Preservation",
+        "role":  "survivor",
+        "slug":  "self-preservation",
+        "desc":  "Whenever another Survivor is hooked, Self-Preservation triggers its effect: Grants the Elusive Status Effect for 20/25/30 seconds",
+        "owner":  "Lee Yun-jin",
+        "desc_tr":  "Ne zaman başka bir Kurban bağlansa, Kendini Koruma etkisini tetikler: 20/25/30 saniye boyunca Zor Statü Etkisi kazandırır.",
+        "name_tr":  "Kendini Koruma"
+    },
+    {
+        "name":  "Shoulder the Burden",
+        "role":  "survivor",
+        "slug":  "shoulder-the-burden",
+        "desc":  "Once per Trial, and while you are not on Death Hook, press the Active Ability button while standing in front of a Hooked Survivor to unhook them and trigger the following effects: Trade 1 Hook Stage with the other Survivor to their benefit. Causes you to scream and suffer from the Exposed Status Effect for 60/50/40 seconds.",
+        "owner":  "Taurie Cain",
+        "desc_tr":  "Her Denemede bir kez ve Death Hook\u0027ta değilken, Kancalanmış bir Hayatta Kalanın önünde dururken Aktif Yetenek düğmesine basarak onu kancadan kurtarın ve aşağıdaki etkileri tetikleyin: 1 Kanca Aşamasını diğer Hayatta Kalanla takas ederek onların yararına kullanın. 60/50/40 saniye boyunca çığlık atmanıza ve Maruz Kalma Durum Etkisinden acı çekmenize neden olur.",
+        "name_tr":  "Yükü Omuzlayın"
+    },
+    {
+        "name":  "Slippery Meat",
+        "role":  "survivor",
+        "slug":  "slippery-meat",
+        "desc":  "You have developed an efficient way to get off Hooks. Grants the ability to attempt +3 additional Self-Unhooks during the first Hook Stage. Increases the chances to successfully perform a Self-Unhook by 2/3/4 %.",
+        "owner":  "General",
+        "desc_tr":  "Hook\u0027lardan kurtulmanın etkili bir yolunu geliştirdiniz. İlk Kanca Aşaması sırasında +3 ek Kendi Kendini Kancayı Kaldırma girişiminde bulunma yeteneği verir. Self-Unhook\u0027u başarılı bir şekilde gerçekleştirme şansını %2/3/4 oranında artırır.",
+        "name_tr":  "Kaygan Et"
+    },
+    {
+        "name":  "Small Game",
+        "role":  "survivor",
+        "slug":  "small-game",
+        "desc":  "Projects an invisible cone in the direction you are looking, with a Detection angle of 45 ° and a range of 8/10/12 metres: Triggers an audio cue when detecting any type of Totem within it. This effect has a cool-down of 14/12/10 seconds after use. Each time a Totem is cleansed, Small Game gains +1 Token, up to a maximum of 5 Tokens: Reduces the Detection angle of the cone by a stack-able -5 ° per Token, up to a maximum of -25 °.",
+        "owner":  "General",
+        "desc_tr":  "45 ° Tespit açısı ve 8/10/12 metre menzil ile baktığınız yöne görünmez bir koni yansıtır: İçinde herhangi bir Totem türü tespit edildiğinde bir sesli işareti tetikler. Bu etkinin kullanımdan sonra 14/12/10 saniyelik bir soğuma süresi vardır. Bir Totem her temizlendiğinde Küçük Oyun, maksimum 5 Jeton olmak üzere +1 Jeton kazanır: Koninin Tespit açısını, maksimum -25 °\u0027ye kadar, Jeton başına istiflenebilir -5 ° azaltır.",
+        "name_tr":  "Küçük Oyun"
+    },
+    {
+        "name":  "Smash Hit",
+        "role":  "survivor",
+        "slug":  "smash-hit",
+        "desc":  "Whenever you stun the Killer with a Pallet , Smash Hit triggers its effect: Grants a +50 % Haste Status Effect for 4 seconds. Smash Hit cannot be used while Exhausted. Smash Hit causes the Exhausted Status Effect for 30/25/20 seconds.",
+        "owner":  "Lee Yun-jin",
+        "desc_tr":  "Katili bir Palet ile sersemlettiğinizde, Smash Hit etkisini tetikler: 4 saniye boyunca +%50 Hız Statü Etkisi verir. Bitkin durumdayken Smash Hit kullanılamaz. Smash Hit, 30/25/20 saniye boyunca Bitkin Durum Etkisine neden olur.",
+        "name_tr":  "Vuruş Vuruşu"
+    },
+    {
+        "name":  "Solidarity",
+        "role":  "survivor",
+        "slug":  "solidarity",
+        "desc":  "While injured, healing another Survivor without a Med-Kit causes Solidarity to apply the following effects: Grants the ability to passively heal yourself while healing other Survivors. Reduces your Personal Healing speed to 50/60/70 % of your Altruistic Healing speed.",
+        "owner":  "Jane Romero",
+        "desc_tr":  "Yaralıyken, başka bir Kurban\u0027ı Sağlık Kiti olmadan iyileştirmek, Solidarity\u0027nin aşağıdaki etkileri uygulamasına neden olur: Diğer Kurbanları iyileştirirken pasif olarak kendinizi iyileştirme yeteneği verir. Kişisel İyileştirme hızınızı, Altruistik İyileştirme hızınızın %50/60/70\u0027ine düşürür.",
+        "name_tr":  "Dayanışma"
+    },
+    {
+        "name":  "Soul Guard",
+        "role":  "survivor",
+        "slug":  "soul-guard",
+        "desc":  "Whenever you heal or recover from the Dying State, Soul Guard triggers its primary effect: Grants the Endurance Status Effect for 4/6/8 seconds. Endurance is cancelled prematurely when performing a Conspicuous Action of any kind. This ability has a cool-down of 30 seconds. While suffering from the Cursed Status Effect, Soul Guard applies its secondary effect: Unlocks the Self-Recovery ability, allowing you to fully recover from the Dying State..",
+        "owner":  "Cheryl Mason",
+        "desc_tr":  "Ölme Durumundan iyileştiğinizde veya iyileştiğinizde, Soul Guard birincil etkisini tetikler: 4/6/8 saniye boyunca Dayanıklılık Durumu Etkisi kazandırır. Herhangi bir türde Göze Çarpan Eylem gerçekleştirilirken dayanıklılık vaktinden önce iptal edilir. Bu yeteneğin soğuma süresi 30 saniyedir. Lanetli Durum Efektinden muzdaripken, Soul Guard ikincil etkisini uygular: Kendini Kurtarma yeteneğinin kilidini açarak Ölme Durumundan tamamen kurtulmanızı sağlar.",
+        "name_tr":  "Ruh Muhafızı"
+    },
+    {
+        "name":  "Specialist",
+        "role":  "survivor",
+        "slug":  "specialist",
+        "desc":  "Adventure. Exploration. Excavation. You are in your element. Whenever you unlock or rummage through a Chest, Specialist gains +1 Token, up to a maximum of 6 Tokens: Succeeding a Great Repair Skill Check while repairing a Generator consumes all Tokens. Permanently reduces the Repair Charges requirement of that Generator by 2/3/4 Charges per Token, up to a maximum of 12/18/24 Charges.",
+        "owner":  "Lara Croft",
+        "desc_tr":  "Macera. Keşif. Kazı. Kendi elementinizdesiniz. Bir Sandığı açtığınızda veya bir Sandığı karıştırdığınızda, Uzman maksimum 6 Jeton olmak üzere +1 Jeton kazanır: Bir Jeneratörü tamir ederken Büyük Onarım Beceri Kontrolünde başarılı olmak tüm Jetonları tüketir. Söz konusu Jeneratörün Onarım Ücreti ihtiyacını, maksimum 12/18/24 Yüke kadar, Jeton başına 2/3/4 Yük oranında kalıcı olarak azaltır.",
+        "name_tr":  "Uzman"
+    },
+    {
+        "name":  "Spine Chill",
+        "role":  "survivor",
+        "slug":  "spine-chill",
+        "desc":  "An unnatural tingle warns you of impending doom. Whenever the Killer is within 36 metres of your location and looking at you with a clear Line of Sight, Spine Chill activates: Warns of the Killer\u0027s proximity and their potential awareness of your location by lighting its icon. Increases your Action speeds for Blessing, Cleansing, Gate-Opening, Healing, Repairing, Sabotaging, Unhooking, and Unlocking by 2/4/6 %. This effect lingers for 0.5 seconds after the Killer loses Line of Sight or exits the Activation range.",
+        "owner":  "General",
+        "desc_tr":  "Doğal olmayan bir karıncalanma sizi yaklaşmakta olan kıyamete karşı uyarır. Katil konumunuza 36 metre yaklaştığında ve net bir görüş hattıyla size baktığında, Spine Chill etkinleşir: Simgesini yakarak Katilin yakınlığı ve konumunuza ilişkin potansiyel farkındalığı konusunda uyarır. Kutsama, Temizleme, Kapı Açma, İyileştirme, Onarım, Sabotaj, Kancayı Açma ve Kilit Açma için Eylem hızlarınızı %2/4/6 artırır. Bu etki, Katil Görüş Hattını kaybettikten veya Aktivasyon menzilinden çıktıktan sonra 0,5 saniye devam eder.",
+        "name_tr":  "Omurga Soğutma"
+    },
+    {
+        "name":  "Sprint Burst",
+        "role":  "survivor",
+        "slug":  "sprint-burst",
+        "desc":  "Starting to run triggers Sprint Burst: Grants a +50 % Haste Status Effect for 3 seconds. Sprint Burst cannot be used while Exhausted. Sprint Burst causes the Exhausted Status Effect for 60/50/40 seconds.",
+        "owner":  "Meg Thomas",
+        "desc_tr":  "Koşmaya başlamak Sprint Burst\u0027u tetikler: 3 saniye boyunca +%50 Hız Durum Etkisi verir. Bitkin durumdayken Sprint Burst kullanılamaz. Sprint Burst, 60/50/40 saniye boyunca Tükenmiş Durum Etkisine neden olur.",
+        "name_tr":  "Hız Patlaması"
+    },
+    {
+        "name":  "Stake Out",
+        "role":  "survivor",
+        "slug":  "stake-out",
+        "desc":  "Staying in the Terror Radius without being chased grants +1 Token every 15 seconds, up to a maximum of 2/3/4 Tokens. While performing a skilful interaction that can trigger Skill Checks, you benefit from the following effects: Converts any Good Skill Check into a Great Skill Check. This consumes -1 Token. Increases the Progression bonus of those Great Skill Checks by +1 %. Stake Out does not apply to regular Great Skill Checks nor do they consume any Tokens.",
+        "owner":  "David Tapp",
+        "desc_tr":  "Terör Yarıçapında kovalanmadan kalmak, her 15 saniyede bir, maksimum 2/3/4 Jeton olmak üzere +1 Jeton kazandırır. Beceri Kontrollerini tetikleyebilecek becerikli bir etkileşim gerçekleştirirken aşağıdaki etkilerden yararlanırsınız: Herhangi bir İyi Beceri Kontrolünü Harika bir Beceri Kontrolüne dönüştürür. Bu -1 Jeton tüketir. Bu Büyük Beceri Kontrollerinin İlerleme bonusunu +%1 artırır. Stake Out, düzenli Büyük Beceri Kontrolleri için geçerli değildir ve herhangi bir Token tüketmez.",
+        "name_tr":  "Stake Out"
+    },
+    {
+        "name":  "Still Sight",
+        "role":  "survivor",
+        "slug":  "still-sight",
+        "desc":  "After standing still for 4/3/2 seconds, Still Sight activates: The following Auras are revealed to you within 24 meters: Killer Chests Generators Still Sight deactivates once you start moving again.",
+        "owner":  "Aestri Yazar \u0026amp; Baermar Uraz",
+        "desc_tr":  "4/3/2 saniye hareketsiz durduktan sonra Hareketsiz Görüş etkinleştirilir: 24 metre içinde aşağıdaki Auralar gösterilir: Katil Sandığı Jeneratörlerinin Sabit Görüşü, tekrar hareket etmeye başladığınızda devre dışı kalır.",
+        "name_tr":  "Hala Görüş"
+    },
+    {
+        "name":  "Streetwise",
+        "role":  "survivor",
+        "slug":  "streetwise",
+        "desc":  "Any Items with Charges you retrieve from Chests benefit from the following primary effect: Increases their Charges permanently by 60/70/80 %. Whenever your currently equipped Item is depleted for the first time, Streetwise triggers its secondary effect: The Aura of the Killer is revealed to you for 8 seconds.",
+        "owner":  "Nea Karlsson",
+        "desc_tr":  "Sandıklardan aldığınız Yüklü tüm Öğeler aşağıdaki birincil etkiden yararlanır: Yüklerini kalıcı olarak %60/70/80 artırır. Şu anda donanımlı Öğeniz ilk kez tükendiğinde, Streetwise ikincil etkisini tetikler: Katilin Aura\u0027sı 8 saniye boyunca size gösterilir.",
+        "name_tr":  "Sokak yönünde"
+    },
+    {
+        "name":  "Strength in Shadows",
+        "role":  "survivor",
+        "slug":  "strength-in-shadows",
+        "desc":  "Whenever you are inside the Basement, Strength in Shadows activates: Unlocks the Strength in Shadows ability, allowing you to self-heal without needing a Med-Kit at 70 % of the normal Healing speed. Upon finishing a heal in the Basement, the Aura of the Killer is revealed to you for 6/8/10 seconds.",
+        "owner":  "Sable Ward",
+        "desc_tr":  "Bodrumun içinde olduğunuzda, Gölgelerdeki Güç etkinleştirilir: Gölgelerdeki Güç yeteneğinin kilidini açar, normal İyileştirme hızının %70\u0027inde bir Med-Kit\u0027e ihtiyaç duymadan kendi kendinizi iyileştirmenize olanak tanır. Bodrumda bir iyileştirmeyi tamamladığınızda, Katilin Aurası 6/8/10 saniye boyunca size gösterilir.",
+        "name_tr":  "Gölgelerdeki Güç"
+    },
+    {
+        "name":  "Teamwork: Collective Stealth",
+        "role":  "survivor",
+        "slug":  "teamwork-collective-stealth",
+        "desc":  "Whenever another Survivor finishes healing you, Teamwork: Collective Stealth activates, and both you and the Survivor who healed you benefit from the following effect: Suppresses your Scratch Marks for as long as you stay within 8/12/16 metres of one another. This effect lingers for 4 seconds once out of range and resumes upon re-entering it before that timer elapses. Survivors can only be affected by one instance of Teamwork: Collective Stealth at a time.",
+        "owner":  "Renato Lyra",
+        "desc_tr":  "Başka bir Kurban sizi iyileştirmeyi bitirdiğinde, Takım Çalışması: Toplu Gizlilik etkinleştirilir ve hem siz hem de sizi iyileştiren Kurban şu etkiden yararlanır: Birbirinizden 8/12/16 metre uzakta kaldığınız sürece Çizik İzlerinizi bastırır. Bu etki menzil dışına çıktığında 4 saniye sürer ve bu süre dolmadan tekrar girildiğinde devam eder. Hayatta kalanlar aynı anda yalnızca bir Ekip Çalışması örneğinden etkilenebilir: Toplu Gizlilik.",
+        "name_tr":  "Ekip Çalışması: Toplu Gizlilik"
+    },
+    {
+        "name":  "Teamwork: Power of Two",
+        "role":  "survivor",
+        "slug":  "teamwork-power-of-two",
+        "desc":  "Whenever you finish healing another Survivor, Teamwork: Power of Two activates, and both you and the healed Survivor benefit from the following effect: Grants a +5 % Haste Status Effect for as long as you stay within 8/12/16 metres of one another. This effect lingers for 4 seconds once out of range and resumes upon re-entering it before that timer elapses. Survivors can only be affected by one instance of Teamwork: Power of Two at a time.",
+        "owner":  "Thalita Lyra",
+        "desc_tr":  "Başka bir Kurban\u0027ı iyileştirmeyi tamamladığınızda, Takım Çalışması: İkinin Gücü etkinleştirilir ve hem siz hem de iyileşen Kurban şu etkiden yararlanır: Birbirinizden 8/12/16 metre uzakta kaldığınız sürece +%5 Haste Statü Etkisi verir. Bu etki menzil dışına çıktığında 4 saniye sürer ve bu süre dolmadan tekrar girildiğinde devam eder. Hayatta kalanlar aynı anda yalnızca bir Ekip Çalışması örneğinden etkilenebilir: Power of Two.",
+        "name_tr":  "Takım Çalışması: İkinin Gücü"
+    },
+    {
+        "name":  "Teamwork: Throw Down",
+        "role":  "survivor",
+        "slug":  "teamwork-throw-down",
+        "desc":  "Whenever you blind the Killer by any means or stun them using a Pallet, Teamwork: Throw Down triggers its effect: Grants the Endurance Status Effect to all other injured Survivors within 24 metres of your location for 6/8/10 seconds.",
+        "owner":  "Michonne Grimes",
+        "desc_tr":  "Katili herhangi bir şekilde kör ettiğinizde veya Palet kullanarak sersemlettiğinizde, Takım Çalışması: Aşağı Atma etkisini tetikler: Bulunduğunuz yerden 24 metre uzaktaki tüm diğer yaralı Hayatta Kalanlara 6/8/10 saniye boyunca Dayanıklılık Durumu Etkisi kazandırır.",
+        "name_tr":  "Takım Çalışması: Aşağı Atın"
+    },
+    {
+        "name":  "Teamwork: Toughen Up",
+        "role":  "survivor",
+        "slug":  "teamwork-toughen-up",
+        "desc":  "While injured, whenever another Survivor within 24 metres of your location blinds the Killer by any means or stuns them using a Pallet, Teamwork: Toughen Up triggers its effect: Suppresses your Grunts of Pain, and the creation of Pools of Blood and Scratch Marks for 20/25/30 seconds.",
+        "owner":  "Rick Grimes",
+        "desc_tr":  "Yaralıyken, konumunuza 24 metre mesafedeki başka bir Kurban, Katili herhangi bir şekilde kör ettiğinde veya bir Palet kullanarak onu sersemlediğinde, Ekip Çalışması: Toughen Up etkisini tetikler: Acı Homurtularınızı ve 20/25/30 saniye boyunca Kan Havuzları ve Çizik İşaretlerinin oluşturulmasını bastırır.",
+        "name_tr":  "Takım Çalışması: Güçlen"
+    },
+    {
+        "name":  "Technician",
+        "role":  "survivor",
+        "slug":  "technician",
+        "desc":  "While repairing a Generator, the following effects apply: Reduces the audible range of all noises related to the Repair interaction by -8 metres. Increases the Progression penalty incurred when failing a Skill Check by 5/4/3 %. Suppresses the explosion of the Generator and the Loud Noise Notification usually triggered by that.",
+        "owner":  "Feng Min",
+        "desc_tr":  "Bir Jeneratörü onarırken aşağıdaki efektler uygulanır: Onarım etkileşimiyle ilgili tüm seslerin duyulabilir aralığını -8 metre azaltır. Beceri Kontrolünde başarısız olunduğunda maruz kalınan İlerleme cezasını %5/4/3 oranında artırır. Jeneratörün patlamasını ve genellikle bunun tetiklediği Yüksek Gürültü Bildirimini bastırır.",
+        "name_tr":  "Teknisyen"
+    },
+    {
+        "name":  "Tenacity",
+        "role":  "survivor",
+        "slug":  "tenacity",
+        "desc":  "Your ferocious tenacity in dire situations allows you to benefit from the following effects while in the Dying State: Grants the ability to recover while crawling. Grants a 30/40/50 % Haste Status Effect. Reduces the volume of Grunts of Pain by -75 %. Blocks your Aura from being read.",
+        "owner":  "David Tapp",
+        "desc_tr":  "Zor durumlardaki gaddar azminiz, Ölme Durumundayken aşağıdaki etkilerden faydalanmanızı sağlar: Sürünerek iyileşme yeteneği kazandırır. %30/40/50 Hız Statü Etkisi verir. Grunts of Pain\u0027in hacmini %-75 azaltır. Auranızın okunmasını engeller.",
+        "name_tr":  "azim"
+    },
+    {
+        "name":  "This Is Not Happening",
+        "role":  "survivor",
+        "slug":  "this-s-not-happening",
+        "desc":  "Whenever you are in the Injured State, This Is Not Happening activates and you benefit from the following effect: Increases the Success zone for a Great Skill Check by 10/20/30 % for the following interactions: Healing Repairing",
+        "owner":  "General",
+        "desc_tr":  "Yaralı Durumunda olduğunuzda, This Is Not Happening etkinleşir ve aşağıdaki etkiden faydalanırsınız: Aşağıdaki etkileşimler için Büyük Beceri Kontrolü için Başarı bölgesini %10/20/30 artırır: İyileşme Onarım",
+        "name_tr":  "Bu Olmuyor"
+    },
+    {
+        "name":  "Troubleshooter",
+        "role":  "survivor",
+        "slug":  "troubleshooter",
+        "desc":  "When you are chased by the Killer, Troubleshooter activates: The Aura of the Generator with the most progress is revealed to you. The Aura of the Killer is revealed to you for 4/5/6 seconds after dropping a Pallet. These effects linger for 6/8/10 seconds after ending the Chase, after which Troubleshooter deactivates.",
+        "owner":  "Gabriel Soma",
+        "desc_tr":  "Katil tarafından kovalandığınızda Sorun Giderici etkinleşir: En fazla ilerleme gösteren Jeneratörün Aura\u0027sı size gösterilir. Katilin Aurası, bir Palet düşürdükten sonra 4/5/6 saniye boyunca size gösterilir. Bu etkiler, Takip sona erdikten sonra 6/8/10 saniye boyunca devam eder ve ardından Sorun Giderici devre dışı kalır.",
+        "name_tr":  "Sorun giderici"
+    },
+    {
+        "name":  "Unbreakable",
+        "role":  "survivor",
+        "slug":  "unbreakable",
+        "desc":  "Whenever you are put in the Dying State by the Killer, Unbreakable activates: Increases your Recovery speed by 25/30/35 %. Unlocks the Self-Recovery ability, allowing you to fully recover from the Dying State. This ability can only be used once per Trial.",
+        "owner":  "Bill Overbeck",
+        "desc_tr":  "Katil tarafından Ölme Durumuna sokulduğunuzda, Unbreakable etkinleştirilir: İyileşme hızınızı %25/30/35 artırır. Kendini Kurtarma yeteneğinin kilidini açarak Ölme Durumundan tamamen kurtulmanızı sağlar. Bu yetenek Deneme başına yalnızca bir kez kullanılabilir.",
+        "name_tr":  "Kırılmaz"
+    },
+    {
+        "name":  "Up the Ante",
+        "role":  "survivor",
+        "slug":  "up-the-ante",
+        "desc":  "Unlocks the ability to attempt Self-Unhooks during the first Hook Stage for all Survivors. For every Survivor still in the Trial, Up the Ante is granted +1 Token: Increases the Luck at succeeding Self-Unhook attempts for all Survivors by a stack-able 1/2/3 % per Token, up to a maximum of 3/6/9 %.",
+        "owner":  "Ace Visconti",
+        "desc_tr":  "Tüm Hayatta Kalanlar için ilk Kanca Aşaması sırasında Kendini Kancadan Çıkarma girişiminde bulunma yeteneğinin kilidini açar. Hala Denemede olan her Kurban için, Artan Bahis +1 Jeton verilir: Tüm Hayatta Kalanlar için Kendini Kancadan Çıkarma girişimlerinin başarılı olması Şansını, maksimum %3/6/9\u0027a kadar, Jeton başına istiflenebilir %1/2/3 oranında artırır.",
+        "name_tr":  "Ante\u0027yi Yükselt"
+    },
+    {
+        "name":  "Urban Evasion",
+        "role":  "survivor",
+        "slug":  "urban-evasion",
+        "desc":  "You benefit from the following permanent effect: Increases your Movement speed while crouched by 90/95/100 %.",
+        "owner":  "Nea Karlsson",
+        "desc_tr":  "Aşağıdaki kalıcı etkiden faydalanırsınız: Çömelirken Hareket hızınızı %90/95/100 artırır.",
+        "name_tr":  "Kentsel Kaçış"
+    },
+    {
+        "name":  "Vigil",
+        "role":  "survivor",
+        "slug":  "vigil",
+        "desc":  "You recover 43/55/66 % faster from the following: The Blindness, Broken, Exhausted, Exposed, Haemorrhage, Hindered, Mangled, and Oblivious Status Effects. Vigil extends its effect to all Survivors within 16 metres of your location and lingers for 15 seconds after leaving its Area of Effect. Survivors can only be affected by one instance of Vigil at a time.",
+        "owner":  "Quentin Smith",
+        "desc_tr":  "Aşağıdakilerden %43/55/66 daha hızlı iyileşirsiniz: Körlük, Kırık, Bitkin, Maruz Kalmış, Kanama, Engellenmiş, Ezilmiş ve Habersiz Durum Etkileri. Vigil, etkisini konumunuza 16 metre mesafedeki tüm Hayatta Kalanlara yayar ve Etki Alanından ayrıldıktan sonra 15 saniye sürer. Hayatta kalanlar aynı anda yalnızca bir Vigil örneğinden etkilenebilir.",
+        "name_tr":  "Nöbet"
+    },
+    {
+        "name":  "Visionary",
+        "role":  "survivor",
+        "slug":  "visionary",
+        "desc":  "You benefit from the following permanent effect: The Auras of Generators are revealed to you within 32 metres. Visionary is temporarily deactivated for 20/18/16 seconds whenever a Generator is completed.",
+        "owner":  "Felix Richter",
+        "desc_tr":  "Aşağıdaki kalıcı etkiden yararlanırsınız: Jeneratörlerin Auraları 32 metre içinde size gösterilir. Bir Jeneratör tamamlandığında Visionary 20/18/16 saniye süreyle geçici olarak devre dışı bırakılır.",
+        "name_tr":  "Vizyoner"
+    },
+    {
+        "name":  "Wake Up!",
+        "role":  "survivor",
+        "slug":  "wake-up",
+        "desc":  "Unlocks potential in your Aura-reading ability. Once all Generators are completed, Wake Up! activates: The Auras of the Exit Gate Switches are revealed to you permanently while within 128 metres. Your Aura is revealed to all other Survivors within 128 metres while you are opening an Exit Gate. Increases your Gate-Opening speed by a stack-able 8/10/12.5 % for each Survivor still alive in the Trial, including yourself, up to a maximum of 32/40/50 %.",
+        "owner":  "Quentin Smith",
+        "desc_tr":  "Aura okuma yeteneğinizdeki potansiyeli açığa çıkarır. Tüm Jeneratörler tamamlandığında Uyanın! etkinleştirilir: Çıkış Kapısı Anahtarlarının Auraları, 128 metre yakınındayken kalıcı olarak size gösterilir. Bir Çıkış Kapısını açarken Auranız 128 metre içindeki diğer tüm Hayatta Kalanlara gösterilir. Kapı Açma hızınızı, siz de dahil olmak üzere Denemede hala hayatta olan her Hayatta Kalan için istiflenebilir %8/10/12,5 oranında, maksimum %32/40/50\u0027ye kadar artırır.",
+        "name_tr":  "Uyanmak!"
+    },
+    {
+        "name":  "We\u0027ll Make It",
+        "role":  "survivor",
+        "slug":  "we-ll-make-t",
+        "desc":  "After unhooking another Survivor, We\u0027ll Make It activates for 30/60/90 seconds: Increases your Altruistic Healing speed by +100 %.",
+        "owner":  "General",
+        "desc_tr":  "Başka bir Hayatta Kalanı kancadan çıkardıktan sonra, 30/60/90 saniye boyunca etkinleştireceğiz: Altruistic Healing hızınızı +%100 artırır.",
+        "name_tr":  "Başaracağız"
+    },
+    {
+        "name":  "We\u0027re Gonna Live Forever",
+        "role":  "survivor",
+        "slug":  "we-re-gonna-live-forever",
+        "desc":  "Your few friends deserve the best protection. You benefit from the following effect when healing a dying Survivor: Increases your Healing speed by +100 %. Any dying Survivor you heal back to the Injured State benefits from the following effect: Grants the Endurance Status Effect for 6/8/10 seconds. This effect can only be triggered once every 30 seconds.",
+        "owner":  "David King",
+        "desc_tr":  "Birkaç arkadaşınız en iyi korumayı hak ediyor. Ölmekte olan bir Hayatta Kalanı iyileştirirken aşağıdaki etkiden yararlanırsınız: İyileşme hızınızı +%100 artırır. Yaralı Devlete geri iyileştirdiğiniz ölmekte olan herhangi bir Kurban, aşağıdaki etkiden yararlanır: 6/8/10 saniye boyunca Dayanıklılık Durumu Etkisi kazandırır. Bu etki yalnızca 30 saniyede bir tetiklenebilir.",
+        "name_tr":  "Sonsuza Kadar Yaşayacağız"
+    },
+    {
+        "name":  "Wicked",
+        "role":  "survivor",
+        "slug":  "wicked",
+        "desc":  "After you are unhooked by any means, Wicked triggers the following effect: The Aura of the Killer is revealed to you for 16/18/20 seconds. While hooked inside the Basement, Wicked potentially triggers the following effect: First Hook Stage: 100 % to succeed an attempted Self-Unhook. Second Hook Stage: Does not trigger the effect. Last Survivor Standing: Does not trigger the effect.",
+        "owner":  "Sable Ward",
+        "desc_tr":  "Herhangi bir şekilde kancadan kurtulduğunuzda, Wicked aşağıdaki etkiyi tetikler: Katilin Aura\u0027sı 16/18/20 saniye boyunca size gösterilir. Wicked, Bodrum\u0027un içinde takılıyken potansiyel olarak şu etkiyi tetikler: İlk Kanca Aşaması: Kendini Kancadan Çıkarma girişiminde başarılı olmak için %100. İkinci Kanca Aşaması: Efekti tetiklemez. Ayakta Kalan Son Hayatta Kalan: Etkiyi tetiklemez.",
+        "name_tr":  "Kötü"
+    },
+    {
+        "name":  "Will to Live",
+        "role":  "survivor",
+        "slug":  "will-to-live",
+        "desc":  "Using whatever is at hand, you stab your aggressor in an ultimate attempt to escape. After being unhooked or unhooking yourself, Will to Live activates for the next 40/50/60 seconds: When grabbed or picked up by the Killer, succeed a Skill Check to stab the Killer and escape from their grasp. Stuns the Killer for 4 seconds. Causes you to become the next Obsession. Will to Live is deactivated once the Exit Gates are powered. Will to Live is disabled for the remainder of the Trial after use. Will to Live is deactivated prematurely when performing a Conspicuous Action. Increases your chance of becoming the initial Obsession by increasing the default value by +100 %. The Killer can only be obsessed with one Survivor at a time.",
+        "owner":  "General",
+        "desc_tr":  "Elinizde ne varsa kullanarak, saldırganınızı nihai bir kaçış girişimiyle bıçaklarsınız. Kancadan kurtulduktan veya kendinizi çözdükten sonra, Yaşama İradesi sonraki 40/50/60 saniye boyunca etkinleşir: Katil tarafından yakalandığında veya kaldırıldığında, Katili bıçaklamak ve elinden kaçmak için bir Beceri Kontrolü\u0027nü geçin. Katili 4 saniyeliğine sersemletir. Bir sonraki Takıntı olmanıza neden olur. Çıkış Kapılarına güç verildiğinde Yaşama İsteği devre dışı bırakılır. Yaşama İsteği, kullanımdan sonra Deneme süresinin geri kalanı boyunca devre dışı bırakılır. Bir Göze Çarpan Eylem gerçekleştirilirken Yaşama İsteği erken devre dışı bırakılır. Varsayılan değeri +%100 artırarak ilk Obsession olma şansınızı artırır. Katil aynı anda yalnızca bir Hayatta Kalan\u0027a takıntılı olabilir.",
+        "name_tr":  "Yaşama İsteği"
+    },
+    {
+        "name":  "Windows of Opportunity",
+        "role":  "survivor",
+        "slug":  "windows-of-opportunity",
+        "desc":  "Unlocks potential in your Aura-reading ability. The Auras of Breakable Walls, Pallets, and Windows are revealed to you within 24/28/32 metres.",
+        "owner":  "Kate Denson",
+        "desc_tr":  "Aura okuma yeteneğinizdeki potansiyeli açığa çıkarır. Kırılabilir Duvarların, Paletlerin ve Pencerelerin Auraları size 24/28/32 metre içinde açığa çıkıyor.",
+        "name_tr":  "Fırsat Pencereleri"
+    }
+];
