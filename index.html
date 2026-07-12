@@ -113,7 +113,7 @@
         .pk.t1 .pop{border-left-color:var(--t1);} .pk.t2 .pop{border-left-color:var(--t2);} .pk.t3 .pop{border-left-color:var(--t3);}
         .pk.pos-right .pop, .pk.pos-top .pop{left:calc(100% + 48px); transform-origin:left center;}
         .pk.pos-left .pop, .pk.pos-bottom .pop{right:calc(100% + 48px); transform-origin:right center;}
-        .pk:hover .pop{opacity:1; visibility:visible; transform:translateY(-50%) scale(1);}
+        .pk:hover .pop, .pk.open .pop{opacity:1; visibility:visible; transform:translateY(-50%) scale(1);}
         .pop .pt{font-weight:800; text-transform:uppercase; letter-spacing:1.2px; font-size:16.5px; color:#fff; margin-bottom:8px;}
         .pop .ptr{display:inline-block; font-size:11px; font-weight:800; letter-spacing:.5px; padding:2px 10px; border-radius:9px; color:#0a0c0e; margin-bottom:11px;}
         .pk.t1 .pop .ptr{background:var(--t1);} .pk.t2 .pop .ptr{background:var(--t2);} .pk.t3 .pop .ptr{background:var(--t3); color:#fff;}
@@ -127,7 +127,10 @@
         .tval{font-weight:800; padding:0 3px; border-radius:3px; background:rgba(255,255,255,.08);}
         .pk.t1 .tval{color:var(--t1);} .pk.t2 .tval{color:#7ee089;} .pk.t3 .tval{color:#c79bf0;}
 
-        footer{color:var(--muted); font-size:12px; margin-top:30px; text-align:center;}
+        footer{color:var(--muted); font-size:12px; margin-top:30px; text-align:center; line-height:1.7;}
+        footer a{color:#e0484c; text-decoration:none; font-weight:700;}
+        footer a:hover{text-decoration:underline;}
+        footer .dev{color:#efe9e1; font-size:13px; font-weight:600;}
 
         @keyframes fade{from{opacity:0; transform:translateY(10px);} to{opacity:1; transform:translateY(0);}}
 
@@ -186,7 +189,10 @@
         <div class="placeholder" id="placeholder">Press a button to generate your build.</div>
     </div>
 
-    <footer>Fan-made randomizer · character &amp; perk icons © Behaviour Interactive · not affiliated · data from deadbydaylight.wiki.gg</footer>
+    <footer>
+        <span class="dev">Developed by <a href="https://github.com/CaramelMisto" target="_blank" rel="noopener">CaramelMisto</a></span><br>
+        Fan-made randomizer · character &amp; perk icons © Behaviour Interactive · not affiliated · data from deadbydaylight.wiki.gg
+    </footer>
 </div>
 
 <script src="perks.js"></script>
