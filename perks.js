@@ -135,6 +135,15 @@ window.PERKS = [
         "name_tr":  "Brine\u0027ın Çağrısı"
     },
     {
+        "name":  "Celestial Witness",
+        "role":  "killer",
+        "slug":  "celestial-witness",
+        "desc":  "Every 30 seconds, if the Obsession is at least 40 metres away from you, their Aura is revealed to you for 2/2.5/3 seconds. Otherwise, the Survivor farthest from you becomes the new Obsession.",
+        "owner":  "The Judgment",
+        "desc_tr":  "Her 30 saniyede bir, Takıntı sizden en az 40 metre uzaktaysa Aura\u0027sı size 2/2.5/3 saniye boyunca gösterilir. Değilse, size en uzaktaki Hayatta Kalan yeni Takıntı olur.",
+        "name_tr":  "Göksel Tanık"
+    },
+    {
         "name":  "Corrupt Intervention",
         "role":  "killer",
         "slug":  "corrupt-ntervention",
@@ -567,6 +576,15 @@ window.PERKS = [
         "name_tr":  "Efsun: İki Oynayabilir"
     },
     {
+        "name":  "Hex: Under Your Thumb",
+        "role":  "killer",
+        "slug":  "hex-under-your-thumb",
+        "desc":  "When a Survivor gains a Hook State, this Hex activates on a random Dull Totem: Running Survivors cannot gain more than 25/20/15 % Haste at once. Whenever a running Survivor within 32 metres gains the Haste Status Effect, their location is revealed to you for 4 seconds. The Hex effects persist as long as the related Hex Totem is standing.",
+        "owner":  "The Judgment",
+        "desc_tr":  "Bir Hayatta Kalan Kanca Durumu kazandığında bu Büyü rastgele bir Boş Totem üzerinde etkinleşir: Koşan Hayatta Kalanlar aynı anda %25/20/15\u0027ten fazla Hızlanma kazanamaz. 32 metre içindeki koşan bir Hayatta Kalan Hızlanma kazandığında konumu size 4 saniye boyunca gösterilir. Büyü etkileri, ilgili Büyü Totemi ayakta kaldığı sürece devam eder.",
+        "name_tr":  "Büyü: Parmağının Ucunda"
+    },
+    {
         "name":  "Hex: Undying",
         "role":  "killer",
         "slug":  "hex-undying",
@@ -691,6 +709,15 @@ window.PERKS = [
         "owner":  "The Lich",
         "desc_tr":  "Bir Kurban, konumunuza 36 metre mesafedeki bir Karga\u0027yı korkuttuğunda, Languid Touch etkinleştirilir: Kurban\u0027ın 6/8/10 saniye boyunca Bitkinlik Durum Etkisinden muzdarip olmasına neden olur. Languid Touch\u0027ın 5 saniyelik bir soğuma süresi vardır.",
         "name_tr":  "Ağır Dokunuş"
+    },
+    {
+        "name":  "Lay Waste",
+        "role":  "killer",
+        "slug":  "lay-waste",
+        "desc":  "Damaging a Generator causes it to regress an additional +2 % faster for each Charge it currently has. Lay Waste has a cool-down of 55/50/45 seconds after damaging a Generator.",
+        "owner":  "The Judgment",
+        "desc_tr":  "Bir Jeneratöre hasar vermek, o Jeneratörün sahip olduğu her Şarj için +%2 daha hızlı gerilemesine neden olur. Jeneratöre hasar verdikten sonra Yıkıma Uğrat\u0027ın 55/50/45 saniyelik soğuma süresi vardır.",
+        "name_tr":  "Yıkıma Uğrat"
     },
     {
         "name":  "Lethal Pursuer",
@@ -1449,6 +1476,15 @@ window.PERKS = [
         "name_tr":  "Lütuf: Gölge Adımı"
     },
     {
+        "name":  "Boon: Steadfast",
+        "role":  "survivor",
+        "slug":  "boon-steadfast",
+        "desc":  "Press and hold the Active Ability button on a Dull Totem or a Hex Totem to bless it and create a Boon Totem. All Survivors within 24 metres benefit from the following effects: Generators within the Boon\u0027s range regress -50 % slower. Survivors repair those Generators +8/9/10 % faster. Survivors see the Auras of those Generators. Survivors can only be affected by one instance of Boon: Steadfast at a time.",
+        "owner":  "Aurora Stardotter",
+        "desc_tr":  "Bir Boş Totem veya Büyü Totemi üzerinde Aktif Yetenek düğmesini basılı tutarak onu kutsayın ve bir Kutsama Totemi oluşturun. 24 metre içindeki tüm Hayatta Kalanlar şu etkilerden yararlanır: Kutsamanın menzilindeki Jeneratörler %50 daha yavaş geriler. Hayatta Kalanlar o Jeneratörleri %8/9/10 daha hızlı tamir eder. Hayatta Kalanlar o Jeneratörlerin Auralarını görür. Bir Hayatta Kalan aynı anda yalnızca tek bir Kutsama: Sarsılmaz etkisinden yararlanabilir.",
+        "name_tr":  "Kutsama: Sarsılmaz"
+    },
+    {
         "name":  "Borrowed Time",
         "role":  "survivor",
         "slug":  "borrowed-time",
@@ -1600,6 +1636,15 @@ window.PERKS = [
         "owner":  "Jill Valentine",
         "desc_tr":  "Aşağıdaki kalıcı etkiden faydalanırsınız: Temizleme hızınızın varsayılan değerini %125\u0027e çıkarır. Bir Totemi her temizlediğinizde, Counterforce aşağıdaki etkileri tetikler: Temizleme hızınızı istiflenebilir +%25 artırır. Mevcut konumunuzdan en uzaktaki Totemin Aurası size 10/12/14 saniye boyunca gösterilir.",
         "name_tr":  "Karşı kuvvet"
+    },
+    {
+        "name":  "Cross-Examination",
+        "role":  "survivor",
+        "slug":  "cross-examination",
+        "desc":  "While inside the Killer\u0027s Terror Radius and not being chased, you can see the Light Marks the Killer leaves behind while moving. Light Marks last 10 seconds. While standing on a Light Mark, you gain the Elusive Status Effect, which lingers for 3/4/5 seconds after you step off.",
+        "owner":  "Shane Wiigwaas",
+        "desc_tr":  "Katilin Terör Yarıçapı içindeyken ve kovalanmıyorken, Katilin hareket ederken bıraktığı Işık İzlerini görürsünüz. Işık İzleri 10 saniye kalır. Bir Işık İzinin üzerinde dururken Ele Geçmez durum etkisini kazanırsınız; bu etki üzerinden çekildikten sonra 3/4/5 saniye daha sürer.",
+        "name_tr":  "Çapraz Sorgu"
     },
     {
         "name":  "Cut Loose",
@@ -1854,6 +1899,15 @@ window.PERKS = [
         "name_tr":  "Dostça Rekabet"
     },
     {
+        "name":  "Fruits of Your Labor",
+        "role":  "survivor",
+        "slug":  "fruits-of-your-labor",
+        "desc":  "Whenever a Generator is completed, Fruits of Your Labor gains a Token. When you finish repairing a Generator, for each Token this perk has: you gain +5 % Haste for 2 seconds and gain 10/15/20 % Healing progress.",
+        "owner":  "Aurora Stardotter",
+        "desc_tr":  "Bir Jeneratör tamamlandığında Emeğinin Meyvesi bir Jeton kazanır. Bir Jeneratörü tamir etmeyi bitirdiğinizde, bu yeteneğin sahip olduğu her Jeton için: 2 saniye boyunca +%5 Hızlanma ve %10/15/20 İyileşme ilerlemesi kazanırsınız.",
+        "name_tr":  "Emeğinin Meyvesi"
+    },
+    {
         "name":  "Ghost Notes",
         "role":  "survivor",
         "slug":  "ghost-notes",
@@ -1969,6 +2023,15 @@ window.PERKS = [
         "owner":  "General",
         "desc_tr":  "Ayakta Kalan Son Hayatta Kalan olduğunuzda, Geride Kalan etkinleşir: Ambarın Aurası 24/28/32 metre içinde size gösterilir.",
         "name_tr":  "Geride Kalan"
+    },
+    {
+        "name":  "Lend a Hand",
+        "role":  "survivor",
+        "slug":  "lend-a-hand",
+        "desc":  "Cleansing or Blessing a Totem activates Lend a Hand. Once per Survivor: while healing another Survivor, press the Activate Ability 2 button to grant that Survivor 2/3/4 permanent Healing charges.",
+        "owner":  "Shane Wiigwaas",
+        "desc_tr":  "Bir Totemi Temizlemek veya Kutsamak Yardım Eli\u0027ni etkinleştirir. Her Hayatta Kalan için bir kez: Başka bir Hayatta Kalanı iyileştirirken Yeteneği Etkinleştir 2 düğmesine basarak o Hayatta Kalana 2/3/4 kalıcı İyileştirme şarjı verirsiniz.",
+        "name_tr":  "Yardım Eli"
     },
     {
         "name":  "Light-Footed",
@@ -2295,6 +2358,15 @@ window.PERKS = [
         "name_tr":  "Sabotajcı"
     },
     {
+        "name":  "Salvation\u0027s Cry",
+        "role":  "survivor",
+        "slug":  "salvation-s-cry",
+        "desc":  "When the Killer starts chasing you, the Auras of the other Survivors are revealed to you for 1/2/3 seconds. Survivors who are not being chased see your Aura for 5 seconds. Survivors who are not being chased see the Killer\u0027s Aura for 5 seconds.",
+        "owner":  "Aurora Stardotter",
+        "desc_tr":  "Katil sizi kovalamaya başladığında diğer Hayatta Kalanların Auraları size 1/2/3 saniye boyunca gösterilir. Kovalanmayan Hayatta Kalanlar sizin Auranızı 5 saniye boyunca görür. Kovalanmayan Hayatta Kalanlar Katilin Aurasını 5 saniye boyunca görür.",
+        "name_tr":  "Kurtuluş Çığlığı"
+    },
+    {
         "name":  "Scavenger",
         "role":  "survivor",
         "slug":  "scavenger",
@@ -2610,6 +2682,15 @@ window.PERKS = [
         "name_tr":  "Kötü"
     },
     {
+        "name":  "Wide Open Throttle",
+        "role":  "survivor",
+        "slug":  "wide-open-throttle",
+        "desc":  "Fast-vaulting a Pallet grants you 10/12.5/15 % Haste for 3 seconds. The Pallet is immediately reset, blocked by The Entity and revealed to all Survivors for 60 seconds. Wide Open Throttle then goes on a cool-down of 60 seconds.",
+        "owner":  "Shane Wiigwaas",
+        "desc_tr":  "Bir Paletin üzerinden hızlı atlamak size 3 saniye boyunca %10/12.5/15 Hızlanma sağlar. Palet anında sıfırlanır, Varlık tarafından engellenir ve 60 saniye boyunca tüm Hayatta Kalanlara gösterilir. Ardından Sonuna Kadar Gaz 60 saniyelik soğumaya girer.",
+        "name_tr":  "Sonuna Kadar Gaz"
+    },
+    {
         "name":  "Will to Live",
         "role":  "survivor",
         "slug":  "will-to-live",
@@ -2627,4 +2708,4 @@ window.PERKS = [
         "desc_tr":  "Aura okuma yeteneğinizdeki potansiyeli açığa çıkarır. Kırılabilir Duvarların, Paletlerin ve Pencerelerin Auraları size 24/28/32 metre içinde açığa çıkıyor.",
         "name_tr":  "Fırsat Pencereleri"
     }
-];
+]

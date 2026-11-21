@@ -1,174 +1,276 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dead by Daylight — Random Build</title>
-    <link rel="icon" href="favicon.ico">
-    <link rel="apple-touch-icon" href="favicon.ico">
-    <style>
-        :root{
-            --bg:#0a0c0e; --panel:#14171b; --panel2:#1b1f24; --line:#2a2f36;
-            --text:#e9e5dd; --muted:#8b929b;
-            --killer:#d13438; --killer-bg:#25131a; --killer-line:#5a2530;
-            --survivor:#2f7fd6; --survivor-bg:#101c2c; --survivor-line:#244463;
-            --t1:#e2b53c; --t2:#43b04a; --t3:#9b51e0;
-        }
-        *{box-sizing:border-box;}
-        html,body{margin:0;}
-        body{
-            min-height:100vh;
-            background:
-                linear-gradient(rgba(9,11,13,.5), rgba(9,11,13,.74)),
-                url('images/bg1.jpg') center center / cover fixed no-repeat,
-                var(--bg);
-            color:var(--text);
-            font-family:'Segoe UI',system-ui,-apple-system,Arial,sans-serif;
-            display:flex; flex-direction:column; align-items:center;
-            padding:20px 16px 40px;
-        }
-        .wrap{width:100%; max-width:1120px;}
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#0a0c0e">
+<title>Entity's Choice — Dead by Daylight Random Build</title>
+<link rel="icon" href="favicon.ico">
+<link rel="apple-touch-icon" href="favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+    --bg:#08090b; --panel:#13161a; --panel2:#1a1e23; --line:#2a2f36; --line2:#3a4049;
+    --text:#ece8e0; --muted:#8b929b;
+    --killer:#e0484c; --killer-dim:#b5292e; --killer-bg:#2a1620; --killer-line:#5a2530;
+    --survivor:#3d8fe0; --survivor-dim:#2a6bb0; --survivor-bg:#132234; --survivor-line:#244463;
+    --t1:#e2b53c; --t2:#43b04a; --t3:#9b51e0;
+    --sheet-pad: env(safe-area-inset-bottom, 0px);
+}
+*{box-sizing:border-box;}
+html,body{margin:0;}
+html{-webkit-text-size-adjust:100%;}
+body{
+    min-height:100dvh;
+    background:
+        radial-gradient(1200px 600px at 50% -10%, rgba(224,72,76,.10), transparent 60%),
+        linear-gradient(rgba(8,9,11,.62), rgba(8,9,11,.84)),
+        url('images/bg1.jpg') center center / cover fixed no-repeat,
+        var(--bg);
+    color:var(--text);
+    font-family:'Segoe UI',system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;
+    display:flex; flex-direction:column; align-items:center;
+    padding:18px 16px 40px;
+    overflow-x:hidden;
+}
+body.sheet-open{overflow:hidden;}
+.wrap{width:100%; max-width:1120px;}
 
-        /* Header */
-        .topbar{display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:22px;}
-        .brand{display:flex; flex-direction:row; align-items:center; gap:12px;}
-        .brand .logo{width:38px; height:38px; object-fit:contain; filter:drop-shadow(0 0 6px rgba(209,52,56,.5));}
-        .brandtext{display:flex; flex-direction:column; line-height:1.1;}
-        .brandtext b{font-size:19px; letter-spacing:3px; text-transform:uppercase; color:#fff;}
-        .brandtext span{font-size:11px; letter-spacing:2px; text-transform:uppercase; color:var(--killer); font-weight:700;}
-        .lang{display:flex; border:1px solid var(--line); border-radius:8px; overflow:hidden;}
-        .lang button{background:transparent; border:none; color:var(--muted); padding:7px 13px; cursor:pointer; font-weight:700; font-size:13px; transition:.2s;}
-        .lang button.on{background:var(--killer); color:#fff;}
+/* ---------------- Üst çubuk / marka ---------------- */
+.topbar{display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:26px;}
+.brand{display:flex; align-items:center; gap:13px; min-width:0;}
+.brand .logo{width:42px; height:42px; object-fit:contain; flex-shrink:0;
+    filter:drop-shadow(0 0 10px rgba(224,72,76,.55));}
+.brandtext{display:flex; flex-direction:column; line-height:1.05; min-width:0; overflow:hidden;}
+.brandtext b{
+    font-family:'Oswald',"Segoe UI",system-ui,sans-serif;
+    font-size:25px; font-weight:600; letter-spacing:4px; text-transform:uppercase;
+    color:#fff; white-space:nowrap;
+    text-shadow:0 0 18px rgba(224,72,76,.45); overflow:hidden; text-overflow:ellipsis;}
+.brandtext span{font-size:10px; letter-spacing:2.4px; text-transform:uppercase;
+    color:var(--killer); font-weight:800; margin-top:4px; white-space:nowrap;
+    overflow:hidden; text-overflow:ellipsis;}
 
-        h1{font-size:32px; text-align:center; margin:8px 0 6px; letter-spacing:.5px;}
-        .sub{color:var(--muted); text-align:center; margin:0 0 28px; font-size:15.5px;}
+.lang{display:flex; border:1px solid var(--line2); border-radius:9px; overflow:hidden; flex-shrink:0;}
+.lang button{background:transparent; border:none; color:var(--muted); padding:9px 15px; cursor:pointer;
+    font-weight:800; font-size:13px; letter-spacing:.6px; transition:.18s; min-height:40px;}
+.lang button:hover{color:#fff; background:rgba(255,255,255,.05);}
+.lang button.on{background:var(--killer); color:#fff;}
 
-        /* Modes */
-        .modes{display:flex; flex-wrap:wrap; gap:10px; justify-content:center; margin-bottom:26px;}
-        .mode{flex:1 1 auto; min-width:170px; padding:17px 20px; border-radius:11px; border:1px solid var(--line);
-            background:var(--panel2); color:var(--text); font-weight:800; text-transform:uppercase; letter-spacing:.5px;
-            font-size:15px; cursor:pointer; transition:.18s;}
-        .mode:hover{transform:translateY(-2px); border-color:var(--killer);}
-        .mode.primary{background:linear-gradient(180deg,#e0484c,#b5292e); border-color:#e0484c; box-shadow:0 8px 24px rgba(197,41,46,.35);}
+h1{font-family:'Oswald',"Segoe UI",system-ui,sans-serif;
+    font-size:38px; font-weight:500; text-align:center; margin:4px 0 8px; letter-spacing:1.5px;
+    text-transform:uppercase;}
+.sub{color:var(--muted); text-align:center; margin:0 0 30px; font-size:15px; line-height:1.5;}
 
-        .placeholder{text-align:center; color:var(--muted); padding:60px 20px; border:1px dashed var(--line); border-radius:14px;}
+/* ---------------- Mod düğmeleri ---------------- */
+.modes{display:flex; flex-wrap:wrap; gap:11px; justify-content:center; margin-bottom:30px;}
+.mode{flex:1 1 auto; min-width:175px; padding:17px 20px; border-radius:12px;
+    border:1px solid var(--line2); background:var(--panel2); color:var(--text);
+    font-weight:800; text-transform:uppercase; letter-spacing:.7px; font-size:14.5px;
+    cursor:pointer; transition:.18s; min-height:56px;
+    display:flex; align-items:center; justify-content:center; gap:9px;}
+.mode:hover{transform:translateY(-2px); border-color:var(--line2); background:#22272d;}
+.mode.primary{background:linear-gradient(180deg,var(--killer),var(--killer-dim));
+    border-color:var(--killer); box-shadow:0 10px 26px rgba(197,41,46,.35); color:#fff;}
+.mode.primary:hover{box-shadow:0 14px 32px rgba(197,41,46,.5);}
+.mode.k:hover{border-color:var(--killer); color:#fff;}
+.mode.s:hover{border-color:var(--survivor); color:#fff;}
+.mode:active{transform:translateY(0) scale(.985);}
 
-        /* Character banner */
-        .charcard{display:flex; align-items:center; gap:26px; border:1px solid var(--line); border-radius:16px; padding:26px 28px; margin-bottom:26px;
-            animation:fade .45s ease; transition:background .4s, border-color .4s;}
-        .charcard.killer{background:linear-gradient(180deg,#2a1620,#1a1013); border-color:var(--killer-line);}
-        .charcard.survivor{background:linear-gradient(180deg,#132234,#101823); border-color:var(--survivor-line);}
-        .portrait{width:124px; height:124px; flex-shrink:0; border-radius:16px; overflow:hidden; border:3px solid; background:#0c0e11;
-            display:flex; align-items:center; justify-content:center; font-size:56px;}
-        .charcard.killer .portrait{border-color:var(--killer);}
-        .charcard.survivor .portrait{border-color:var(--survivor);}
-        .portrait img{width:100%; height:100%; object-fit:cover; display:block;}
-        .rolebadge{display:inline-block; font-size:12px; font-weight:800; letter-spacing:1.5px; text-transform:uppercase; padding:4px 12px; border-radius:20px; margin-bottom:9px;}
-        .charcard.killer .rolebadge{background:var(--killer); color:#fff;}
-        .charcard.survivor .rolebadge{background:var(--survivor); color:#fff;}
-        .charname{font-size:36px; font-weight:800;}
-        .rolebadge{font-size:13px !important;}
+.placeholder{text-align:center; color:var(--muted); padding:64px 22px;
+    border:1px dashed var(--line2); border-radius:16px; background:rgba(16,18,22,.45); line-height:1.6;}
 
-        /* Perks */
-        .sectitle{display:flex; align-items:center; gap:12px; margin:0 2px 12px;}
-        .sectitle h2{font-size:14px; text-transform:uppercase; letter-spacing:1.5px; color:var(--muted); margin:0; font-weight:800;}
-        .tierlegend{display:flex; gap:6px;}
-        .tierlegend i{width:22px; height:22px; border-radius:5px; display:flex; align-items:center; justify-content:center;
-            font-style:normal; font-size:11px; font-weight:800; color:#0a0c0e; opacity:.28; transition:opacity .2s, transform .2s;}
-        .tierlegend i.d1{background:var(--t1);} .tierlegend i.d2{background:var(--t2);} .tierlegend i.d3{background:var(--t3);}
-        .tierlegend i.on{opacity:1; transform:scale(1.12);}
-        .hint{font-size:11px; color:var(--muted); margin-left:auto;}
+/* ---------------- Karakter kartı ---------------- */
+.charcard{display:flex; align-items:center; gap:26px; border:1px solid var(--line);
+    border-radius:18px; padding:24px 28px; margin-bottom:26px; position:relative; overflow:hidden;
+    animation:fade .4s ease; transition:background .4s, border-color .4s;}
+.charcard::after{content:''; position:absolute; inset:0; pointer-events:none;
+    background:radial-gradient(420px 150px at 10% 0%, rgba(255,255,255,.055), transparent 70%);}
+.charcard.killer{background:linear-gradient(135deg,var(--killer-bg),#160f12); border-color:var(--killer-line);}
+.charcard.survivor{background:linear-gradient(135deg,var(--survivor-bg),#0f1620); border-color:var(--survivor-line);}
+.portrait{width:120px; height:120px; flex-shrink:0; border-radius:18px; overflow:hidden; border:3px solid;
+    background:#0c0e11; display:flex; align-items:center; justify-content:center; font-size:54px;}
+.charcard.killer .portrait{border-color:var(--killer); box-shadow:0 0 26px rgba(224,72,76,.3);}
+.charcard.survivor .portrait{border-color:var(--survivor); box-shadow:0 0 26px rgba(61,143,224,.3);}
+.portrait img{width:100%; height:100%; object-fit:cover; display:block;}
+.charmeta{min-width:0;}
+.rolebadge{display:inline-flex; align-items:center; gap:6px; font-size:12px; font-weight:800;
+    letter-spacing:1.6px; text-transform:uppercase; padding:5px 13px; border-radius:20px; margin-bottom:10px;}
+.charcard.killer .rolebadge{background:var(--killer); color:#fff;}
+.charcard.survivor .rolebadge{background:var(--survivor); color:#fff;}
+.charname{font-family:'Oswald',"Segoe UI",system-ui,sans-serif;
+    font-size:40px; font-weight:600; letter-spacing:.6px; line-height:1.1; word-break:break-word;}
 
-        /* Üst çubuk: sadece tier göstergesi (sade) */
-        .perkbar{display:flex; align-items:center; justify-content:center; gap:12px; margin:2px 0 2px;}
-        .phint{font-size:11px; color:#b9c0c8; text-shadow:0 1px 4px rgba(0,0,0,.9);}
+/* ---------------- Tier çubuğu ---------------- */
+.perkbar{display:flex; align-items:center; justify-content:center; gap:10px; margin:4px 0 2px; flex-wrap:wrap;}
+.tierlegend{display:flex; gap:7px; align-items:center;}
+.tierlegend button{width:38px; height:38px; border-radius:9px; border:1px solid transparent;
+    display:flex; align-items:center; justify-content:center; cursor:pointer;
+    font-family:'Oswald',sans-serif; font-size:14px; font-weight:700; color:#0a0c0e;
+    opacity:.3; transition:opacity .2s, transform .2s, box-shadow .2s; padding:0;}
+.tierlegend button.d1{background:var(--t1);} .tierlegend button.d2{background:var(--t2);}
+.tierlegend button.d3{background:var(--t3); color:#fff;}
+.tierlegend button.on{opacity:1; transform:scale(1.1);}
+.tierlegend button:hover{opacity:.85;}
+.tierlegend button.on:hover{opacity:1;}
+.tcycle{width:38px; height:38px; border-radius:9px; border:1px solid var(--line2);
+    background:var(--panel2); color:var(--muted); cursor:pointer; font-size:15px;
+    display:flex; align-items:center; justify-content:center; transition:.18s; margin-left:4px;}
+.tcycle:hover{color:#fff; border-color:var(--line2); background:#22272d;}
+.tcycle.off{color:var(--t1); border-color:var(--t1);}
+.phint{font-size:11.5px; color:#aab2bb; text-shadow:0 1px 4px rgba(0,0,0,.9); letter-spacing:.3px;}
 
-        /* Elmas dizilim — SIKI küme (oyundaki loadout), yazısız */
-        .loadout{position:relative; width:480px; height:480px; margin:6px auto 0;}
-        .pk{position:absolute; width:170px; height:170px;}
-        .pk.pos-top{left:155px; top:36px;}
-        .pk.pos-bottom{left:155px; top:274px;}
-        .pk.pos-left{left:36px; top:155px;}
-        .pk.pos-right{left:274px; top:155px;}
+/* ---------------- Elmas loadout ---------------- */
+.loadout{position:relative; width:480px; height:480px; margin:8px auto 0;}
+.pk{position:absolute; width:170px; height:170px;}
+.pk.pos-top{left:155px; top:36px;}
+.pk.pos-bottom{left:155px; top:274px;}
+.pk.pos-left{left:36px; top:155px;}
+.pk.pos-right{left:274px; top:155px;}
 
-        .dia{width:170px; height:170px; transform:rotate(45deg); border-radius:16px;
-            background:radial-gradient(circle at 50% 42%, #452c60, #130c1d 82%);
-            border:3px solid var(--line); box-shadow:0 8px 26px rgba(0,0,0,.6);
-            display:flex; align-items:center; justify-content:center; cursor:pointer;
-            transition:border-color .3s, box-shadow .3s, transform .18s;}
-        .pk:hover{z-index:80;}
-        .pk:hover .dia{transform:rotate(45deg) scale(1.06);}
-        .pk.t1 .dia{border-color:var(--t1); box-shadow:0 0 24px rgba(226,181,60,.45),0 8px 26px rgba(0,0,0,.6);}
-        .pk.t2 .dia{border-color:var(--t2); box-shadow:0 0 24px rgba(67,176,74,.45),0 8px 26px rgba(0,0,0,.6);}
-        .pk.t3 .dia{border-color:var(--t3); box-shadow:0 0 30px rgba(155,81,224,.6),0 8px 26px rgba(0,0,0,.6);}
-        .dia-in{transform:rotate(-45deg); width:114px; height:114px; display:flex; align-items:center; justify-content:center; font-size:44px;}
-        .dia-in img{width:100%; height:100%; object-fit:contain; filter:brightness(1.6) contrast(1.05) drop-shadow(0 1px 3px rgba(0,0,0,.7));}
+.dia{width:170px; height:170px; transform:rotate(45deg); border-radius:18px;
+    background:radial-gradient(circle at 50% 42%, #452c60, #120b1b 82%);
+    border:3px solid var(--line2); box-shadow:0 8px 26px rgba(0,0,0,.65);
+    display:flex; align-items:center; justify-content:center; cursor:pointer;
+    transition:border-color .3s, box-shadow .3s, transform .18s;
+    -webkit-tap-highlight-color:transparent;}
+.pk:hover{z-index:80;}
+.pk:hover .dia{transform:rotate(45deg) scale(1.06);}
+.pk.t1 .dia{border-color:var(--t1); box-shadow:0 0 26px rgba(226,181,60,.45),0 8px 26px rgba(0,0,0,.6);}
+.pk.t2 .dia{border-color:var(--t2); box-shadow:0 0 26px rgba(67,176,74,.45),0 8px 26px rgba(0,0,0,.6);}
+.pk.t3 .dia{border-color:var(--t3); box-shadow:0 0 32px rgba(155,81,224,.6),0 8px 26px rgba(0,0,0,.6);}
+.dia-in{transform:rotate(-45deg); width:114px; height:114px;
+    display:flex; align-items:center; justify-content:center; font-size:44px;}
+.dia-in img{width:100%; height:100%; object-fit:contain;
+    filter:brightness(1.6) contrast(1.05) drop-shadow(0 1px 3px rgba(0,0,0,.7));}
 
-        /* Yan popup — isim + tier + sahip + açıklama (hover) */
-        .pop{position:absolute; top:85px; transform:translateY(-50%) scale(.96); width:340px; z-index:90;
-            background:rgba(15,18,22,.98); border:1px solid var(--line); border-left:4px solid var(--line);
-            border-radius:14px; padding:16px 19px; box-shadow:0 24px 56px rgba(0,0,0,.75);
-            opacity:0; visibility:hidden; pointer-events:none;
-            transition:opacity .16s ease, transform .16s ease, visibility .16s;}
-        .pk.t1 .pop{border-left-color:var(--t1);} .pk.t2 .pop{border-left-color:var(--t2);} .pk.t3 .pop{border-left-color:var(--t3);}
-        .pk.pos-right .pop, .pk.pos-top .pop{left:calc(100% + 48px); transform-origin:left center;}
-        .pk.pos-left .pop, .pk.pos-bottom .pop{right:calc(100% + 48px); transform-origin:right center;}
-        .pk:hover .pop, .pk.open .pop{opacity:1; visibility:visible; transform:translateY(-50%) scale(1);}
-        .pop .pt{font-weight:800; text-transform:uppercase; letter-spacing:1.2px; font-size:16.5px; color:#fff; margin-bottom:8px;}
-        .pop .ptr{display:inline-block; font-size:11px; font-weight:800; letter-spacing:.5px; padding:2px 10px; border-radius:9px; color:#0a0c0e; margin-bottom:11px;}
-        .pk.t1 .pop .ptr{background:var(--t1);} .pk.t2 .pop .ptr{background:var(--t2);} .pk.t3 .pop .ptr{background:var(--t3); color:#fff;}
-        .pop .o{font-size:12.5px; color:var(--muted); margin-bottom:11px; padding-bottom:9px; border-bottom:1px solid var(--line);}
-        .pop .o b{color:#fff;}
-        .pop .d{font-size:14px; color:#dfe3e8;}
-        .pop .pline{margin:0; line-height:1.65;}
-        .pop ul.blist{margin:0; padding-left:18px;}
-        .pop ul.blist li{margin:0 0 8px; line-height:1.5;}
-        .pop ul.blist li:last-child{margin-bottom:0;}
-        .tval{font-weight:800; padding:0 3px; border-radius:3px; background:rgba(255,255,255,.08);}
-        .pk.t1 .tval{color:var(--t1);} .pk.t2 .tval{color:#7ee089;} .pk.t3 .tval{color:#c79bf0;}
+/* ---------------- Perk paneli ---------------- */
+.pop{position:absolute; top:85px; transform:translateY(-50%) scale(.96); width:350px; z-index:90;
+    background:rgba(14,17,21,.985); border:1px solid var(--line2); border-left:4px solid var(--line2);
+    border-radius:16px; padding:17px 20px; box-shadow:0 24px 60px rgba(0,0,0,.8);
+    opacity:0; visibility:hidden; pointer-events:none;
+    transition:opacity .16s ease, transform .16s ease, visibility .16s;}
+.pk.t1 .pop{border-left-color:var(--t1);}
+.pk.t2 .pop{border-left-color:var(--t2);}
+.pk.t3 .pop{border-left-color:var(--t3);}
+.pk.pos-right .pop, .pk.pos-top .pop{left:calc(100% + 48px); transform-origin:left center;}
+.pk.pos-left .pop, .pk.pos-bottom .pop{right:calc(100% + 48px); transform-origin:right center;}
+.pk:hover .pop, .pk.open .pop{opacity:1; visibility:visible; transform:translateY(-50%) scale(1);}
+.pk.open .pop{pointer-events:auto;}          /* açıkken tıklanabilir olmalı */
 
-        footer{color:var(--muted); font-size:12px; margin-top:30px; text-align:center; line-height:1.7;}
-        footer a{color:#e0484c; text-decoration:none; font-weight:700;}
-        footer a:hover{text-decoration:underline;}
-        footer .dev{color:#efe9e1; font-size:13px; font-weight:600;}
+.pophead{display:flex; align-items:flex-start; gap:10px;}
+.pophead .pt{font-family:'Oswald',sans-serif; font-weight:600; text-transform:uppercase;
+    letter-spacing:1.3px; font-size:18px; color:#fff; margin:0 0 8px; flex:1; line-height:1.2;}
+.popclose{display:none; flex-shrink:0; width:36px; height:36px; margin:-4px -6px 0 0;
+    border:1px solid var(--line2); background:var(--panel2); color:var(--text);
+    border-radius:10px; font-size:17px; line-height:1; cursor:pointer;
+    align-items:center; justify-content:center; -webkit-tap-highlight-color:transparent;}
+.popclose:hover{background:var(--killer); border-color:var(--killer); color:#fff;}
+.pop .ptr{display:inline-block; font-size:11px; font-weight:800; letter-spacing:.6px;
+    padding:3px 11px; border-radius:9px; color:#0a0c0e; margin-bottom:11px;}
+.pk.t1 .pop .ptr{background:var(--t1);} .pk.t2 .pop .ptr{background:var(--t2);}
+.pk.t3 .pop .ptr{background:var(--t3); color:#fff;}
+.pop .o{font-size:12.5px; color:var(--muted); margin-bottom:11px; padding-bottom:9px;
+    border-bottom:1px solid var(--line);}
+.pop .o b{color:#fff;}
+.pop .d{font-size:14px; color:#dfe3e8;}
+.pop .pline{margin:0; line-height:1.65;}
+.pop ul.blist{margin:0; padding-left:18px;}
+.pop ul.blist li{margin:0 0 8px; line-height:1.55;}
+.pop ul.blist li:last-child{margin-bottom:0;}
+.tval{font-weight:800; padding:0 3px; border-radius:3px; background:rgba(255,255,255,.08);}
+.pk.t1 .tval{color:var(--t1);} .pk.t2 .tval{color:#7ee089;} .pk.t3 .tval{color:#c79bf0;}
 
-        @keyframes fade{from{opacity:0; transform:translateY(10px);} to{opacity:1; transform:translateY(0);}}
+/* Perde (mobil panel arkası) */
+.backdrop{position:fixed; inset:0; background:rgba(4,5,7,.72); backdrop-filter:blur(2px);
+    opacity:0; visibility:hidden; transition:opacity .18s, visibility .18s; z-index:150;}
+body.sheet-open .backdrop{opacity:1; visibility:visible;}
 
-        /* Orta/dar ekran (≤1080): mini elmas küme; açıklama DOKUNUNCA alttan açılır */
-        @media (max-width:1080px){
-            .loadout{width:400px; height:400px;}
-            .pk{width:140px; height:140px;}
-            .pk.pos-top{left:130px; top:31px;} .pk.pos-bottom{left:130px; top:229px;}
-            .pk.pos-left{left:31px; top:130px;} .pk.pos-right{left:229px; top:130px;}
-            .dia{width:140px; height:140px;} .dia-in{width:94px; height:94px; font-size:34px;}
-            .pk:hover .dia{transform:rotate(45deg);} .pk:active .dia{transform:rotate(45deg) scale(1.05);}
-            /* açıklama: alt-yaprak (bottom sheet), perke dokununca */
-            .pop, .pk.pos-top .pop, .pk.pos-bottom .pop, .pk.pos-left .pop, .pk.pos-right .pop{
-                position:fixed; left:14px; right:14px; bottom:14px; top:auto; width:auto; max-width:none;
-                transform:translateY(28px); opacity:0; visibility:hidden; z-index:200;
-                box-shadow:0 -10px 44px rgba(0,0,0,.75); max-height:72vh; overflow-y:auto;}
-            .pk:hover .pop{opacity:0; visibility:hidden; transform:translateY(28px);}
-            .pk.open .pop{opacity:1; visibility:visible; transform:translateY(0);}
-        }
-        @media (max-width:640px){
-            h1{font-size:23px;} .charname{font-size:25px;} .portrait{width:92px; height:92px; font-size:42px;}
-            .charcard{gap:16px; padding:18px;}
-            .mode{min-width:120px; font-size:13px; padding:13px 12px;}
-            .loadout{width:330px; height:330px;}
-            .pk{width:116px; height:116px;}
-            .pk.pos-top{left:107px; top:25px;} .pk.pos-bottom{left:107px; top:189px;}
-            .pk.pos-left{left:25px; top:107px;} .pk.pos-right{left:189px; top:107px;}
-            .dia{width:116px; height:116px;} .dia-in{width:78px; height:78px; font-size:28px;}
-            .pop .d{font-size:13.5px;}
-        }
-    </style>
+/* Yeniden at düğmesi (mobil) */
+.reroll{position:fixed; right:16px; bottom:calc(16px + var(--sheet-pad)); z-index:120;
+    display:none; align-items:center; gap:8px; padding:14px 20px; border-radius:30px;
+    border:none; background:linear-gradient(180deg,var(--killer),var(--killer-dim)); color:#fff;
+    font-weight:800; font-size:14px; letter-spacing:.5px; text-transform:uppercase;
+    box-shadow:0 10px 30px rgba(0,0,0,.6), 0 0 22px rgba(224,72,76,.35); cursor:pointer;
+    -webkit-tap-highlight-color:transparent;}
+.reroll:active{transform:scale(.96);}
+body.sheet-open .reroll{display:none !important;}
+
+footer{color:var(--muted); font-size:12px; margin-top:34px; text-align:center; line-height:1.8;}
+footer a{color:var(--killer); text-decoration:none; font-weight:700;}
+footer a:hover{text-decoration:underline;}
+footer .dev{color:#efe9e1; font-size:13px; font-weight:600;}
+
+@keyframes fade{from{opacity:0; transform:translateY(10px);} to{opacity:1; transform:translateY(0);}}
+
+/* ============ Orta/dar ekran: panel alttan açılır ============ */
+@media (max-width:1080px){
+    .loadout{width:400px; height:400px;}
+    .pk{width:140px; height:140px;}
+    .pk.pos-top{left:130px; top:31px;} .pk.pos-bottom{left:130px; top:229px;}
+    .pk.pos-left{left:31px; top:130px;} .pk.pos-right{left:229px; top:130px;}
+    .dia{width:140px; height:140px;} .dia-in{width:94px; height:94px; font-size:34px;}
+    .pk:hover .dia{transform:rotate(45deg);}
+    .pk:active .dia{transform:rotate(45deg) scale(1.05);}
+
+    .popclose{display:flex;}
+    .pop, .pk.pos-top .pop, .pk.pos-bottom .pop, .pk.pos-left .pop, .pk.pos-right .pop{
+        position:fixed; left:0; right:0; bottom:0; top:auto; width:auto; max-width:none;
+        border-radius:20px 20px 0 0; border-left:1px solid var(--line2); border-top:4px solid var(--line2);
+        padding:14px 20px calc(22px + var(--sheet-pad));
+        transform:translateY(100%); opacity:1; visibility:hidden; z-index:200;
+        box-shadow:0 -14px 48px rgba(0,0,0,.8); max-height:76dvh; overflow-y:auto;
+        -webkit-overflow-scrolling:touch;
+        transition:transform .22s cubic-bezier(.22,.8,.3,1), visibility .22s;}
+    .pk.t1 .pop{border-top-color:var(--t1);} .pk.t2 .pop{border-top-color:var(--t2);}
+    .pk.t3 .pop{border-top-color:var(--t3);}
+    .pop::before{content:''; display:block; width:42px; height:4px; border-radius:3px;
+        background:var(--line2); margin:0 auto 14px;}
+    .pk:hover .pop{opacity:1; visibility:hidden; transform:translateY(100%);}
+    .pk.open .pop{opacity:1; visibility:visible; transform:translateY(0); pointer-events:auto;}
+    .reroll{display:flex;}
+}
+
+@media (max-width:640px){
+    body{padding:14px 12px 30px;}
+    .brandtext b{font-size:20px; letter-spacing:3px;}
+    .brandtext span{font-size:9px; letter-spacing:1.8px;}
+    .brand .logo{width:34px; height:34px;}
+    h1{font-size:25px; letter-spacing:1px;} .sub{font-size:13.5px; margin-bottom:22px;}
+    .charname{font-size:27px;} .portrait{width:94px; height:94px; font-size:42px;}
+    .charcard{gap:16px; padding:17px; border-radius:15px;}
+    .mode{min-width:0; flex:1 1 30%; font-size:12.5px; padding:14px 8px; gap:6px; letter-spacing:.3px;}
+    .modes{gap:8px;}
+    .loadout{width:330px; height:330px;}
+    .pk{width:116px; height:116px;}
+    .pk.pos-top{left:107px; top:25px;} .pk.pos-bottom{left:107px; top:189px;}
+    .pk.pos-left{left:25px; top:107px;} .pk.pos-right{left:189px; top:107px;}
+    .dia{width:116px; height:116px; border-radius:14px;} .dia-in{width:78px; height:78px; font-size:28px;}
+    .pop .d{font-size:14px;}
+    .pophead .pt{font-size:17px;}
+}
+@media (max-width:480px){ .bs2{display:none;} }
+@media (max-width:360px){
+    .loadout{width:290px; height:290px;}
+    .pk{width:102px; height:102px;}
+    .pk.pos-top{left:94px; top:22px;} .pk.pos-bottom{left:94px; top:166px;}
+    .pk.pos-left{left:22px; top:94px;} .pk.pos-right{left:166px; top:94px;}
+    .dia{width:102px; height:102px;} .dia-in{width:68px; height:68px;}
+}
+</style>
 </head>
 <body>
+
 <div class="wrap">
     <div class="topbar">
         <div class="brand">
             <img src="favicon.ico" alt="" class="logo">
-            <div class="brandtext"><b>Dead by Daylight</b><span>Random Build</span></div>
+            <div class="brandtext">
+                <b lang="en">Entity&rsquo;s Choice</b>
+                <span id="brandsub">Dead by Daylight<span class="bs2"> · Random Build</span></span>
+            </div>
         </div>
         <div class="lang">
             <button type="button" data-lang="tr" onclick="setLanguage('tr')">TR</button>
@@ -181,8 +283,8 @@
 
     <div class="modes">
         <button class="mode primary" id="mRandom" onclick="roll('any')">🎲 Fully Random</button>
-        <button class="mode" id="mKiller" onclick="roll('killer')">🔪 Killer</button>
-        <button class="mode" id="mSurvivor" onclick="roll('survivor')">🩸 Survivor</button>
+        <button class="mode k" id="mKiller" onclick="roll('killer')">🔪 Killer</button>
+        <button class="mode s" id="mSurvivor" onclick="roll('survivor')">🩸 Survivor</button>
     </div>
 
     <div id="result">
@@ -195,152 +297,239 @@
     </footer>
 </div>
 
+<div class="backdrop" id="backdrop"></div>
+<button class="reroll" id="reroll" type="button">🎲 <span id="rerollText">Re-roll</span></button>
+
 <script src="perks.js"></script>
 <script>
-    /* ---------- UI dili ---------- */
-    let currentLang = 'en';
-    const ui = {
-        en:{ title:'Random Build Generator', sub:'Pick a role — get a character and 4 random perks.',
-             random:'🎲 Fully Random', killer:'🔪 Killer', survivor:'🩸 Survivor',
-             ph:'Press a button to generate your build.', roleK:'Killer', roleS:'Survivor',
-             perks:'Perks', tier:'Tier', hint:'Tiers cycle I → II → III automatically', owner:'Belongs to' },
-        tr:{ title:'Rastgele Build Üretici', sub:'Bir rol seç — karakter ve 4 rastgele perk gelsin.',
-             random:'🎲 Tamamen Rastgele', killer:'🔪 Katil', survivor:'🩸 Kurban',
-             ph:'Build oluşturmak için bir butona bas.', roleK:'Katil', roleS:'Kurban',
-             perks:'Perkler', tier:'Kademe', hint:'Kademeler I → II → III otomatik döner', owner:'Sahibi' }
-    };
-
-    /* ---------- Karakterler ---------- */
-    const KILLERS = ["The Trapper","The Wraith","The Hillbilly","The Nurse","The Shape","The Hag","The Doctor","The Huntress","The Cannibal","The Nightmare","The Pig","The Clown","The Spirit","The Legion","The Plague","The Ghost Face","The Demogorgon","The Oni","The Deathslinger","The Executioner","The Blight","The Twins","The Trickster","The Nemesis","The Cenobite","The Artist","The Onryo","The Dredge","The Mastermind","The Knight","The Skull Merchant","The Singularity","The Xenomorph","The Good Guy","The Unknown","The Lich","The Dark Lord","The Houndmaster","The Ghoul","The Animatronic","The Krasue","The First","The Slasher"];
-    const SURVIVORS = ["Dwight Fairfield","Meg Thomas","Claudette Morel","Jake Park","Nea Karlsson","Laurie Strode","Ace Visconti","Bill Overbeck","Feng Min","David King","Quentin Smith","Detective Tapp","Kate Denson","Adam Francis","Jeff Johansen","Jane Romero","Ashley Williams","Nancy Wheeler","Steve Harrington","Yui Kimura","Zarina Kassir","Cheryl Mason","Felix Richter","Élodie Rakoto","Yun-Jin Lee","Jill Valentine","Leon Kennedy","Mikaela Reid","Jonah Vasquez","Yoichi Asakawa","Haddie Kaur","Ada Wong","Rebecca Chambers","Vittorio Toscano","Thalita Lyra","Renato Lyra","Gabriel Soma","Nicolas Cage","Ellen Ripley","Alan Wake","Sable Ward","Lara Croft","Trevor Belmont","Taurie Cain","Aestri & Baermar","Orela Rose","Rick Grimes","Michonne Grimes","Vee Boonyasak","Dustin Henderson","Eleven","Kwon Tae-young","Shane Wiigwaas"];
-
-    /* ---------- Perk havuzu (perks.js -> window.PERKS) ---------- */
-    const PERKS = window.PERKS || [];
-    const killerPerks = PERKS.filter(p => p.role === 'killer');
-    const survivorPerks = PERKS.filter(p => p.role === 'survivor');
-
-    /* ---------- Yardımcılar ---------- */
-    function shuffle(a){ a = a.slice(); for(let i=a.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; } return a; }
-    function slug(name){ return name.toLowerCase().replace(/^the\s+/,'').normalize('NFD').replace(/[̀-ͯ]/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,''); }
-    function charPortrait(role, name){ return `images/${role}s/${slug(name)}.png`; }
-    function perkIcon(p){ return `images/perks/${p.role}s/${p.slug}.png`; }
-
-    const roman = {1:'I',2:'II',3:'III'};
-    function perkName(p){ return (currentLang==='tr' && p.name_tr) ? p.name_tr : p.name; }
-    // Katil başlıkları Türkçe (kurban = kişi adı, İngilizce kalır)
-    const charTR = {
-        "The Trapper":"Tuzakçı","The Wraith":"Hayalet","The Hillbilly":"Köylü","The Nurse":"Hemşire",
-        "The Shape":"Şekil","The Hag":"Cadı","The Doctor":"Doktor","The Huntress":"Avcı",
-        "The Cannibal":"Yamyam","The Nightmare":"Kabus","The Pig":"Domuz","The Clown":"Palyaço",
-        "The Spirit":"Ruh","The Legion":"Lejyon","The Plague":"Veba","The Ghost Face":"Hayalet Yüz",
-        "The Demogorgon":"Demogorgon","The Oni":"Oni","The Deathslinger":"Ölüm Silahşörü","The Executioner":"Cellat",
-        "The Blight":"Afet","The Twins":"İkizler","The Trickster":"Hilebaz","The Nemesis":"Nemesis",
-        "The Cenobite":"Cenobite","The Artist":"Sanatçı","The Onryo":"Onryo","The Dredge":"Karabasan",
-        "The Mastermind":"Usta Beyin","The Knight":"Şövalye","The Skull Merchant":"Kafatası Tüccarı","The Singularity":"Tekillik",
-        "The Xenomorph":"Xenomorph","The Good Guy":"İyi Çocuk","The Unknown":"Bilinmeyen","The Lich":"Lich",
-        "The Dark Lord":"Karanlık Lord","The Houndmaster":"Tazı Ustası","The Ghoul":"Gulyabani","The Animatronic":"Animatronik",
-        "The Krasue":"Krasue","The First":"İlk","The Slasher":"Deşici"
-    };
-    function charName(n){ return (currentLang==='tr' && charTR[n]) ? charTR[n] : n; }
-    function descForTier(p, t){
-        const base = (currentLang==='tr' && p.desc_tr) ? p.desc_tr : (p.desc || '');
-        const withVals = base.replace(/(\d+(?:\.\d+)?)\/(\d+(?:\.\d+)?)\/(\d+(?:\.\d+)?)/g,(m,a,b,c)=>`<span class="tval">${[a,b,c][t-1]}</span>`);
-        const parts = withVals.split(/(?<=\.)\s+|\s*•\s*/).map(s=>s.trim()).filter(Boolean);
-        if(parts.length<=1) return '<p class="pline">'+withVals+'</p>';
-        return '<ul class="blist">'+parts.map(s=>'<li>'+s+'</li>').join('')+'</ul>';
+/* ---------- Arayüz dili ---------- */
+const ui = {
+    en:{
+        title:'Random Build Generator',
+        sub:'Pick a role — get a character and 4 random perks.',
+        brandsub:'Dead by Daylight<span class="bs2"> · Random Build</span>',
+        random:'🎲 Fully Random', killer:'🔪 Killer', survivor:'🩸 Survivor',
+        ph:'Press a button to generate your build.',
+        roleK:'Killer', roleS:'Survivor', owner:'Perk owner', tier:'Tier',
+        hint:'Tap a perk for details · tap I / II / III to lock the tier',
+        reroll:'Re-roll', close:'Close', noData:'perks.js could not be loaded.'
+    },
+    tr:{
+        title:'Rastgele <span lang="en">Build</span> Üretici',
+        sub:'Bir rol seç — karakterini ve 4 rastgele yeteneğini al.',
+        brandsub:'<span lang="en">Dead by Daylight</span><span class="bs2"> · Rastgele <span lang="en">Build</span></span>',
+        random:'🎲 Tamamen Rastgele', killer:'🔪 Katil', survivor:'🩸 Kurban',
+        ph:'Build üretmek için bir düğmeye bas.',
+        roleK:'Katil', roleS:'Kurban', owner:'Yetenek sahibi', tier:'Seviye',
+        hint:'Ayrıntı için yeteneğe dokun · seviyeyi sabitlemek için I / II / III',
+        reroll:'Yeniden At', close:'Kapat', noData:'perks.js yüklenemedi.'
     }
+};
+let currentLang = 'en';
 
-    /* ---------- Deste (karakter tekrar etmesin) ---------- */
-    const bags={killer:[],survivor:[]}, lastChar={killer:null,survivor:null};
-    function drawChar(role){
-        const src = role==='killer'?KILLERS:SURVIVORS;
-        if(bags[role].length===0){ bags[role]=shuffle(src); if(lastChar[role]&&bags[role][bags[role].length-1]===lastChar[role]&&bags[role].length>1){ const b=bags[role]; [b[0],b[b.length-1]]=[b[b.length-1],b[0]]; } }
-        const c=bags[role].pop(); lastChar[role]=c; return c;
-    }
-    function draw4(role){ const pool = role==='killer'?killerPerks:survivorPerks; return shuffle(pool).slice(0,4); }
+/* ---------- Perk havuzu ---------- */
+const PERKS = window.PERKS || [];
+const killerPerks   = PERKS.filter(p => p.role === 'killer');
+const survivorPerks = PERKS.filter(p => p.role === 'survivor');
 
-    /* ---------- Durum ---------- */
-    let build=null, curTier=1, timer=null, currentPerks=[];
+/* ---------- Karakterler ---------- */
+const KILLERS = ["The Trapper","The Wraith","The Hillbilly","The Nurse","The Shape","The Hag","The Doctor","The Huntress","The Cannibal","The Nightmare","The Pig","The Clown","The Spirit","The Legion","The Plague","The Ghost Face","The Demogorgon","The Oni","The Deathslinger","The Executioner","The Blight","The Twins","The Trickster","The Nemesis","The Cenobite","The Artist","The Onryo","The Dredge","The Mastermind","The Knight","The Skull Merchant","The Singularity","The Xenomorph","The Good Guy","The Unknown","The Lich","The Dark Lord","The Houndmaster","The Ghoul","The Animatronic","The Krasue","The First","The Slasher","The Judgment"];
 
-    function roll(mode){
-        if(!PERKS.length){ document.getElementById('result').innerHTML='<div class="placeholder">perks.js yüklenemedi.</div>'; return; }
-        const role = mode==='any' ? (Math.random()<0.5?'killer':'survivor') : mode;
-        build = { role, character: drawChar(role), perks: draw4(role) };
-        currentPerks = build.perks;
-        renderOnce();
-        startCycle();
-    }
+const SURVIVORS = ["Dwight Fairfield","Meg Thomas","Claudette Morel","Jake Park","Nea Karlsson","Laurie Strode","Ace Visconti","Bill Overbeck","Feng Min","David King","Quentin Smith","Detective Tapp","Kate Denson","Adam Francis","Jeff Johansen","Jane Romero","Ashley Williams","Nancy Wheeler","Steve Harrington","Yui Kimura","Zarina Kassir","Cheryl Mason","Felix Richter","Élodie Rakoto","Yun-Jin Lee","Jill Valentine","Leon Kennedy","Mikaela Reid","Jonah Vasquez","Yoichi Asakawa","Haddie Kaur","Ada Wong","Rebecca Chambers","Vittorio Toscano","Thalita Lyra","Renato Lyra","Gabriel Soma","Nicolas Cage","Ellen Ripley","Alan Wake","Sable Ward","Lara Croft","Trevor Belmont","Taurie Cain","Aestri & Baermar","Orela Rose","Rick Grimes","Michonne Grimes","Vee Boonyasak","Dustin Henderson","Eleven","Kwon Tae-young","Shane Wiigwaas","Aurora Stardotter"];
 
-    function renderOnce(){
-        const t=ui[currentLang], isK=build.role==='killer';
-        const roleLabel = isK?t.roleK:t.roleS, emoji = isK?'💀':'🏃';
-        const POS = ['pos-top','pos-left','pos-right','pos-bottom'];
-        const cards = build.perks.map((p,i)=>`
-            <div class="pk ${POS[i]} t1" data-i="${i}">
-                <div class="dia"><div class="dia-in"><img src="${perkIcon(p)}" alt="${p.name}" loading="lazy" onerror="this.style.display='none';this.parentNode.textContent='🎯'"></div></div>
-                <div class="pop">
-                    <div class="pt">${perkName(p)}</div>
-                    <span class="ptr">${t.tier} I</span>
-                    <div class="o">${t.owner}: <b>${p.owner||'—'}</b></div>
-                    <div class="d">${descForTier(p,1)}</div>
-                </div>
-            </div>`).join('');
-        document.getElementById('result').innerHTML = `
-            <div class="charcard ${build.role}">
-                <div class="portrait"><img src="${charPortrait(build.role,build.character)}" alt="${build.character}" onerror="this.style.display='none';this.parentNode.textContent='${emoji}'"></div>
-                <div>
-                    <span class="rolebadge">${emoji} ${roleLabel}</span>
-                    <div class="charname">${charName(build.character)}</div>
-                </div>
-            </div>
-            <div class="perkbar">
-                <div class="tierlegend"><i class="d1" data-t="1">I</i><i class="d2" data-t="2">II</i><i class="d3" data-t="3">III</i></div>
-                <span class="phint">${t.hint}</span>
-            </div>
-            <div class="loadout ${build.role}">${cards}</div>`;
-    }
+/* ---------- Yardımcılar ---------- */
+function shuffle(a){ a=a.slice(); for(let i=a.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; } return a; }
+function slug(name){ return name.toLowerCase().replace(/^the\s+/,'').normalize('NFD').replace(/[̀-ͯ]/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,''); }
+function charPortrait(role,name){ return `images/${role}s/${slug(name)}.png`; }
+function perkIcon(p){ return `images/perks/${p.role}s/${p.slug}.png`; }
+function esc(s){ return String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
 
-    function applyTier(t){
-        curTier=t;
-        document.querySelectorAll('#result .pk').forEach((el,i)=>{
-            const p=currentPerks[i]; if(!p) return;
-            el.classList.remove('t1','t2','t3'); el.classList.add('t'+t);
-            const tr=el.querySelector('.ptr'); if(tr) tr.textContent = ui[currentLang].tier+' '+roman[t];
-            const d=el.querySelector('.pop .d'); if(d) d.innerHTML = descForTier(p,t);
-        });
-        document.querySelectorAll('#result .tierlegend i').forEach(i=> i.classList.toggle('on', +i.dataset.t===t));
-    }
-    function startCycle(){ clearInterval(timer); applyTier(1); timer=setInterval(()=>applyTier(curTier%3+1), 600); }
+const roman = {1:'I',2:'II',3:'III'};
+function perkName(p){ return (currentLang==='tr' && p.name_tr) ? p.name_tr : p.name; }
 
-    function setLanguage(lang){
-        currentLang=lang; document.documentElement.lang=lang; const t=ui[lang];
-        document.getElementById('title').innerText=t.title;
-        document.getElementById('subtitle').innerText=t.sub;
-        document.getElementById('mRandom').innerText=t.random;
-        document.getElementById('mKiller').innerText=t.killer;
-        document.getElementById('mSurvivor').innerText=t.survivor;
-        document.querySelectorAll('.lang button').forEach(b=>b.classList.toggle('on', b.dataset.lang===lang));
-        const ph=document.getElementById('placeholder'); if(ph) ph.innerText=t.ph;
-        if(build){ // metinleri tazele (görselleri yeniden yüklemeden)
-            const rb=document.querySelector('.rolebadge'); if(rb) rb.innerHTML=(build.role==='killer'?'💀 '+t.roleK:'🏃 '+t.roleS);
-            const hint=document.querySelector('.phint'); if(hint) hint.textContent=t.hint;
-            const cn=document.querySelector('.charname'); if(cn) cn.textContent=charName(build.character);
-            document.querySelectorAll('.pop .pt').forEach((el,i)=>{ const p=currentPerks[i]; if(p) el.textContent=perkName(p); });
-            document.querySelectorAll('.pop .o').forEach((el,i)=>{ const p=currentPerks[i]; if(p) el.innerHTML=t.owner+': <b>'+(p.owner||'—')+'</b>'; });
-            applyTier(curTier);
+/* Katil adları Türkçeleştirilir; kurbanlar kişi adı olduğu için aynı kalır */
+const charTR = {
+    "The Trapper":"Tuzakçı","The Wraith":"Hayalet","The Hillbilly":"Köylü","The Nurse":"Hemşire",
+    "The Shape":"Şekil","The Hag":"Cadı","The Doctor":"Doktor","The Huntress":"Avcı",
+    "The Cannibal":"Yamyam","The Nightmare":"Kabus","The Pig":"Domuz","The Clown":"Palyaço",
+    "The Spirit":"Ruh","The Legion":"Lejyon","The Plague":"Veba","The Ghost Face":"Hayalet Yüz",
+    "The Demogorgon":"Demogorgon","The Oni":"Oni","The Deathslinger":"Ölüm Silahşörü","The Executioner":"Cellat",
+    "The Blight":"Afet","The Twins":"İkizler","The Trickster":"Hilebaz","The Nemesis":"Nemesis",
+    "The Cenobite":"Cenobite","The Artist":"Sanatçı","The Onryo":"Onryo","The Dredge":"Karabasan",
+    "The Mastermind":"Usta Beyin","The Knight":"Şövalye","The Skull Merchant":"Kafatası Tüccarı","The Singularity":"Tekillik",
+    "The Xenomorph":"Xenomorph","The Good Guy":"İyi Çocuk","The Unknown":"Bilinmeyen","The Lich":"Lich",
+    "The Dark Lord":"Karanlık Lord","The Houndmaster":"Tazı Ustası","The Ghoul":"Gulyabani","The Animatronic":"Animatronik",
+    "The Krasue":"Krasue","The First":"İlk","The Slasher":"Deşici","The Judgment":"Yargı"
+};
+function charName(n){ return (currentLang==='tr' && charTR[n]) ? charTR[n] : n; }
+
+function descForTier(p,t){
+    const base = (currentLang==='tr' && p.desc_tr) ? p.desc_tr : (p.desc || '');
+    const withVals = esc(base).replace(/(\d+(?:\.\d+)?)\/(\d+(?:\.\d+)?)\/(\d+(?:\.\d+)?)/g,
+        (m,a,b,c)=>`<span class="tval">${[a,b,c][t-1]}</span>`);
+    const parts = withVals.split(/(?<=\.)\s+|\s*•\s*/).map(s=>s.trim()).filter(Boolean);
+    if(parts.length<=1) return '<p class="pline">'+withVals+'</p>';
+    return '<ul class="blist">'+parts.map(s=>'<li>'+s+'</li>').join('')+'</ul>';
+}
+
+/* ---------- Deste (aynı karakter üst üste gelmesin) ---------- */
+const bags={killer:[],survivor:[]}, lastChar={killer:null,survivor:null};
+function drawChar(role){
+    const src = role==='killer'?KILLERS:SURVIVORS;
+    if(bags[role].length===0){
+        bags[role]=shuffle(src);
+        if(lastChar[role] && bags[role][bags[role].length-1]===lastChar[role] && bags[role].length>1){
+            const b=bags[role]; [b[0],b[b.length-1]]=[b[b.length-1],b[0]];
         }
     }
+    const c=bags[role].pop(); lastChar[role]=c; return c;
+}
+function draw4(role){ const pool = role==='killer'?killerPerks:survivorPerks; return shuffle(pool).slice(0,4); }
 
-    setLanguage('en');
+/* ---------- Durum ---------- */
+let build=null, curTier=1, timer=null, currentPerks=[], lastMode='any', cycleOn=true;
 
-    // Dokunmatik: perke dokununca açıklama alttan açılsın (mobil). Tek dinleyici, delegasyon.
-    document.getElementById('result').addEventListener('click', function(e){
-        if(e.target.closest('.pop')) return;           // panele dokununca kapanmasın (okunabilsin)
-        const pk = e.target.closest('.pk'); if(!pk) return;
-        const wasOpen = pk.classList.contains('open');
-        document.querySelectorAll('#result .pk.open').forEach(x=>x.classList.remove('open'));
-        if(!wasOpen) pk.classList.add('open');
+function roll(mode){
+    if(!PERKS.length){
+        document.getElementById('result').innerHTML='<div class="placeholder">'+ui[currentLang].noData+'</div>';
+        return;
+    }
+    closeSheet();
+    lastMode = mode;
+    const role = mode==='any' ? (Math.random()<0.5?'killer':'survivor') : mode;
+    build = { role, character: drawChar(role), perks: draw4(role) };
+    currentPerks = build.perks;
+    renderOnce();
+    startCycle();
+}
+
+function renderOnce(){
+    const t=ui[currentLang], isK=build.role==='killer';
+    const roleLabel = isK?t.roleK:t.roleS, emoji = isK?'💀':'🏃';
+    const POS = ['pos-top','pos-left','pos-right','pos-bottom'];
+    const cards = build.perks.map((p,i)=>`
+        <div class="pk ${POS[i]} t1" data-i="${i}">
+            <div class="dia"><div class="dia-in"><img src="${perkIcon(p)}" alt="${esc(p.name)}" loading="lazy" onerror="this.style.display='none';this.parentNode.textContent='🎯'"></div></div>
+            <div class="pop" role="dialog" aria-modal="false">
+                <div class="pophead">
+                    <h3 class="pt"${perkName(p)===p.name?' lang="en"':''}>${esc(perkName(p))}</h3>
+                    <button class="popclose" type="button" aria-label="${t.close}" data-close="1">✕</button>
+                </div>
+                <span class="ptr">${t.tier} I</span>
+                <div class="o">${t.owner}: <b>${esc(p.owner||'—')}</b></div>
+                <div class="d">${descForTier(p,1)}</div>
+            </div>
+        </div>`).join('');
+
+    document.getElementById('result').innerHTML = `
+        <div class="charcard ${build.role}">
+            <div class="portrait"><img src="${charPortrait(build.role,build.character)}" alt="${esc(build.character)}" onerror="this.style.display='none';this.parentNode.textContent='${emoji}'"></div>
+            <div class="charmeta">
+                <span class="rolebadge">${emoji} ${roleLabel}</span>
+                <div class="charname">${esc(charName(build.character))}</div>
+            </div>
+        </div>
+        <div class="perkbar">
+            <div class="tierlegend">
+                <button class="d1" type="button" data-t="1">I</button>
+                <button class="d2" type="button" data-t="2">II</button>
+                <button class="d3" type="button" data-t="3">III</button>
+                <button class="tcycle" type="button" id="tcycle" title="auto">${cycleOn?'⏸':'▶'}</button>
+            </div>
+            <span class="phint">${t.hint}</span>
+        </div>
+        <div class="loadout ${build.role}">${cards}</div>`;
+}
+
+function applyTier(t){
+    curTier=t;
+    document.querySelectorAll('#result .pk').forEach((el,i)=>{
+        const p=currentPerks[i]; if(!p) return;
+        el.classList.remove('t1','t2','t3'); el.classList.add('t'+t);
+        const tr=el.querySelector('.ptr'); if(tr) tr.textContent = ui[currentLang].tier+' '+roman[t];
+        const d=el.querySelector('.pop .d'); if(d) d.innerHTML = descForTier(p,t);
     });
+    document.querySelectorAll('#result .tierlegend button[data-t]').forEach(b=>
+        b.classList.toggle('on', +b.dataset.t===t));
+}
+function startCycle(){
+    clearInterval(timer);
+    applyTier(1);
+    if(cycleOn) timer=setInterval(()=>applyTier(curTier%3+1), 1100);
+}
+function stopCycle(){ clearInterval(timer); timer=null; }
+function setCycle(on){
+    cycleOn = on;
+    const b=document.getElementById('tcycle'); if(b){ b.textContent = on?'⏸':'▶'; b.classList.toggle('off', !on); }
+    if(on){ stopCycle(); timer=setInterval(()=>applyTier(curTier%3+1), 1100); }
+    else stopCycle();
+}
+
+/* ---------- Panel aç / kapat ---------- */
+function closeSheet(){
+    document.querySelectorAll('#result .pk.open').forEach(x=>x.classList.remove('open'));
+    document.body.classList.remove('sheet-open');
+    if(cycleOn && build && !timer) timer=setInterval(()=>applyTier(curTier%3+1), 1100);
+}
+function openSheet(pk){
+    document.querySelectorAll('#result .pk.open').forEach(x=>x.classList.remove('open'));
+    pk.classList.add('open');
+    document.body.classList.add('sheet-open');
+    stopCycle();   // okurken yazı değişmesin
+}
+
+document.getElementById('result').addEventListener('click', function(e){
+    // Kapat düğmesi
+    if(e.target.closest('[data-close]')){ closeSheet(); return; }
+    // Seviye düğmeleri
+    const tb = e.target.closest('.tierlegend button[data-t]');
+    if(tb){ setCycle(false); applyTier(+tb.dataset.t); return; }
+    const tc = e.target.closest('#tcycle');
+    if(tc){ setCycle(!cycleOn); return; }
+    // Panelin içine dokunmak kapatmasın (metin okunabilsin)
+    if(e.target.closest('.pop')) return;
+    const pk = e.target.closest('.pk'); if(!pk) return;
+    if(pk.classList.contains('open')) closeSheet(); else openSheet(pk);
+});
+
+/* Perdeye, dışarıya veya Esc'ye basınca kapansın */
+document.getElementById('backdrop').addEventListener('click', closeSheet);
+document.addEventListener('click', function(e){
+    if(!document.body.classList.contains('sheet-open')) return;
+    if(e.target.closest('#result') || e.target.closest('#reroll')) return;
+    closeSheet();
+});
+document.addEventListener('keydown', e=>{ if(e.key==='Escape') closeSheet(); });
+
+document.getElementById('reroll').addEventListener('click', ()=> roll(lastMode));
+
+/* ---------- Dil ---------- */
+function setLanguage(lang){
+    currentLang=lang; document.documentElement.lang=lang;
+    const t=ui[lang];
+    document.getElementById('title').innerHTML=t.title;
+    document.getElementById('subtitle').innerText=t.sub;
+    document.getElementById('brandsub').innerHTML=t.brandsub;
+    document.getElementById('mRandom').innerText=t.random;
+    document.getElementById('mKiller').innerText=t.killer;
+    document.getElementById('mSurvivor').innerText=t.survivor;
+    document.getElementById('rerollText').innerText=t.reroll;
+    document.querySelectorAll('.lang button').forEach(b=>b.classList.toggle('on', b.dataset.lang===lang));
+    const ph=document.getElementById('placeholder'); if(ph) ph.innerText=t.ph;
+    if(build){
+        const rb=document.querySelector('.rolebadge');
+        if(rb) rb.innerHTML=(build.role==='killer'?'💀 '+t.roleK:'🏃 '+t.roleS);
+        const hint=document.querySelector('.phint'); if(hint) hint.textContent=t.hint;
+        const cn=document.querySelector('.charname'); if(cn) cn.textContent=charName(build.character);
+        document.querySelectorAll('.pop .pt').forEach((el,i)=>{ const p=currentPerks[i]; if(!p) return;
+            const nm=perkName(p); el.textContent=nm;
+            if(nm===p.name) el.setAttribute('lang','en'); else el.removeAttribute('lang'); });
+        document.querySelectorAll('.pop .o').forEach((el,i)=>{ const p=currentPerks[i]; if(p) el.innerHTML=t.owner+': <b>'+esc(p.owner||'—')+'</b>'; });
+        document.querySelectorAll('.popclose').forEach(el=> el.setAttribute('aria-label', t.close));
+        applyTier(curTier);
+    }
+}
+setLanguage('en');
 </script>
 </body>
 </html>
