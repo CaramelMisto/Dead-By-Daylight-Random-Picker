@@ -35,7 +35,6 @@ body{
     padding:18px 16px 40px;
     overflow-x:hidden;
 }
-body.sheet-open{overflow:hidden;}
 .wrap{width:100%; max-width:1120px;}
 
 /* ---------------- Üst çubuk / marka ---------------- */
@@ -150,6 +149,7 @@ h1{font-family:'Oswald',"Segoe UI",system-ui,sans-serif;
 .pop{position:absolute; top:85px; transform:translateY(-50%) scale(.96); width:350px; z-index:90;
     background:rgba(14,17,21,.985); border:1px solid var(--line2); border-left:4px solid var(--line2);
     border-radius:16px; padding:17px 20px; box-shadow:0 24px 60px rgba(0,0,0,.8);
+    max-height:78vh; overflow-y:auto;
     opacity:0; visibility:hidden; pointer-events:none;
     transition:opacity .16s ease, transform .16s ease, visibility .16s;}
 .pk.t1 .pop{border-left-color:var(--t1);}
@@ -186,7 +186,6 @@ h1{font-family:'Oswald',"Segoe UI",system-ui,sans-serif;
 /* Perde (mobil panel arkası) */
 .backdrop{position:fixed; inset:0; background:rgba(4,5,7,.72); backdrop-filter:blur(2px);
     opacity:0; visibility:hidden; transition:opacity .18s, visibility .18s; z-index:150;}
-body.sheet-open .backdrop{opacity:1; visibility:visible;}
 
 /* Yeniden at düğmesi (mobil) */
 .reroll{position:fixed; right:16px; bottom:calc(16px + var(--sheet-pad)); z-index:120;
@@ -215,6 +214,8 @@ footer .dev{color:#efe9e1; font-size:13px; font-weight:600;}
     .pk:hover .dia{transform:rotate(45deg);}
     .pk:active .dia{transform:rotate(45deg) scale(1.05);}
 
+    body.sheet-open{overflow:hidden;}
+    body.sheet-open .backdrop{opacity:1; visibility:visible;}
     .popclose{display:flex;}
     .pop, .pk.pos-top .pop, .pk.pos-bottom .pop, .pk.pos-left .pop, .pk.pos-right .pop{
         position:fixed; left:0; right:0; bottom:0; top:auto; width:auto; max-width:none;
@@ -466,6 +467,12 @@ function setCycle(on){
 }
 
 /* ---------- Panel aç / kapat ---------- */
+/* Alt panel modu: dar ekran ya da uzerine gelinemeyen (dokunmatik) cihaz.
+   Genis masaustunde panel zaten hover ile aciliyor, tiklama ile sabitlemiyoruz. */
+function altPanelModu(){
+    return window.matchMedia('(max-width:1080px)').matches ||
+           !window.matchMedia('(hover:hover)').matches;
+}
 function closeSheet(){
     document.querySelectorAll('#result .pk.open').forEach(x=>x.classList.remove('open'));
     document.body.classList.remove('sheet-open');
@@ -489,6 +496,7 @@ document.getElementById('result').addEventListener('click', function(e){
     // Panelin içine dokunmak kapatmasın (metin okunabilsin)
     if(e.target.closest('.pop')) return;
     const pk = e.target.closest('.pk'); if(!pk) return;
+    if(!altPanelModu()) return;              // masaustunde hover yeterli
     if(pk.classList.contains('open')) closeSheet(); else openSheet(pk);
 });
 
